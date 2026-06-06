@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Machine | Soluciones Publicitarias, Audiovisuales y Tecnológicas</title>
     
-    <!-- Fuente moderna desde Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg-principal: #121214;
-            --bg-secundario: #1a1a1e;
-            --bg-tarjeta: #232329;
-            --texto-principal: #ffffff;
-            --texto-secundario: #a0a0a5;
-            --color-acento: #FFC107;
-            --color-acento-hover: #e0a800;
+            /* Paleta de Colores Profesional: Negro, Plateado, Blanco */
+            --bg-principal: #121214; /* Negro mate profesional */
+            --bg-secundario: #1a1a1e; /* Negro ligeramente más claro para contraste */
+            --bg-tarjeta: #232329; /* Negro muy oscuro para tarjetas */
+            --texto-principal: #ffffff; /* Blanco puro para texto clave */
+            --texto-secundario: #dcdde1; /* Plateado claro para texto general y secundario */
+            --color-acento: #c0c0c0; /* Plateado metálico para acentos, bordes y botones */
+            --color-acento-hover: #e0e0e0; /* Plateado brillante para hover */
+            --borde-acento: #4a4a4f; /* Plateado oscuro para líneas y bordes sutiles */
         }
 
         * {
@@ -29,7 +30,7 @@
 
         body {
             background-color: var(--bg-principal);
-            color: var(--texto-principal);
+            color: var(--texto-secundario); /* Plateado como texto base profesional */
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
         }
@@ -41,48 +42,76 @@
             padding: 40px 20px;
         }
 
-        /* Encabezado / Hero */
+        /* --- SECCIÓN DE PRESENTACIÓN (HEADER) --- */
         header {
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(180deg, #1e1e24 0%, var(--bg-principal) 100%);
+            padding: 120px 20px; /* Más padding para que la imagen de fondo respire */
+            
+            /* INTEGRACIÓN DE LA IMAGEN DE FONDO */
+            background-image: url('logo_media_if.png'); /* Ruta a tu archivo de logo */
+            background-size: cover; /* Cubre todo el fondo de forma proporcional */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* No repite la imagen */
             border-bottom: 2px solid var(--color-acento);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Capa de superposición para mejorar la legibilidad del texto si es necesario */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Capa negra sutil al 40% */
+            z-index: 1;
+        }
+
+        header .header-content {
+            position: relative;
+            z-index: 2; /* Coloca el texto sobre la capa de superposición */
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         header h1 {
             font-size: 3rem;
             font-weight: 700;
             letter-spacing: 2px;
-            color: var(--texto-principal);
+            color: var(--texto-principal); /* Blanco para el título principal */
             margin-bottom: 10px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif; /* Usar Montserrat para el título principal */
         }
 
         header h1 span {
-            color: var(--color-acento);
+            color: var(--color-acento); /* Plateado para resaltar partes */
         }
 
         header .slogan {
             font-size: 1.5rem;
             font-weight: 300;
             font-style: italic;
-            color: var(--texto-secundario);
+            color: var(--texto-principal); /* Blanco para el eslogan */
             margin-bottom: 15px;
         }
 
         header .descripcion {
-            max-width: 800px;
-            margin: 0 auto;
-            color: var(--texto-secundario);
+            color: var(--texto-secundario); /* Plateado claro para la descripción */
             font-size: 1.1rem;
         }
 
-        /* Títulos de secciones */
+        /* --- Títulos de secciones --- */
         h2 {
             font-size: 2rem;
             text-align: center;
             margin-bottom: 40px;
             position: relative;
-            color: var(--color-acento);
+            color: var(--texto-principal); /* Blanco para títulos de sección */
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
         }
 
         h2::after {
@@ -90,12 +119,12 @@
             display: block;
             width: 60px;
             height: 3px;
-            background-color: var(--texto-principal);
+            background-color: var(--color-acento); /* Plateado para la línea */
             margin: 10px auto 0;
             border-radius: 2px;
         }
 
-        /* Sección Misión y Visión */
+        /* --- Sección Misión y Visión --- */
         .identidad {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -107,16 +136,21 @@
             background-color: var(--bg-secundario);
             padding: 30px;
             border-radius: 12px;
-            border-left: 4px solid var(--color-acento);
+            border-left: 4px solid var(--color-acento); /* Plateado para el borde */
         }
 
         .card-identidad h3 {
             font-size: 1.3rem;
             margin-bottom: 15px;
             text-transform: uppercase;
+            color: var(--texto-principal); /* Blanco para los subtítulos */
         }
 
-        /* Sección Estadísticas */
+        .card-identidad p {
+            color: var(--texto-secundario);
+        }
+
+        /* --- Sección Estadísticas --- */
         .estadisticas {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -127,22 +161,25 @@
             text-align: center;
             margin-bottom: 60px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid var(--borde-acento); /* Borde plateado sutil */
         }
 
         .stat-item h3 {
             font-size: 2.5rem;
-            color: var(--color-acento);
+            color: var(--color-acento); /* Plateado para los números */
             margin-bottom: 5px;
+            font-weight: 700;
         }
 
         .stat-item p {
-            color: var(--texto-secundario);
+            color: var(--texto-principal); /* Blanco para el texto de las estadísticas */
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-weight: 600;
         }
 
-        /* Sección Servicios */
+        /* --- Sección Servicios --- */
         .servicios-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -155,19 +192,22 @@
             padding: 25px;
             border-radius: 12px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid transparent; /* Para el hover effect */
         }
 
         .servicio-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 193, 7, 0.1);
+            box-shadow: 0 10px 20px rgba(192, 192, 192, 0.1); /* Efecto de brillo plateado suave */
+            border-color: var(--color-acento);
         }
 
         .servicio-card h3 {
-            color: var(--color-acento);
+            color: var(--texto-principal); /* Blanco para los subtítulos de servicios */
             margin-bottom: 15px;
             font-size: 1.2rem;
-            border-bottom: 1px solid #3d3d47;
+            border-bottom: 1px solid var(--borde-acento); /* Plateado sutil */
             padding-bottom: 10px;
+            text-transform: uppercase;
         }
 
         .servicio-card ul {
@@ -183,11 +223,11 @@
 
         .servicio-card ul li::before {
             content: "• ";
-            color: var(--color-acento);
+            color: var(--color-acento); /* Plateado para los viñetas */
             font-weight: bold;
         }
 
-        /* Sección Proceso de Trabajo */
+        /* --- Sección Proceso de Trabajo --- */
         .proceso-flujo {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -200,18 +240,20 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            border-top: 3px solid var(--color-acento);
+            border-top: 3px solid var(--color-acento); /* Plateado */
         }
 
         .proceso-paso .numero {
             font-size: 1.8rem;
             font-weight: bold;
-            color: var(--color-acento);
+            color: var(--color-acento); /* Plateado */
             margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .proceso-paso h4 {
             margin-bottom: 8px;
+            color: var(--texto-principal); /* Blanco */
         }
 
         .proceso-paso p {
@@ -219,7 +261,7 @@
             color: var(--texto-secundario);
         }
 
-        /* Galería de Proyectos (Tu base original mejorada) */
+        /* --- Galería de Proyectos --- */
         .galeria-section {
             margin-bottom: 60px;
         }
@@ -236,10 +278,12 @@
             background-color: var(--bg-tarjeta);
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             transition: transform 0.3s ease;
+            border: 1px solid var(--borde-acento); /* Plateado sutil */
         }
 
         .galeria-item:hover {
             transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(192, 192, 192, 0.1);
         }
 
         .galeria img {
@@ -256,12 +300,12 @@
             text-align: center;
         }
 
-        /* Pie de Página / Contacto masivo */
+        /* --- Pie de Página --- */
         footer {
             background-color: var(--bg-secundario);
-            padding: 5px 0 0 0;
+            padding: 0;
             margin-top: 40px;
-            border-top: 1px solid #2d2d35;
+            border-top: 1px solid var(--borde-acento); /* Plateado sutil */
         }
 
         .footer-content {
@@ -275,7 +319,7 @@
         }
 
         .footer-col h3 {
-            color: var(--color-acento);
+            color: var(--texto-principal); /* Blanco */
             margin-bottom: 20px;
             font-size: 1.2rem;
             text-transform: uppercase;
@@ -290,11 +334,11 @@
         }
 
         .footer-col a:hover {
-            color: var(--color-acento);
+            color: var(--color-acento); /* Plateado en hover */
         }
 
         .footer-col strong {
-            color: var(--texto-principal);
+            color: var(--texto-principal); /* Blanco */
         }
 
         .btn-whatsapp {
@@ -318,14 +362,15 @@
             padding: 20px;
             background-color: var(--bg-principal);
             font-size: 0.85rem;
-            color: #666;
-            border-top: 1px solid #232329;
+            color: var(--borde-acento);
+            border-top: 1px solid var(--bg-secundario);
         }
 
         /* Adaptabilidad para pantallas móviles pequeñas */
         @media (max-width: 768px) {
             header h1 { font-size: 2.2rem; }
             header .slogan { font-size: 1.2rem; }
+            header { padding: 80px 20px; } /* Menos padding en mobile */
             .footer-content { text-align: center; }
         }
     </style>
@@ -333,16 +378,16 @@
 
 <body>
 
-    <!-- Encabezado de la Marca -->
     <header>
-        <h1>MEDIA <span>MACHINE</span></h1>
-        <p class="slogan">"Construimos tus ideas"</p>
-        <p class="descripcion">Soluciones publicitarias, audiovisuales y tecnológicas para empresas, instituciones y marcas que buscan destacar.</p>
+        <div class="header-content">
+            <h1>MEDIA <span>MACHINE</span></h1>
+            <p class="slogan">"Construimos tus ideas"</p>
+            <p class="descripcion">Soluciones publicitarias, audiovisuales y tecnológicas para empresas, instituciones y marcas que buscan destacar.</p>
+        </div>
     </header>
 
     <div class="container">
 
-        <!-- Sección Quiénes Somos (Misión / Visión) -->
         <section class="identidad">
             <div class="card-identidad">
                 <h3>Misión</h3>
@@ -354,7 +399,6 @@
             </div>
         </section>
 
-        <!-- Sección de Estadísticas de Impacto -->
         <section class="estadisticas">
             <div class="stat-item">
                 <h3>500+</h3>
@@ -374,7 +418,6 @@
             </div>
         </section>
 
-        <!-- Sección de Servicios Ofrecidos -->
         <section style="margin-bottom: 60px;">
             <h2>Nuestros Servicios</h2>
             <div class="servicios-grid">
@@ -422,7 +465,6 @@
             </div>
         </section>
 
-        <!-- Sección Proceso de Trabajo -->
         <section style="margin-bottom: 60px;">
             <h2>Proceso de Trabajo</h2>
             <div class="proceso-flujo">
@@ -454,7 +496,6 @@
             </div>
         </section>
 
-        <!-- Sección del Catálogo / Galería de Imágenes -->
         <section class="galeria-section">
             <h2>Catálogo de Proyectos</h2>
             <div class="galeria">
@@ -496,7 +537,6 @@
 
     </div>
 
-    <!-- Pie de Página Dinámico con Contactos y Direcciones -->
     <footer>
         <div class="footer-content">
             <div class="footer-col">
@@ -504,7 +544,7 @@
                 <p><strong>Sitio Web:</strong> <a href="http://www.mediamachine-ec.com" target="_blank">www.mediamachine-ec.com</a></p>
                 <p><strong>Instagram:</strong> <a href="https://instagram.com/mediamachineuio" target="_blank">@mediamachineuio</a></p>
                 <p><strong>Facebook:</strong> <a href="#" target="_blank">Media Machine</a></p>
-                <a href="https://wa.me/+593999250437" class="btn-whatsapp" target="_blank">Escríbenos por WhatsApp</a>
+                <a href="https://wa.me/5939999250437" class="btn-whatsapp" target="_blank">Escríbenos por WhatsApp</a>
             </div>
             
             <div class="footer-col">
