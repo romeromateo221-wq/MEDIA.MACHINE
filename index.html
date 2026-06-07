@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Machine | Soluciones Publicitarias, Audiovisuales y Tecnológicas</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@700;800&display=swap](https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@700;800&display=swap)" rel="stylesheet">
 
     <style>
         :root {
             /* Paleta Corporativa Avanzada: Negro, Plateado, Blanco */
             --bg-principal: #0d0d0f; /* Negro profundo */
-            --bg-secundario: #141416; /* Negro intermedio */
-            --bg-tarjeta: #1c1c1f; /* Gris muy oscuro satinado */
+            --bg-secundario: rgba(20, 20, 22, 0.9); /* Negro intermedio con transparencia */
+            --bg-tarjeta: rgba(28, 28, 31, 0.95); /* Gris muy oscuro satinado con transparencia */
             --texto-principal: #ffffff; /* Blanco puro */
             --texto-secundario: #babcbe; /* Plateado claro refinado */
             --color-acento: #e1e2e6; /* Platino brillante */
@@ -30,7 +30,7 @@
         body {
             background-color: var(--bg-principal);
             color: var(--texto-secundario);
-            font-family: 'Outfit', sans-serif; /* Letra de lectura estilizada y limpia */
+            font-family: 'Outfit', sans-serif;
             line-height: 1.6;
             letter-spacing: 0.3px;
         }
@@ -39,6 +39,36 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 60px 20px;
+        }
+
+        /* Estilo común para secciones con fondo de imagen (Opción B) */
+        .section-with-bg {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Efecto parallax opcional */
+            border-radius: 20px;
+            margin-bottom: 80px;
+            border: 1px solid var(--borde-acento);
+            overflow: hidden; /* Para border-radius en pseudo-elementos */
+        }
+
+        /* Capa oscura superpuesta común para secciones con fondo */
+        .section-with-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.65); /* Asegura legibilidad */
+            z-index: 1;
+        }
+
+        .section-with-bg .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 60px 40px;
         }
 
         /* --- SECCIÓN HERO (HEADER) --- */
@@ -52,6 +82,7 @@
             border-bottom: 1px solid var(--borde-acento);
             position: relative;
             overflow: hidden;
+            margin-bottom: 80px; /* Separación extra */
         }
 
         header::before {
@@ -61,7 +92,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Capa oscura cinematográfica */
+            background-color: rgba(0, 0, 0, 0.6); 
             z-index: 1;
         }
 
@@ -73,7 +104,7 @@
         }
 
         header h1 {
-            font-family: 'Syne', sans-serif; /* Letra artística de alto impacto visual */
+            font-family: 'Syne', sans-serif;
             font-size: 3.5rem;
             font-weight: 800;
             letter-spacing: -1px;
@@ -104,7 +135,7 @@
 
         /* --- Títulos de Secciones --- */
         h2 {
-            font-family: 'Syne', sans-serif; /* Letra artística para encabezados */
+            font-family: 'Syne', sans-serif;
             font-size: 2.2rem;
             font-weight: 700;
             text-align: center;
@@ -113,6 +144,11 @@
             color: var(--texto-principal); 
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        /* Estilo para h2 dentro de secciones con fondo */
+        .section-with-bg h2 {
+            margin-bottom: 40px;
         }
 
         h2::after {
@@ -129,7 +165,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-bottom: 80px;
         }
 
         .card-identidad {
@@ -137,7 +172,7 @@
             padding: 40px;
             border-radius: 16px;
             border: 1px solid var(--borde-acento);
-            position: relative;
+            backdrop-filter: blur(5px);
         }
 
         .card-identidad h3 {
@@ -154,12 +189,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
-            background-color: var(--bg-secundario);
-            padding: 50px 30px;
-            border-radius: 20px;
             text-align: center;
-            margin-bottom: 80px;
-            border: 1px solid var(--borde-acento); 
         }
 
         .stat-item h3 {
@@ -183,7 +213,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-bottom: 80px;
         }
 
         .servicio-card {
@@ -192,11 +221,12 @@
             border-radius: 16px;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid transparent; 
+            backdrop-filter: blur(3px);
         }
 
         .servicio-card:hover {
             transform: translateY(-8px);
-            background-color: var(--bg-secundario);
+            background-color: rgba(20, 20, 22, 1);
             border-color: var(--color-acento);
         }
 
@@ -233,7 +263,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 20px;
-            margin-bottom: 80px;
         }
 
         .proceso-paso {
@@ -242,6 +271,7 @@
             border-radius: 14px;
             text-align: center;
             border: 1px solid var(--borde-acento);
+            backdrop-filter: blur(5px);
         }
 
         .proceso-paso .numero {
@@ -277,7 +307,7 @@
         .galeria-item {
             overflow: hidden;
             border-radius: 16px;
-            background-color: var(--bg-tarjeta);
+            background-color: rgb(28, 28, 31);
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid var(--borde-acento); 
         }
@@ -295,7 +325,7 @@
 
         /* --- Pie de Página --- */
         footer {
-            background-color: var(--bg-secundario);
+            background-color: rgb(20, 20, 22);
             border-top: 1px solid var(--borde-acento); 
         }
 
@@ -369,6 +399,7 @@
             header .slogan { font-size: 1.3rem; }
             header { padding: 100px 20px; } 
             .footer-content { text-align: center; }
+            .section-with-bg .content-wrapper { padding: 40px 20px; }
         }
     </style>
 </head>
@@ -385,79 +416,58 @@
 
     <div class="container">
 
-        <section class="identidad">
-            <div class="card-identidad">
-                <h3>Misión</h3>
-                <p>Brindar soluciones creativas, tecnológicas y publicitarias que ayuden a nuestros clientes a impulsar su imagen y crecimiento empresarial.</p>
-            </div>
-            <div class="card-identidad">
-                <h3>Visión</h3>
-                <p>Ser una empresa líder en Ecuador en soluciones publicitarias, audiovisuales y tecnológicas.</p>
-            </div>
-        </section>
-
-        <section class="estadisticas">
-            <div class="stat-item">
-                <h3>500+</h3>
-                <p>Proyectos Realizados</p>
-            </div>
-            <div class="stat-item">
-                <h3>200+</h3>
-                <p>Clientes Satisfechos</p>
-            </div>
-            <div class="stat-item">
-                <h3>10+</h3>
-                <p>Años de Experiencia</p>
-            </div>
-            <div class="stat-item">
-                <h3>50+</h3>
-                <p>Equipo Profesional</p>
-            </div>
-        </section>
-
-        <section style="margin-bottom: 60px;">
-            <h2>Nuestros Servicios</h2>
-            <div class="servicios-grid">
-                <div class="servicio-card">
-                    <h3>Publicidad y Branding</h3>
-                    <ul>
-                        <li>Rotulación</li>
-                        <li>Branding Corporativo</li>
-                        <li>Señalética</li>
-                        <li>Publicidad Exterior</li>
-                    </ul>
-                </div>
-                <div class="servicio-card">
-                    <h3>Producción Gráfica</h3>
-                    <ul>
-                        <li>Impresión de gran formato</li>
-                        <li>Viniles</li>
-                        <li>Lonas</li>
-                        <li>Material POP</li>
-                    </ul>
-                </div>
-                <div class="servicio-card">
-                    <h3>Soluciones Audiovisuales</h3>
-                    <ul>
-                        <li>Pantallas LED</li>
-                        <li>Video Walls</li>
-                        <li>Pantallas Interactivas</li>
-                        <li>Sistemas Multimedia</li>
-                    </ul>
-                </div>
-                <div class="servicio-card">
-                    <h3>Tecnología</h3>
-                    <ul>
-                        <li>Instalación</li>
-                        <li>Configuración</li>
-                        <li>Integración tecnológica</li>
-                        <li>Soporte técnico 24/7</li>
-                    </ul>
+        <section class="section-with-bg" style="background-image: url('tu_imagen_quienes_somos.jpg');">
+            <div class="content-wrapper">
+                <h2>Quiénes Somos</h2>
+                <div class="identidad">
+                    <div class="card-identidad">
+                        <h3>Misión</h3>
+                        <p>Brindar soluciones creativas, tecnológicas y publicitarias que ayuden a nuestros clientes a impulsar su imagen y crecimiento empresarial.</p>
+                    </div>
+                    <div class="card-identidad">
+                        <h3>Visión</h3>
+                        <p>Ser una empresa líder en Ecuador en soluciones publicitarias, audiovisuales y tecnológicas.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section style="margin-bottom: 60px;">
+        <section class="section-with-bg" style="background-image: url('tu_imagen_estadisticas.jpg');">
+            <div class="content-wrapper">
+                <div class="estadisticas">
+                    <div class="stat-item"><h3>500+</h3><p>Proyectos Realizados</p></div>
+                    <div class="stat-item"><h3>200+</h3><p>Clientes Satisfechos</p></div>
+                    <div class="stat-item"><h3>10+</h3><p>Años de Experiencia</p></div>
+                    <div class="stat-item"><h3>50+</h3><p>Equipo Profesional</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-with-bg" style="background-image: url('tu_imagen_servicios.jpg');">
+            <div class="content-wrapper">
+                <h2>Nuestros Servicios</h2>
+                <div class="servicios-grid">
+                    <div class="servicio-card">
+                        <h3>Publicidad y Branding</h3>
+                        <ul><li>Rotulación</li><li>Branding Corporativo</li><li>Señalética</li><li>Publicidad Exterior</li></ul>
+                    </div>
+                    <div class="servicio-card">
+                        <h3>Producción Gráfica</h3>
+                        <ul><li>Impresión de gran formato</li><li>Viniles</li><li>Lonas</li><li>Material POP</li></ul>
+                    </div>
+                    <div class="servicio-card">
+                        <h3>Soluciones Audiovisuales</h3>
+                        <ul><li>Pantallas LED</li><li>Video Walls</li><li>Pantallas Interactivas</li><li>Sistemas Multimedia</li></ul>
+                    </div>
+                    <div class="servicio-card">
+                        <h3>Tecnología</h3>
+                        <ul><li>Instalación</li><li>Configuración</li><li>Integración tecnológica</li><li>Soporte técnico 24/7</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 80px;">
             <h2>Proceso de Trabajo</h2>
             <div class="proceso-flujo">
                 <div class="proceso-paso"><div class="numero">01</div><h4>Asesoría</h4><p>Entendemos tus necesidades</p></div>
@@ -479,10 +489,10 @@
         <div class="footer-content">
             <div class="footer-col">
                 <h3>Contacto</h3>
-                <p><strong>Sitio Web:</strong> <a href="http://www.mediamachine-ec.com" target="_blank">www.mediamachine-ec.com</a></p>
-                <p><strong>Instagram:</strong> <a href="https://instagram.com/mediamachineuio" target="_blank">@mediamachineuio</a></p>
+                <p><strong>Sitio Web:</strong> <a href="[http://www.mediamachine-ec.com](http://www.mediamachine-ec.com)" target="_blank">[www.mediamachine-ec.com](https://www.mediamachine-ec.com)</a></p>
+                <p><strong>Instagram:</strong> <a href="[https://instagram.com/mediamachineuio](https://instagram.com/mediamachineuio)" target="_blank">@mediamachineuio</a></p>
                 <p><strong>Facebook:</strong> <a href="#" target="_blank">Media Machine</a></p>
-                <a href="https://wa.me/5939999250437" class="btn-whatsapp" target="_blank">Iniciar Chat WhatsApp</a>
+                <a href="[https://wa.me/5939999250437](https://wa.me/5939999250437)" class="btn-whatsapp" target="_blank">Iniciar Chat WhatsApp</a>
             </div>
             <div class="footer-col">
                 <h3>Ubicaciones</h3>
@@ -502,7 +512,6 @@
         const finPagina = 54;
 
         for (let i = inicioPagina; i <= finPagina; i++) {
-            // CONDICIÓN: Si el índice actual es 13 o 15, el código lo ignora y pasa al siguiente número
             if (i === 13 || i === 15) {
                 continue; 
             }
