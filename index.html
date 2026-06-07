@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Machine | Construimos Tus Ideas</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            /* Paleta Corporativa Avanzada: Negro, Plateado, Blanco */
-            --bg-principal: #0d0d0f; 
-            --bg-secundario: rgba(20, 20, 22, 0.9); 
-            --bg-tarjeta: rgba(28, 28, 31, 0.95); 
+            /* Paleta Premium: Fondos más dinámicos basados en grises profundos y platas */
+            --bg-principal: #121214; 
+            --bg-gradient-hero: linear-gradient(135deg, #1a1a1e 0%, #0d0d0f 100%);
+            --bg-secundario: rgba(30, 30, 34, 0.7); 
+            --bg-tarjeta: rgba(40, 40, 46, 0.8); 
             --texto-principal: #ffffff; 
-            --texto-secundario: #babcbe; 
+            --texto-secundario: #cfd1d4; 
             --color-acento: #e1e2e6; 
-            --borde-acento: #323236; 
+            --borde-acento: rgba(255, 255, 255, 0.1); 
         }
 
         * {
@@ -43,45 +42,11 @@
             padding: 60px 20px;
         }
 
-        /* Estilo común para secciones con fondo de imagen */
-        .section-with-bg {
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed; /* Efecto parallax suave */
-            border-radius: 20px;
-            margin-bottom: 80px;
-            border: 1px solid var(--borde-acento);
-            position: relative;
-            overflow: hidden; 
-        }
-
-        /* Capa oscura superpuesta común para secciones con fondo */
-        .section-with-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Filtro oscuro para asegurar que el texto sea legible */
-            z-index: 1;
-        }
-
-        .section-with-bg .content-wrapper {
-            position: relative;
-            z-index: 2;
-            padding: 60px 40px;
-        }
-
-        /* --- SECCIÓN HERO (HEADER) --- */
+        /* --- SECCIÓN HERO RENOVADA (Sin fondo negro plano) --- */
         header {
             text-align: center;
-            padding: 140px 20px; 
-            background-image: url('image_bc407f.png'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
+            padding: 160px 20px; 
+            background: var(--bg-gradient-hero);
             border-bottom: 1px solid var(--borde-acento);
             position: relative;
             overflow: hidden;
@@ -91,75 +56,96 @@
         header::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); 
-            z-index: 1;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, rgba(225, 226, 230, 0.05) 0%, transparent 70%);
+            pointer-events: none;
         }
 
         header .header-content {
             position: relative;
             z-index: 2; 
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
         header h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
             font-weight: 800;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
             color: var(--texto-principal); 
-            margin-bottom: 15px;
-            text-transform: uppercase;
+            margin-bottom: 20px;
         }
 
         header h1 span {
             color: var(--color-acento);
-            font-weight: 700;
+            font-weight: 400;
+            font-style: italic;
         }
 
         header .slogan {
-            font-size: 1.6rem;
-            font-weight: 300;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
             font-style: italic;
-            color: var(--texto-principal); 
-            margin-bottom: 20px;
-            letter-spacing: 1px;
+            color: #a5a7aa; 
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
         }
 
         header .descripcion {
             color: var(--texto-secundario); 
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 300;
+            max-width: 650px;
+            margin: 0 auto;
         }
 
-        /* --- Títulos de Secciones --- */
+        /* Estilo común para secciones con fondo de imagen */
+        .section-with-bg {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            border-radius: 24px;
+            margin-bottom: 80px;
+            border: 1px solid var(--borde-acento);
+            position: relative;
+            overflow: hidden; 
+        }
+
+        .section-with-bg::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(10, 10, 12, 0.75); 
+            z-index: 1;
+        }
+
+        .section-with-bg .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 80px 50px;
+        }
+
+        /* --- Títulos Artísticos --- */
         h2 {
-            font-family: 'Syne', sans-serif;
-            font-size: 2.2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 50px;
-            position: relative;
             color: var(--texto-principal); 
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .section-with-bg h2 {
-            margin-bottom: 40px;
         }
 
         h2::after {
             content: '';
             display: block;
-            width: 50px;
-            height: 2px;
+            width: 60px;
+            height: 1px;
             background-color: var(--color-acento); 
-            margin: 15px auto 0;
+            margin: 20px auto 0;
+            opacity: 0.5;
         }
 
         /* --- Quiénes Somos --- */
@@ -174,16 +160,14 @@
             padding: 40px;
             border-radius: 16px;
             border: 1px solid var(--borde-acento);
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(10px);
         }
 
         .card-identidad h3 {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.4rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
             margin-bottom: 15px;
-            text-transform: uppercase;
             color: var(--texto-principal); 
-            letter-spacing: 1px;
         }
 
         /* --- Estadísticas --- */
@@ -195,18 +179,18 @@
         }
 
         .stat-item h3 {
-            font-family: 'Syne', sans-serif;
-            font-size: 2.8rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
             color: var(--texto-principal); 
             margin-bottom: 5px;
-            font-weight: 800;
+            font-weight: 700;
         }
 
         .stat-item p {
-            color: var(--texto-secundario); 
+            color: #949699; 
             font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             font-weight: 500;
         }
 
@@ -219,45 +203,41 @@
 
         .servicio-card {
             background-color: var(--bg-tarjeta);
-            padding: 30px;
-            border-radius: 16px;
+            padding: 40px 30px;
+            border-radius: 20px;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid transparent; 
-            backdrop-filter: blur(3px);
+            backdrop-filter: blur(10px);
         }
 
         .servicio-card:hover {
             transform: translateY(-8px);
-            background-color: rgba(20, 20, 22, 1);
-            border-color: var(--color-acento);
+            background-color: #1e1e22;
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .servicio-card h3 {
-            font-family: 'Syne', sans-serif;
+            font-family: 'Playfair Display', serif;
             color: var(--texto-principal); 
             margin-bottom: 20px;
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             border-bottom: 1px solid var(--borde-acento); 
             padding-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .servicio-card ul {
             list-style: none;
-            text-align: left;
         }
 
         .servicio-card ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-size: 0.95rem;
             font-weight: 300;
         }
 
         .servicio-card ul li::before {
             content: "—  ";
-            color: var(--color-acento); 
-            font-weight: normal;
+            color: #a5a7aa; 
         }
 
         /* --- Proceso de Trabajo --- */
@@ -269,18 +249,18 @@
 
         .proceso-paso {
             background-color: var(--bg-secundario);
-            padding: 25px 20px;
-            border-radius: 14px;
+            padding: 30px 20px;
+            border-radius: 16px;
             text-align: center;
             border: 1px solid var(--borde-acento);
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(10px);
         }
 
         .proceso-paso .numero {
-            font-family: 'Syne', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--color-acento); 
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-style: italic;
+            color: var(--texto-principal); 
             margin-bottom: 12px;
         }
 
@@ -290,16 +270,7 @@
             font-weight: 500;
         }
 
-        .proceso-paso p {
-            font-size: 0.85rem;
-            font-weight: 300;
-        }
-
-        /* --- Catálogo de Proyectos --- */
-        .galeria-section {
-            margin-bottom: 80px;
-        }
-
+        /* --- Catálogo con Efecto interactivo --- */
         .galeria {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -309,25 +280,81 @@
         .galeria-item {
             overflow: hidden;
             border-radius: 16px;
-            background-color: rgb(28, 28, 31);
+            background-color: #1a1a1d;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid var(--borde-acento); 
+            cursor: pointer;
         }
 
         .galeria-item:hover {
-            transform: scale(1.03);
-            border-color: var(--color-acento);
+            transform: scale(1.02);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
         .galeria img {
             width: 100%;
             height: auto;
             display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .galeria-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* --- INTERFAZ ZOOM INTERACTIVO (MODAL) --- */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(10, 10, 12, 0.95);
+            backdrop-filter: blur(8px);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .lightbox-modal.active .lightbox-content {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+            user-select: none;
+        }
+
+        .lightbox-close:hover {
+            color: #babcbe;
+            transform: scale(1.1);
         }
 
         /* --- Pie de Página --- */
         footer {
-            background-color: rgb(20, 20, 22);
+            background-color: #0d0d0f;
             border-top: 1px solid var(--borde-acento); 
         }
 
@@ -337,17 +364,14 @@
             gap: 50px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 20px;
-            text-align: left;
+            padding: 80px 20px;
         }
 
         .footer-col h3 {
-            font-family: 'Syne', sans-serif;
+            font-family: 'Playfair Display', serif;
             color: var(--texto-principal); 
             margin-bottom: 25px;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 1.3rem;
         }
 
         .footer-col p, .footer-col a {
@@ -356,68 +380,62 @@
             text-decoration: none;
             display: block;
             font-weight: 300;
+            color: var(--texto-secundario);
         }
 
         .footer-col a:hover {
             color: var(--texto-principal); 
         }
 
-        .footer-col strong {
-            color: var(--texto-principal); 
-            font-weight: 500;
-        }
-
         .btn-whatsapp {
             display: inline-block;
             background-color: #ffffff;
             color: #000000 !important;
-            padding: 12px 24px;
+            padding: 14px 28px;
             border-radius: 30px;
             font-weight: 600;
             margin-top: 15px;
             text-align: center;
-            transition: transform 0.3s ease, background-color 0.3s ease;
+            transition: all 0.3s ease;
             font-size: 0.9rem;
-            text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .btn-whatsapp:hover {
-            background-color: var(--color-acento);
+            background-color: #e1e2e6;
             transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255,255,255,0.1);
         }
 
         .copyright {
             text-align: center;
-            padding: 25px;
-            background-color: var(--bg-principal);
+            padding: 30px;
+            background-color: #08080a;
             font-size: 0.85rem;
             color: #55575c;
             border-top: 1px solid var(--borde-acento);
         }
 
         @media (max-width: 768px) {
-            header h1 { font-size: 2.6rem; }
-            header .slogan { font-size: 1.3rem; }
-            header { padding: 100px 20px; } 
+            header h1 { font-size: 2.8rem; }
+            header .slogan { font-size: 1.4rem; }
+            header { padding: 120px 20px; } 
             .footer-content { text-align: center; }
-            .section-with-bg .content-wrapper { padding: 40px 20px; }
+            .section-with-bg .content-wrapper { padding: 50px 25px; }
+            .lightbox-close { top: 20px; right: 20px; font-size: 34px; }
         }
     </style>
 </head>
 
 <body>
-    <section class="section-with-bg" style="background-image: url('');">
+
     <header>
-    
         <div class="header-content">
             <h1>MEDIA <span>MACHINE</span></h1>
             <p class="slogan">"Construimos tus ideas"</p>
-            <p class="descripcion">Soluciones publicitarias, audiovisuales y tecnológicas para empresas, instituciones y marcas que buscan destacar.</p>
+            <p class="descripcion">Soluciones publicitarias, audiovisuales y tecnológicas premium para marcas de alto impacto que buscan marcar la diferencia.</p>
         </div>
-      
     </header>
-    </section>  
 
     <div class="container">
 
@@ -490,13 +508,17 @@
 
     </div>
 
+    <div class="lightbox-modal" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Vista ampliada">
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-col">
                 <h3>Contacto</h3>
                 <p><strong>Instagram:</strong> <a href="https://www.instagram.com/mediamachineuio/" target="_blank">@mediamachineuio</a></p>
                 <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/18qtZdFPBv/?mibextid=wwXIfr" target="_blank">Media Machine</a></p>
-                
                 <a href="https://api.whatsapp.com/send?phone=593999250437" class="btn-whatsapp" target="_blank">Iniciar Chat WhatsApp</a>
             </div>
             <div class="footer-col">
@@ -513,9 +535,14 @@
 
     <script>
         const galeria = document.getElementById('galeria-proyectos');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+        
         const inicioPagina = 2;
         const finPagina = 54;
 
+        // Renderizado del catálogo
         for (let i = inicioPagina; i <= finPagina; i++) {
             if (i === 13 || i === 15) {
                 continue; 
@@ -531,9 +558,27 @@
             img.alt = `Proyecto Media Machine ${i}`;
             img.loading = `lazy`; 
             
+            // Asignar el evento dinámico para abrir el Zoom
+            item.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+            
             item.appendChild(img);
             galeria.appendChild(item);
         }
+
+        // Evento para cerrar la imagen al dar clic en la 'X'
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        // Evento para cerrar si dan clic fuera de la imagen
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
     </script>
 
 </body>
