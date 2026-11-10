@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#050506">
+<meta name="theme-color" content="#08080a">
 <meta name="description" content="Media Machine Ecuador. Diseño, publicidad, branding, diseño interior, rotulación, iluminación y franquicias.">
 <title>Media Machine | Construimos tus ideas</title>
 
@@ -13,23 +13,20 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================================
-   MEDIA MACHINE
-   BLACK & WHITE LUXURY PRO
-   ========================================= */
+/* ==========================================
+   MEDIA MACHINE — BLACK & WHITE LUXURY PRO
+   ========================================== */
 
 :root {
-  --bg: #050506;
-  --bg-soft: #0d0d10;
-  --bg-card: #151518;
+  --black: #08080a;
+  --dark: #111114;
   --white: #ffffff;
-  --silver: #dcdce2;
-  --muted: #a6a6b1;
-  --border: rgba(255,255,255,.14);
-  --glow: rgba(255,255,255,.18);
+  --light: #f6f6f7;
+  --gray: #62626a;
+  --silver: #c6c6ce;
+  --line: rgba(255,255,255,.15);
   --font: "DM Sans", sans-serif;
-  --font-display: "Manrope", sans-serif;
+  --display: "Manrope", sans-serif;
 }
 
 * {
@@ -43,7 +40,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: var(--black);
   color: var(--white);
   font-family: var(--font);
   overflow-x: hidden;
@@ -59,8 +56,8 @@ a {
 }
 
 button {
-  font: inherit;
   cursor: pointer;
+  font: inherit;
 }
 
 img {
@@ -69,94 +66,94 @@ img {
 
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid white;
+  outline: 2px solid #ffffff;
   outline-offset: 4px;
 }
 
 .container {
-  width: min(1250px, calc(100% - 44px));
-  margin-inline: auto;
+  width: min(1240px, calc(100% - 44px));
+  margin: auto;
 }
 
-/* =========================================
-   TOPBAR
-   ========================================= */
+/* ==========================================
+   TOP BAR
+   ========================================== */
 
 .topbar {
-  padding: 11px 16px;
   text-align: center;
   background: #111114;
-  border-bottom: 1px solid var(--border);
-  color: #bdbdc6;
+  color: #c7c7cf;
+  padding: 11px 15px;
   font-size: 10px;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   font-weight: 700;
+  border-bottom: 1px solid var(--line);
 }
 
-/* =========================================
+/* ==========================================
    NAVBAR
-   ========================================= */
+   ========================================== */
 
 .navbar {
   position: sticky;
   top: 0;
   z-index: 500;
-  background: rgba(6,6,8,.87);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(8,8,10,.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .nav-content {
   min-height: 82px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  align-items: center;
+  gap: 25px;
 }
 
 .logo {
-  font-family: var(--font-display);
+  font-family: var(--display);
   font-size: 23px;
-  letter-spacing: -1.8px;
   font-weight: 800;
   color: white;
+  letter-spacing: -1.5px;
   white-space: nowrap;
 }
 
 .logo span {
-  color: #bdbdc5;
+  color: #bbbbc5;
 }
 
 .navigation {
   display: flex;
-  gap: 25px;
   align-items: center;
+  gap: 23px;
 }
 
 .navigation a {
+  color: #e2e2e7;
   font-size: 12px;
   font-weight: 700;
-  color: #d5d5dc;
-  transition: .3s;
+  transition: color .3s;
 }
 
 .navigation a:hover {
   color: white;
-  text-shadow: 0 0 15px rgba(255,255,255,.8);
+  text-shadow: 0 0 14px rgba(255,255,255,.65);
 }
 
 .menu-toggle {
   display: none;
+  background: none;
   border: 0;
-  background: transparent;
   color: white;
   font-size: 28px;
 }
 
-/* =========================================
+/* ==========================================
    BUTTONS
-   ========================================= */
+   ========================================== */
 
 .btn {
   display: inline-flex;
@@ -167,98 +164,93 @@ a:focus-visible {
   border: 1px solid transparent;
   font-size: 13px;
   font-weight: 800;
-  transition: .35s ease;
+  transition: transform .3s, box-shadow .3s, background .3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
 }
 
 .btn-primary {
+  color: #08080a;
   background: white;
-  color: #050506;
-  box-shadow: 0 0 20px rgba(255,255,255,.16);
+  box-shadow: 0 0 24px rgba(255,255,255,.18);
 }
 
 .btn-primary:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 0 20px rgba(255,255,255,.4),
-    0 0 55px rgba(255,255,255,.18);
+  background: #f0f0f2;
+  box-shadow: 0 0 42px rgba(255,255,255,.36);
 }
 
 .btn-outline {
+  background: transparent;
+  border-color: rgba(255,255,255,.55);
   color: white;
-  border-color: rgba(255,255,255,.45);
-  background: rgba(255,255,255,.025);
 }
 
 .btn-outline:hover {
   background: white;
-  color: black;
-  box-shadow: 0 0 35px rgba(255,255,255,.2);
+  color: #08080a;
 }
 
-/* =========================================
-   HERO WITH ANIMATED LIGHTS
-   ========================================= */
+/* ==========================================
+   HERO — BLACK LUXURY WITH LIGHTS
+   ========================================== */
 
 .hero {
+  background: #08080a;
+  color: white;
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: 115px 0;
-  background: #050506;
+  padding: 110px 0;
 }
-
-/* Light left */
 
 .hero::before {
   content: "";
   position: absolute;
+  z-index: -1;
   width: 750px;
   height: 750px;
   left: -350px;
-  top: -200px;
-  z-index: -1;
+  top: -250px;
 
   background: radial-gradient(
     circle,
-    rgba(255,255,255,.16) 0%,
-    rgba(160,160,175,.07) 35%,
+    rgba(255,255,255,.14),
+    rgba(160,160,180,.05) 40%,
     transparent 70%
   );
 
-  filter: blur(50px);
-  animation: lightFloat 12s ease-in-out infinite alternate;
+  filter: blur(55px);
+  animation: floatLight 13s ease-in-out infinite alternate;
 }
-
-/* Light right */
 
 .hero::after {
   content: "";
   position: absolute;
-  width: 800px;
-  height: 800px;
-  right: -350px;
-  bottom: -350px;
   z-index: -1;
+  width: 850px;
+  height: 850px;
+  right: -400px;
+  bottom: -400px;
 
   background: radial-gradient(
     circle,
-    rgba(255,255,255,.12),
-    transparent 68%
+    rgba(255,255,255,.11),
+    transparent 70%
   );
 
   filter: blur(70px);
-  animation: lightFloat 15s ease-in-out infinite alternate-reverse;
+  animation: floatLight 16s ease-in-out infinite alternate-reverse;
 }
 
-@keyframes lightFloat {
-  0% {
+@keyframes floatLight {
+  from {
     transform: translate(0,0) scale(1);
-    opacity: .65;
   }
-
-  100% {
-    transform: translate(90px,45px) scale(1.15);
-    opacity: 1;
+  to {
+    transform: translate(70px,40px) scale(1.12);
   }
 }
 
@@ -266,48 +258,45 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
   align-items: center;
-  gap: 70px;
+  gap: 65px;
 }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  color: #e5e5eb;
-  font-size: 11px;
-  letter-spacing: 2.5px;
   text-transform: uppercase;
+  font-size: 11px;
   font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .eyebrow::before {
   content: "";
   width: 24px;
   height: 2px;
-  background: white;
-  box-shadow: 0 0 12px white;
+  background: currentColor;
 }
 
 .hero h1 {
-  font-family: var(--font-display);
-  font-size: clamp(47px,6.4vw,90px);
-  line-height: 1.06;
+  font-family: var(--display);
+  font-size: clamp(46px,6.2vw,86px);
+  line-height: 1.07;
   letter-spacing: -4px;
-  font-weight: 800;
   margin: 28px 0;
+  font-weight: 800;
 }
 
 .hero h1 span {
   display: inline-block;
   color: white;
   text-shadow:
-    0 0 12px rgba(255,255,255,.32),
-    0 0 45px rgba(255,255,255,.17),
-    0 0 100px rgba(255,255,255,.08);
+    0 0 15px rgba(255,255,255,.4),
+    0 0 50px rgba(255,255,255,.18);
 }
 
 .hero p {
-  color: #b8b8c2;
+  color: #c7c7cf;
   font-size: 17px;
   line-height: 1.85;
   max-width: 540px;
@@ -315,150 +304,68 @@ a:focus-visible {
 
 .hero-buttons {
   display: flex;
-  flex-wrap: wrap;
   gap: 14px;
-  margin-top: 35px;
+  flex-wrap: wrap;
+  margin-top: 36px;
 }
 
-/* =========================================
-   HERO VISUAL
-   ========================================= */
+/* ==========================================
+   OFFICIAL MEDIA MACHINE + IF LOGO
+   ========================================== */
 
-.hero-visual {
-  height: 560px;
-  border-radius: 26px;
+.hero-visual.hero-logo {
   position: relative;
   isolation: isolate;
+  height: 440px;
+  min-width: 0;
   overflow: hidden;
-  background: #101014;
-  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 26px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #030505;
+  border: 1px solid rgba(255,255,255,.22);
 
   box-shadow:
-    0 0 22px rgba(255,255,255,.12),
-    0 0 80px rgba(255,255,255,.07),
-    0 35px 90px rgba(0,0,0,.75);
+    0 0 25px rgba(255,255,255,.1),
+    0 0 85px rgba(255,255,255,.05),
+    0 35px 80px rgba(0,0,0,.65);
 }
 
-.hero-visual::before {
+.hero-visual.hero-logo::before {
   content: "";
   position: absolute;
-  inset: -50%;
-  z-index: -1;
-
-  background: conic-gradient(
-    #ffffff,
-    #52525d,
-    #050506,
-    #aaaaaf,
-    #ffffff
-  );
-
-  filter: blur(65px);
-  animation: rotateLight 18s linear infinite;
-}
-
-@keyframes rotateLight {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.hero-visual img {
-  position: absolute;
   inset: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(255,255,255,.07),
+    transparent 70%
+  );
+}
+
+.hero-brand-image {
+  display: block;
+  position: relative;
+  z-index: 2;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  object-fit: contain;
+  padding: 18px;
+  filter: drop-shadow(0 0 14px rgba(255,255,255,.1));
 }
 
-.hero-visual img[hidden] {
-  display: none;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,.05),
-    rgba(0,0,0,.28) 45%,
-    rgba(0,0,0,.88)
-  );
-}
-
-.hero-visual-text {
-  position: absolute;
-  z-index: 3;
-  left: 38px;
-  right: 30px;
-  bottom: 42px;
-}
-
-.hero-visual-text h2 {
-  font-family: var(--font-display);
-  font-size: clamp(39px,4.7vw,70px);
-  letter-spacing: -3px;
-  line-height: 1;
-  margin: 0;
-}
-
-.hero-visual-text p {
-  color: white;
-  font-size: 11px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-/* Moving light reflection */
-
-.hero-visual .reflection {
-  position: absolute;
-  z-index: 3;
-  top: -100%;
-  left: -55%;
-  width: 50%;
-  height: 300%;
-  pointer-events: none;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,.13),
-    transparent
-  );
-
-  transform: rotate(25deg);
-  animation: shineSweep 9s ease-in-out infinite;
-}
-
-@keyframes shineSweep {
-  0%, 35% {
-    left: -90%;
-  }
-
-  70%, 100% {
-    left: 150%;
-  }
-}
-
-/* =========================================
+/* ==========================================
    GENERAL SECTIONS
-   ========================================= */
+   ========================================== */
 
 .section {
   padding: 105px 0;
   position: relative;
-}
-
-.section-light {
-  background: #101013;
-}
-
-.section-dark {
-  background: #050506;
 }
 
 .section-heading {
@@ -467,24 +374,35 @@ a:focus-visible {
 }
 
 .section-heading h2 {
-  font-family: var(--font-display);
+  font-family: var(--display);
   font-size: clamp(36px,4.5vw,62px);
   line-height: 1.13;
-  letter-spacing: -2.5px;
+  letter-spacing: -2px;
   font-weight: 800;
   margin: 20px 0;
-  color: white;
 }
 
 .section-heading p {
-  color: var(--muted);
-  line-height: 1.9;
   font-size: 16px;
+  line-height: 1.85;
 }
 
-/* =========================================
-   SERVICES CARDS
-   ========================================= */
+/* ==========================================
+   SERVICES — WHITE BACKGROUND
+   ========================================== */
+
+#servicios {
+  background: white;
+  color: #101014;
+}
+
+#servicios .section-heading p {
+  color: #565660;
+}
+
+#servicios .eyebrow {
+  color: #50505a;
+}
 
 .services-grid {
   display: grid;
@@ -493,96 +411,86 @@ a:focus-visible {
 }
 
 .service-card {
-  min-height: 370px;
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
   padding: 38px;
   border-radius: 22px;
   display: flex;
   flex-direction: column;
-  position: relative;
-  overflow: hidden;
 
-  background: linear-gradient(
-    145deg,
-    #222227,
-    #101013 75%
-  );
+  background: #f5f5f7;
+  border: 1px solid #e4e4e8;
 
-  border: 1px solid rgba(255,255,255,.14);
-
-  transition:
-    transform .4s,
-    border-color .4s,
-    box-shadow .4s;
+  transition: transform .35s, box-shadow .35s, border-color .35s;
 }
-
-/* Premium luminous effect */
 
 .service-card::before {
   content: "";
   position: absolute;
-  width: 230px;
-  height: 230px;
-  right: -90px;
-  top: -110px;
-  pointer-events: none;
+  width: 250px;
+  height: 250px;
+  right: -120px;
+  top: -120px;
 
   background: radial-gradient(
     circle,
-    rgba(255,255,255,.18),
+    rgba(0,0,0,.08),
     transparent 70%
   );
 
-  opacity: 0;
-  transition: opacity .4s;
+  pointer-events: none;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
-  border-color: rgba(255,255,255,.5);
+  transform: translateY(-8px);
+  border-color: #aaaab3;
 
   box-shadow:
-    0 0 20px rgba(255,255,255,.09),
-    0 0 60px rgba(255,255,255,.05),
-    0 25px 55px rgba(0,0,0,.5);
-}
-
-.service-card:hover::before {
-  opacity: 1;
+    0 20px 50px rgba(0,0,0,.12),
+    0 0 20px rgba(0,0,0,.035);
 }
 
 .service-number {
   font-size: 12px;
-  letter-spacing: 1px;
-  color: #c3c3cc;
   font-weight: 800;
+  letter-spacing: 1px;
+  color: #656570;
 }
 
 .service-card h3 {
-  font-family: var(--font-display);
+  font-family: var(--display);
   font-size: 28px;
   letter-spacing: -1px;
   margin: auto 0 17px;
+  color: #111114;
 }
 
 .service-card p {
-  color: #b3b3bd;
-  line-height: 1.85;
+  color: #55555f;
   font-size: 14px;
+  line-height: 1.85;
 }
 
 .service-card a {
-  font-size: 13px;
+  color: #101014;
   font-weight: 800;
+  font-size: 13px;
   margin-top: 25px;
 }
 
-.service-card a:hover {
-  text-shadow: 0 0 15px white;
+/* ==========================================
+   WHY US — DARK BACKGROUND
+   ========================================== */
+
+#porque {
+  background: #101014;
+  color: white;
 }
 
-/* =========================================
-   WHY US
-   ========================================= */
+#porque .section-heading p {
+  color: #bdbdc6;
+}
 
 .why-grid {
   display: grid;
@@ -595,30 +503,38 @@ a:focus-visible {
   grid-template-columns: 45px 1fr;
   gap: 20px;
   padding: 28px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255,255,255,.17);
 }
 
 .why-number {
   color: white;
   font-weight: 800;
-  text-shadow: 0 0 12px rgba(255,255,255,.3);
 }
 
 .why-item h3 {
-  font-family: var(--font-display);
+  font-family: var(--display);
   font-size: 23px;
   margin: 0 0 12px;
 }
 
 .why-item p {
-  color: var(--muted);
+  color: #bdbdc6;
   font-size: 14px;
   line-height: 1.85;
 }
 
-/* =========================================
-   DETAIL SERVICES
-   ========================================= */
+/* ==========================================
+   DETAILED SERVICES — WHITE
+   ========================================== */
+
+#servicios-detalle {
+  background: #f5f5f6;
+  color: #101014;
+}
+
+#servicios-detalle .eyebrow {
+  color: #55555f;
+}
 
 .details-grid {
   display: grid;
@@ -626,23 +542,27 @@ a:focus-visible {
 }
 
 .detail-panel {
-  padding: 43px;
-  background: linear-gradient(145deg,#1c1c21,#0b0b0e);
-  border: 1px solid var(--border);
+  background: white;
+  border: 1px solid #e0e0e5;
   border-radius: 23px;
-  transition: .35s;
+  padding: 43px;
+
+  box-shadow: 0 12px 35px rgba(0,0,0,.04);
+
+  transition: box-shadow .35s, border-color .35s;
 }
 
 .detail-panel:hover {
-  border-color: rgba(255,255,255,.38);
-  box-shadow: 0 0 40px rgba(255,255,255,.055);
+  border-color: #a0a0a8;
+  box-shadow: 0 20px 50px rgba(0,0,0,.1);
 }
 
 .detail-panel h3 {
-  font-family: var(--font-display);
+  font-family: var(--display);
   font-size: 35px;
   letter-spacing: -1px;
   margin: 15px 0 35px;
+  color: #101014;
 }
 
 .detail-columns {
@@ -652,19 +572,20 @@ a:focus-visible {
 }
 
 .detail-item {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #e1e1e6;
   padding-top: 23px;
 }
 
 .detail-item h4 {
   font-size: 17px;
+  color: #101014;
   margin: 0 0 14px;
 }
 
 .detail-item p {
-  color: #a9a9b3;
-  line-height: 1.85;
+  color: #55555f;
   font-size: 13px;
+  line-height: 1.85;
 }
 
 .tags {
@@ -675,26 +596,32 @@ a:focus-visible {
 }
 
 .tags span {
-  padding: 9px 12px;
-  border-radius: 30px;
-  background: #29292f;
-  border: 1px solid #ffffff12;
-  color: #dedee4;
   font-size: 11px;
+  padding: 9px 12px;
+  background: #eeeeef;
+  border: 1px solid #e1e1e5;
+  border-radius: 30px;
+  color: #303039;
 }
 
-/* =========================================
-   PORTFOLIO PREMIUM
-   ========================================= */
+/* ==========================================
+   PORTFOLIO — BLACK
+   ========================================== */
 
 #portafolio {
   background:
     radial-gradient(
       ellipse at 50% 0%,
-      rgba(255,255,255,.045),
-      transparent 48%
+      rgba(255,255,255,.07),
+      transparent 50%
     ),
-    #050506;
+    #070709;
+
+  color: white;
+}
+
+#portafolio .section-heading p {
+  color: #bdbdc6;
 }
 
 .gallery-controls {
@@ -708,30 +635,29 @@ a:focus-visible {
 
 .gallery-tabs {
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .gallery-tab {
+  padding: 12px 20px;
   background: transparent;
   color: white;
-  border: 1px solid #57575e;
+  border: 1px solid #57575f;
   border-radius: 50px;
-  padding: 12px 20px;
   font-size: 12px;
   font-weight: 700;
-  transition: .3s;
 }
 
 .gallery-tab.active {
   background: white;
   border-color: white;
-  color: black;
+  color: #08080a;
 }
 
 .gallery-count {
   font-size: 13px;
-  color: #aaaaaf;
+  color: #b4b4bd;
 }
 
 .gallery-grid {
@@ -741,11 +667,12 @@ a:focus-visible {
 }
 
 .gallery-card {
-  background: #141417;
+  overflow: hidden;
+  background: #18181d;
   border: 1px solid rgba(255,255,255,.15);
   border-radius: 18px;
-  overflow: hidden;
-  transition: .35s;
+
+  transition: transform .35s, border-color .35s, box-shadow .35s;
 }
 
 .gallery-card:hover {
@@ -753,77 +680,77 @@ a:focus-visible {
   border-color: rgba(255,255,255,.6);
 
   box-shadow:
-    0 0 25px rgba(255,255,255,.11),
-    0 0 60px rgba(255,255,255,.045),
-    0 25px 55px rgba(0,0,0,.65);
+    0 0 30px rgba(255,255,255,.12),
+    0 25px 55px rgba(0,0,0,.6);
 }
 
 .gallery-button {
   display: block;
   width: 100%;
   padding: 0;
-  text-align: left;
-  border: none;
   background: transparent;
+  border: 0;
   color: white;
+  text-align: left;
 }
 
 .gallery-button img {
   display: block;
   width: 100%;
-  height: 340px;
+  height: 350px;
   object-fit: contain;
   background: #202025;
-  transition: transform .4s;
-}
-
-.gallery-card:hover img {
-  transform: scale(1.035);
 }
 
 .gallery-info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  padding: 19px;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px;
+  color: white;
   font-size: 12px;
   font-weight: 800;
 }
 
 .gallery-info small {
-  color: #b6b6bf;
+  color: #c4c4cc;
   font-size: 11px;
   font-weight: 500;
 }
 
 .image-error {
-  min-height: 340px;
-  padding: 24px;
+  min-height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 12px;
-  color: #babac3;
+  padding: 25px;
+  color: #d2d2da;
 }
 
 .image-error small {
-  overflow-wrap: anywhere;
   font-size: 11px;
+  overflow-wrap: anywhere;
 }
 
 .gallery-note {
-  margin-top: 25px;
-  color: #a7a7b0;
+  color: #aaaab4;
   font-size: 12px;
   line-height: 1.8;
+  margin-top: 28px;
 }
 
-/* =========================================
-   ABOUT
-   ========================================= */
+/* ==========================================
+   ABOUT — WHITE
+   ========================================== */
+
+#nosotros {
+  background: white;
+  color: #101014;
+}
 
 .about-grid {
   display: grid;
@@ -839,42 +766,36 @@ a:focus-visible {
   padding: 45px;
   border-radius: 25px;
 
-  background: linear-gradient(
-    135deg,
-    #38383f,
-    #111115 70%
-  );
-
-  border: 1px solid rgba(255,255,255,.25);
-
-  box-shadow:
-    0 0 45px rgba(255,255,255,.08);
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  background: linear-gradient(135deg,#35353c,#09090d);
+  border: 1px solid #494952;
+  color: white;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,.16);
 }
 
 .about-feature::before {
   content: "";
   position: absolute;
-  right: -180px;
   top: -180px;
+  right: -180px;
   width: 450px;
   height: 450px;
+  pointer-events: none;
 
   background: radial-gradient(
     circle,
-    rgba(255,255,255,.17),
+    rgba(255,255,255,.18),
     transparent 70%
   );
-
-  pointer-events: none;
 }
 
 .about-feature strong {
   position: relative;
-  font-family: var(--font-display);
+  font-family: var(--display);
   font-size: clamp(35px,4vw,54px);
   line-height: 1.15;
   letter-spacing: -2px;
@@ -883,99 +804,121 @@ a:focus-visible {
 .about-feature span {
   position: relative;
   font-size: 11px;
-  letter-spacing: 2px;
   font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.about-copy .eyebrow {
+  color: #565660;
 }
 
 .about-copy h2 {
-  font-family: var(--font-display);
+  font-family: var(--display);
   font-size: clamp(35px,4vw,54px);
-  letter-spacing: -2px;
   line-height: 1.13;
+  letter-spacing: -2px;
+  color: #101014;
 }
 
 .about-copy p {
-  color: #b1b1bb;
-  line-height: 2;
   font-size: 15px;
+  color: #55555f;
+  line-height: 2;
 }
 
-/* =========================================
-   CLIENTS
-   ========================================= */
+/* ==========================================
+   CLIENTS — LIGHT
+   ========================================== */
+
+#clientes {
+  background: #f4f4f5;
+  color: #101014;
+}
+
+#clientes .eyebrow {
+  color: #55555f;
+}
+
+#clientes .section-heading p {
+  color: #55555f;
+}
 
 .clients-panel {
-  background: #151518;
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: 22px;
   padding: 55px;
+  background: white;
+  border: 1px solid #dedee4;
+  border-radius: 22px;
   text-align: center;
+  box-shadow: 0 12px 35px rgba(0,0,0,.05);
+}
+
+.clients-panel h3 {
+  color: #101014;
 }
 
 .clients-panel p {
-  color: var(--muted);
+  color: #55555f;
   line-height: 1.85;
 }
 
-/* =========================================
-   CONTACT
-   ========================================= */
+/* ==========================================
+   CONTACT — BLACK WITH LIGHT
+   ========================================== */
 
 .contact-section {
+  background: #08080a;
+  color: white;
   padding: 90px 0;
-  background: #050506;
 }
 
 .contact-panel {
-  position: relative;
-  overflow: hidden;
-  border-radius: 28px;
-  padding: 75px 65px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 40px;
+
+  padding: 70px 65px;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
 
   background:
     radial-gradient(
       circle at 85% 20%,
-      rgba(255,255,255,.2),
-      transparent 40%
+      rgba(255,255,255,.18),
+      transparent 45%
     ),
-    linear-gradient(
-      120deg,
-      #303038,
-      #09090d
-    );
+    linear-gradient(120deg,#303038,#09090d);
 
-  border: 1px solid rgba(255,255,255,.3);
+  border: 1px solid rgba(255,255,255,.25);
 
   box-shadow:
-    0 0 30px rgba(255,255,255,.07),
-    0 0 80px rgba(255,255,255,.035);
+    0 0 35px rgba(255,255,255,.06),
+    0 30px 70px rgba(0,0,0,.4);
 }
 
 .contact-panel h2 {
-  font-family: var(--font-display);
-  font-size: clamp(36px,4.5vw,60px);
-  letter-spacing: -2px;
+  font-family: var(--display);
+  font-size: clamp(35px,4.5vw,60px);
   line-height: 1.12;
-  max-width: 680px;
+  letter-spacing: -2px;
+  color: white;
 }
 
 .contact-panel p {
-  color: #c7c7cf;
+  color: #c8c8d0;
   line-height: 1.85;
 }
 
-/* =========================================
+/* ==========================================
    FOOTER
-   ========================================= */
+   ========================================== */
 
 .footer {
-  padding: 75px 0 30px;
   background: #08080a;
-  border-top: 1px solid var(--border);
+  color: white;
+  padding: 75px 0 30px;
+  border-top: 1px solid var(--line);
 }
 
 .footer-grid {
@@ -985,44 +928,44 @@ a:focus-visible {
 }
 
 .footer h4 {
+  color: white;
   margin: 0 0 22px;
 }
 
-.footer p {
-  color: #aaaab3;
-  line-height: 1.9;
+.footer p,
+.footer a {
+  color: #bdbdc6;
   font-size: 14px;
+  line-height: 1.9;
 }
 
 .footer a {
   display: block;
   margin-bottom: 14px;
-  color: #bdbdc6;
-  font-size: 14px;
 }
 
 .footer a:hover {
   color: white;
-  text-shadow: 0 0 12px #ffffff50;
 }
 
 .footer-bottom {
-  padding-top: 28px;
   margin-top: 50px;
-  border-top: 1px solid var(--border);
-  color: #85858d;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  color: #90909b;
   font-size: 12px;
 }
 
-/* =========================================
+/* ==========================================
    LIGHTBOX
-   ========================================= */
+   ========================================== */
 
 .lightbox {
   display: none;
   position: fixed;
   inset: 0;
   z-index: 9999;
+
   background: rgba(3,3,5,.97);
   padding: 25px;
 
@@ -1039,28 +982,27 @@ a:focus-visible {
   max-width: 95vw;
   max-height: 82vh;
   object-fit: contain;
-  border-radius: 8px;
 }
 
 .lightbox-close {
   position: absolute;
-  right: 25px;
   top: 15px;
-  border: none;
+  right: 25px;
   background: transparent;
   color: white;
+  border: 0;
   font-size: 44px;
 }
 
 .lightbox-caption {
-  color: #b6b6c0;
   margin-top: 17px;
+  color: #bdbdc7;
   font-size: 12px;
 }
 
-/* =========================================
+/* ==========================================
    FLOATING WHATSAPP
-   ========================================= */
+   ========================================== */
 
 .floating-whatsapp {
   position: fixed;
@@ -1072,40 +1014,47 @@ a:focus-visible {
   border-radius: 50px;
 
   background: white;
-  color: black;
+  color: #08080a;
+
   font-size: 13px;
   font-weight: 800;
 
   box-shadow:
-    0 0 22px rgba(255,255,255,.25),
-    0 12px 30px rgba(0,0,0,.35);
-
-  transition: .3s;
+    0 0 22px rgba(255,255,255,.2),
+    0 12px 30px rgba(0,0,0,.3);
 }
 
 .floating-whatsapp:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 38px rgba(255,255,255,.45);
+  box-shadow: 0 0 35px rgba(255,255,255,.4);
 }
 
-/* =========================================
-   SCROLL REVEAL
-   ========================================= */
+/* ==========================================
+   SAFE REVEAL ANIMATIONS
+   ========================================== */
+
+/* Visible by default, even if JS fails. */
 
 .reveal {
-  opacity: 0;
-  transform: translateY(26px);
-  transition: opacity .75s, transform .75s;
+  opacity: 1;
+  transform: none;
 }
 
-.reveal.visible {
+/* Animation only when JS has activated it. */
+
+.js-animations .reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.js-animations .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* =========================================
+/* ==========================================
    RESPONSIVE
-   ========================================= */
+   ========================================== */
 
 @media(max-width:1050px) {
   .navigation {
@@ -1114,10 +1063,6 @@ a:focus-visible {
 
   .navigation a {
     font-size: 11px;
-  }
-
-  .hero-grid {
-    gap: 35px;
   }
 }
 
@@ -1129,14 +1074,7 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .hero-visual {
-    height: 460px;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-
+  .services-grid,
   .gallery-grid {
     grid-template-columns: repeat(2,1fr);
   }
@@ -1148,14 +1086,16 @@ a:focus-visible {
   .navigation {
     display: none;
     position: absolute;
+    top: 82px;
     left: 0;
     right: 0;
-    top: 82px;
-    padding: 30px;
-    background: #101013;
-    border-bottom: 1px solid var(--border);
+
     flex-direction: column;
     gap: 22px;
+    padding: 30px;
+
+    background: #101014;
+    border-bottom: 1px solid var(--line);
   }
 
   .navigation.open {
@@ -1174,7 +1114,7 @@ a:focus-visible {
 @media(max-width:650px) {
 
   .container {
-    width: min(100% - 32px,1250px);
+    width: min(100% - 32px,1240px);
   }
 
   .hero {
@@ -1185,13 +1125,12 @@ a:focus-visible {
     letter-spacing: -2px;
   }
 
-  .hero-visual {
-    height: 380px;
+  .hero-visual.hero-logo {
+    height: 260px;
   }
 
-  .hero-visual-text {
-    left: 25px;
-    bottom: 25px;
+  .hero-brand-image {
+    padding: 8px;
   }
 
   .section {
@@ -1226,15 +1165,9 @@ a:focus-visible {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .floating-whatsapp {
-    right: 14px;
-    bottom: 14px;
-  }
 }
 
 @media(prefers-reduced-motion:reduce) {
-
   *,
   *::before,
   *::after {
@@ -1243,380 +1176,9 @@ a:focus-visible {
     scroll-behavior: auto !important;
   }
 
-  .reveal {
+  .js-animations .reveal {
     opacity: 1;
     transform: none;
-  }
-}
-
-/* ================================================
-   MEDIA MACHINE — BLACK & WHITE CONTRAST FIX
-   PREMIUM LUXURY EDITION
-   ================================================ */
-
-/* 1. COLORES PRINCIPALES */
-
-:root {
-  --bg: #08080a;
-  --bg-soft: #f6f6f7;
-  --bg-card: #ffffff;
-  --white: #ffffff;
-  --silver: #e5e5e9;
-  --muted: #777780;
-  --border: rgba(0,0,0,.10);
-}
-
-/* 2. TEXTO GENERAL */
-
-body {
-  background: #08080a;
-  color: #ffffff;
-}
-
-/* 3. HERO — NEGRO + BLANCO */
-
-.hero {
-  background:
-    radial-gradient(
-      ellipse at 75% 25%,
-      rgba(255,255,255,.13),
-      transparent 50%
-    ),
-    #08080a;
-  color: #ffffff;
-}
-
-.hero h1,
-.hero h2 {
-  color: #ffffff;
-}
-
-.hero p {
-  color: #c5c5cd;
-}
-
-.hero .eyebrow {
-  color: #e5e5e9;
-}
-
-/* 4. SERVICIOS — BLANCO + NEGRO */
-
-#servicios {
-  background: #ffffff;
-  color: #101014;
-}
-
-#servicios h2,
-#servicios h3,
-#servicios h4 {
-  color: #101014;
-}
-
-#servicios p {
-  color: #55555f;
-}
-
-#servicios .eyebrow {
-  color: #55555f;
-}
-
-#servicios .eyebrow::before {
-  background: #101014;
-  box-shadow: none;
-}
-
-/* TARJETAS DE SERVICIOS */
-
-#servicios .service-card {
-  background: #f5f5f7;
-  border: 1px solid #e5e5e9;
-  box-shadow: 0 12px 35px rgba(0,0,0,.05);
-}
-
-#servicios .service-card:hover {
-  transform: translateY(-8px);
-  border-color: #a0a0a8;
-  box-shadow:
-    0 20px 45px rgba(0,0,0,.12),
-    0 0 25px rgba(0,0,0,.04);
-}
-
-#servicios .service-number {
-  color: #686873;
-}
-
-#servicios .service-card p {
-  color: #55555f;
-}
-
-#servicios .service-card a {
-  color: #101014;
-}
-
-/* 5. POR QUÉ NOSOTROS — NEGRO + BLANCO */
-
-#porque {
-  background: #101014;
-  color: #ffffff;
-}
-
-#porque h2,
-#porque h3 {
-  color: #ffffff;
-}
-
-#porque p {
-  color: #bcbcc5;
-}
-
-#porque .why-item {
-  border-bottom: 1px solid rgba(255,255,255,.17);
-}
-
-#porque .why-number {
-  color: #ffffff;
-}
-
-/* 6. ESPECIALIDADES — BLANCO + NEGRO */
-
-#servicios-detalle {
-  background: #f5f5f5;
-  color: #101014;
-}
-
-#servicios-detalle h2,
-#servicios-detalle h3,
-#servicios-detalle h4 {
-  color: #101014;
-}
-
-#servicios-detalle .section-heading p {
-  color: #565660;
-}
-
-#servicios-detalle .eyebrow {
-  color: #55555f;
-}
-
-#servicios-detalle .eyebrow::before {
-  background: #101014;
-  box-shadow: none;
-}
-
-/* TARJETAS DE ESPECIALIDADES */
-
-#servicios-detalle .detail-panel {
-  background: #ffffff;
-  border: 1px solid #e0e0e5;
-  box-shadow: 0 14px 35px rgba(0,0,0,.05);
-}
-
-#servicios-detalle .detail-panel:hover {
-  border-color: #9a9aa4;
-  box-shadow: 0 20px 45px rgba(0,0,0,.1);
-}
-
-#servicios-detalle .detail-item {
-  border-top: 1px solid #e3e3e7;
-}
-
-#servicios-detalle .detail-item p {
-  color: #575760;
-}
-
-#servicios-detalle .tags span {
-  background: #eeeeef;
-  border: 1px solid #e3e3e7;
-  color: #303037;
-}
-
-/* 7. PORTAFOLIO — NEGRO + BLANCO */
-
-#portafolio {
-  background:
-    radial-gradient(
-      ellipse at 50% 0%,
-      rgba(255,255,255,.08),
-      transparent 55%
-    ),
-    #070709;
-  color: #ffffff;
-}
-
-#portafolio h2,
-#portafolio h3 {
-  color: #ffffff;
-}
-
-#portafolio p {
-  color: #bdbdc5;
-}
-
-#portafolio .gallery-card {
-  background: #19191e;
-  border: 1px solid rgba(255,255,255,.16);
-}
-
-#portafolio .gallery-info {
-  color: #ffffff;
-}
-
-#portafolio .gallery-tab {
-  background: transparent;
-  color: #ffffff;
-}
-
-#portafolio .gallery-tab.active {
-  background: #ffffff;
-  color: #09090b;
-  border-color: #ffffff;
-}
-
-/* 8. NOSOTROS — BLANCO + NEGRO */
-
-#nosotros {
-  background: #ffffff;
-  color: #101014;
-}
-
-#nosotros h2 {
-  color: #101014;
-}
-
-#nosotros .about-copy p {
-  color: #55555f;
-}
-
-#nosotros .about-copy .eyebrow {
-  color: #55555f;
-}
-
-#nosotros .about-feature {
-  background: linear-gradient(
-    135deg,
-    #25252b,
-    #08080a
-  );
-  color: #ffffff;
-  border: 1px solid #494952;
-
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.15),
-    0 0 35px rgba(0,0,0,.06);
-}
-
-#nosotros .about-feature strong,
-#nosotros .about-feature span {
-  color: #ffffff;
-}
-
-/* 9. CLIENTES — BLANCO + NEGRO */
-
-#clientes {
-  background: #f4f4f5;
-  color: #101014;
-}
-
-#clientes h2,
-#clientes h3 {
-  color: #101014;
-}
-
-#clientes p {
-  color: #55555f;
-}
-
-#clientes .eyebrow {
-  color: #55555f;
-}
-
-#clientes .clients-panel {
-  background: #ffffff;
-  border: 1px solid #dedee4;
-  box-shadow: 0 12px 35px rgba(0,0,0,.05);
-}
-
-/* 10. CONTACTO — NEGRO + BLANCO */
-
-#contacto {
-  background: #08080a;
-  color: #ffffff;
-}
-
-#contacto .contact-panel {
-  background:
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(255,255,255,.17),
-      transparent 45%
-    ),
-    linear-gradient(
-      125deg,
-      #28282e,
-      #0b0b0e
-    );
-
-  border: 1px solid rgba(255,255,255,.25);
-}
-
-#contacto h2 {
-  color: #ffffff;
-}
-
-#contacto p {
-  color: #c5c5cc;
-}
-
-#contacto .btn-primary {
-  background: #ffffff;
-  color: #08080a;
-}
-
-/* 11. NAVBAR */
-
-.navbar {
-  background: rgba(8,8,10,.94);
-  border-bottom: 1px solid rgba(255,255,255,.14);
-}
-
-.navbar .logo,
-.navbar .navigation a,
-.navbar .menu-toggle {
-  color: #ffffff;
-}
-
-/* 12. FOOTER */
-
-.footer {
-  background: #08080a;
-  color: #ffffff;
-}
-
-.footer h4 {
-  color: #ffffff;
-}
-
-.footer p,
-.footer a {
-  color: #b5b5bf;
-}
-
-/* 13. EFECTOS PREMIUM */
-
-#servicios .service-card,
-#servicios-detalle .detail-panel,
-#portafolio .gallery-card {
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease,
-    border-color .35s ease;
-}
-
-/* 14. MODO MÓVIL */
-
-@media (max-width: 950px) {
-  .navigation {
-    background: #101014;
   }
 }
 
@@ -1625,17 +1187,17 @@ body {
 
 <body>
 
-<!-- =====================================
+<!-- ==========================================
      TOP BAR
-===================================== -->
+     ========================================== -->
 
 <div class="topbar">
   MEDIA MACHINE · CREATIVE DESIGN & ADVERTISING · QUITO
 </div>
 
-<!-- =====================================
+<!-- ==========================================
      NAVIGATION
-===================================== -->
+     ========================================== -->
 
 <nav class="navbar">
   <div class="container nav-content">
@@ -1668,9 +1230,9 @@ body {
 
 <main>
 
-<!-- =====================================
+<!-- ==========================================
      HERO
-===================================== -->
+     ========================================== -->
 
 <section class="hero" id="inicio">
   <div class="container hero-grid">
@@ -1695,6 +1257,7 @@ body {
       </p>
 
       <div class="hero-buttons">
+
         <a href="#portafolio" class="btn btn-primary">
           Explorar proyectos ↗
         </a>
@@ -1702,28 +1265,27 @@ body {
         <a href="#contacto" class="btn btn-outline">
           Hablemos de tu idea
         </a>
+
       </div>
     </div>
 
-   
+    <!-- OFFICIAL MEDIA MACHINE + IF LOGO -->
 
-<div class="hero-visual hero-logo">
-  <img
-    src="./MediaMachine_IF_Logo.png"
-    alt="Media Machine y La Franquicia"
-    class="hero-brand-image">
-</div>
-
-
+    <div class="hero-visual hero-logo">
+      <img
+        src="./MediaMachine_IF_Logo.png"
+        alt="Media Machine y La Franquicia"
+        class="hero-brand-image">
+    </div>
 
   </div>
 </section>
 
-<!-- =====================================
+<!-- ==========================================
      SERVICES
-===================================== -->
+     ========================================== -->
 
-<section class="section section-light" id="servicios">
+<section class="section" id="servicios">
   <div class="container">
 
     <div class="section-heading reveal">
@@ -1753,8 +1315,8 @@ body {
         <p>
           Potencia e innova tu marca.
           Fusionamos diseño y publicidad
-          para crear impacto visual y
-          conectar con tu audiencia.
+          para crear impacto visual
+          y conectar con tu audiencia.
         </p>
 
         <a href="#detalle-publicidad">
@@ -1788,10 +1350,9 @@ body {
         <h3>Franquicias</h3>
 
         <p>
-          Diseñamos conceptos visuales y
-          espacios que fortalecen la identidad
-          de tu negocio y acompañan
-          su crecimiento.
+          Diseñamos conceptos visuales
+          y espacios que fortalecen la identidad
+          de tu negocio y acompañan su crecimiento.
         </p>
 
         <a href="#detalle-franquicias">
@@ -1803,9 +1364,9 @@ body {
   </div>
 </section>
 
-<!-- =====================================
+<!-- ==========================================
      WHY US
-===================================== -->
+     ========================================== -->
 
 <section class="section" id="porque">
   <div class="container why-grid">
@@ -1822,8 +1383,8 @@ body {
 
       <p>
         Transformamos ideas en soluciones
-        que combinan estrategia,
-        creatividad y ejecución profesional.
+        que combinan estrategia, creatividad
+        y ejecución profesional.
       </p>
     </div>
 
@@ -1835,8 +1396,8 @@ body {
           <h3>Estrategias innovadoras</h3>
           <p>
             Desarrollamos soluciones creativas
-            para conectar tu marca con su
-            público de manera memorable.
+            para conectar tu marca con su público
+            de manera memorable.
           </p>
         </div>
       </div>
@@ -1846,10 +1407,9 @@ body {
         <div>
           <h3>Perspectivas estratégicas</h3>
           <p>
-            Analizamos las necesidades de
-            cada proyecto para proponer
-            soluciones funcionales y
-            visualmente impactantes.
+            Analizamos las necesidades de cada
+            proyecto para proponer soluciones
+            funcionales y visualmente impactantes.
           </p>
         </div>
       </div>
@@ -1870,11 +1430,11 @@ body {
   </div>
 </section>
 
-<!-- =====================================
+<!-- ==========================================
      DETAILED SERVICES
-===================================== -->
+     ========================================== -->
 
-<section class="section section-light" id="servicios-detalle">
+<section class="section" id="servicios-detalle">
   <div class="container">
 
     <div class="section-heading reveal">
@@ -1882,7 +1442,9 @@ body {
         Nuestras especialidades
       </span>
 
-      <h2>Soluciones para cada idea.</h2>
+      <h2>
+        Soluciones para cada idea.
+      </h2>
     </div>
 
     <div class="details-grid">
@@ -1891,18 +1453,22 @@ body {
 
       <article class="detail-panel reveal" id="detalle-publicidad">
 
-        <span class="eyebrow">Brand Marketing</span>
+        <span class="eyebrow">
+          Brand Marketing
+        </span>
+
         <h3>Diseño & Publicidad</h3>
 
         <div class="detail-columns">
 
           <div class="detail-item">
             <h4>Diseño de marca</h4>
+
             <p>
-              Creamos marcas sólidas que
-              transmiten confianza y conectan
-              con su público.
+              Creamos marcas sólidas que transmiten
+              confianza y conectan con su público.
             </p>
+
             <div class="tags">
               <span>Manual de marca</span>
               <span>Papelería corporativa</span>
@@ -1912,11 +1478,13 @@ body {
 
           <div class="detail-item">
             <h4>Material publicitario</h4>
+
             <p>
               Desarrollamos comunicación visual
               atractiva para posicionar productos
               y servicios.
             </p>
+
             <div class="tags">
               <span>Flyers</span>
               <span>Folletos</span>
@@ -1928,10 +1496,12 @@ body {
 
           <div class="detail-item">
             <h4>Rotulación</h4>
+
             <p>
               Realzamos la presencia de tu marca
               en espacios públicos y comerciales.
             </p>
+
             <div class="tags">
               <span>Letras 3D</span>
               <span>Rótulos luminosos</span>
@@ -1947,17 +1517,22 @@ body {
 
       <article class="detail-panel reveal" id="detalle-interior">
 
-        <span class="eyebrow">Decoración</span>
+        <span class="eyebrow">
+          Decoración
+        </span>
+
         <h3>Diseño Interior</h3>
 
         <div class="detail-columns">
 
           <div class="detail-item">
             <h4>Planificación de espacios</h4>
+
             <p>
               Optimizamos funcionalidad y estética
               para crear ambientes personalizados.
             </p>
+
             <div class="tags">
               <span>Diseño conceptual</span>
               <span>Distribución espacial</span>
@@ -1967,11 +1542,13 @@ body {
 
           <div class="detail-item">
             <h4>Diseño de iluminación</h4>
+
             <p>
               Creamos ambientes donde la luz
-              complementa la identidad y
-              experiencia de tu marca.
+              complementa la identidad y experiencia
+              de tu marca.
             </p>
+
             <div class="tags">
               <span>Planificación</span>
               <span>Luminarias</span>
@@ -1981,11 +1558,12 @@ body {
 
           <div class="detail-item">
             <h4>Decoración personalizada</h4>
+
             <p>
-              Diseñamos espacios acogedores
-              que reflejan el carácter de
-              cada negocio.
+              Diseñamos espacios acogedores que
+              reflejan el carácter de cada negocio.
             </p>
+
             <div class="tags">
               <span>Conceptualización</span>
               <span>Temática y estilo</span>
@@ -2010,11 +1588,13 @@ body {
 
           <div class="detail-item">
             <h4>Asesoramiento</h4>
+
             <p>
               Analizamos necesidades comerciales
               y espaciales para definir soluciones
               funcionales.
             </p>
+
             <div class="tags">
               <span>Evaluación</span>
               <span>Planificación</span>
@@ -2024,11 +1604,13 @@ body {
 
           <div class="detail-item">
             <h4>Desarrollo de concepto</h4>
+
             <p>
               Creamos propuestas visuales que
               mantienen una identidad coherente
               en cada sede.
             </p>
+
             <div class="tags">
               <span>Concepto de marca</span>
               <span>Propuesta visual</span>
@@ -2038,11 +1620,13 @@ body {
 
           <div class="detail-item">
             <h4>Decoración personalizada</h4>
+
             <p>
-              Adaptamos la temática y elementos
+              Adaptamos la temática y los elementos
               visuales a la propuesta comercial
               del negocio.
             </p>
+
             <div class="tags">
               <span>Ambientación</span>
               <span>Estilo</span>
@@ -2057,11 +1641,11 @@ body {
   </div>
 </section>
 
-<!-- =====================================
+<!-- ==========================================
      PORTFOLIO
-===================================== -->
+     ========================================== -->
 
-<section class="section section-dark" id="portafolio">
+<section class="section" id="portafolio">
   <div class="container">
 
     <div class="section-heading reveal">
@@ -2076,27 +1660,32 @@ body {
 
       <p>
         Explora nuestro catálogo de proyectos
-        de diseño, publicidad y soluciones creativas.
-        Cada fotografía conserva sus colores originales.
+        de diseño, publicidad y soluciones
+        creativas. Las fotografías mantienen
+        sus colores originales.
       </p>
     </div>
 
     <div class="gallery-controls">
 
       <div class="gallery-tabs">
+
         <button
           class="gallery-tab active"
           data-view="all"
-          type="button">
+          type="button"
+          aria-pressed="true">
           Todo el catálogo
         </button>
 
         <button
           class="gallery-tab"
           data-view="featured"
-          type="button">
+          type="button"
+          aria-pressed="false">
           Destacados
         </button>
+
       </div>
 
       <span
@@ -2113,7 +1702,7 @@ body {
     </div>
 
     <p class="gallery-note">
-      Haz clic sobre cada fotografía para ampliarla.
+      Haz clic en cada fotografía para ampliarla.
       El catálogo conserva la numeración original
       de Media Machine.
     </p>
@@ -2121,14 +1710,15 @@ body {
   </div>
 </section>
 
-<!-- =====================================
+<!-- ==========================================
      ABOUT
-===================================== -->
+     ========================================== -->
 
-<section class="section section-light" id="nosotros">
+<section class="section" id="nosotros">
   <div class="container about-grid">
 
     <div class="about-feature reveal">
+
       <span>04 / SOBRE NOSOTROS</span>
 
       <strong>
@@ -2137,6 +1727,7 @@ body {
       </strong>
 
       <span>MEDIA MACHINE · QUITO</span>
+
     </div>
 
     <div class="about-copy reveal">
@@ -2158,10 +1749,10 @@ body {
       </p>
 
       <p>
-        Hemos colaborado con una amplia gama de
-        clientes, ayudándoles a alcanzar sus
-        objetivos comerciales mediante estrategias
-        innovadoras y una ejecución cuidada.
+        Hemos colaborado con una amplia gama
+        de clientes, ayudándoles a alcanzar
+        sus objetivos comerciales mediante
+        estrategias innovadoras y una ejecución cuidada.
       </p>
 
       <p>
@@ -2174,14 +1765,15 @@ body {
   </div>
 </section>
 
-<!-- =====================================
+<!-- ==========================================
      CLIENTS
-===================================== -->
+     ========================================== -->
 
 <section class="section" id="clientes">
   <div class="container">
 
     <div class="section-heading reveal">
+
       <span class="eyebrow">
         05 / Nuestros clientes
       </span>
@@ -2195,24 +1787,26 @@ body {
         Construimos relaciones de confianza
         y proyectos que generan resultados duraderos.
       </p>
+
     </div>
 
     <div class="clients-panel reveal">
+
       <h3>CLIENTES MEDIA MACHINE</h3>
 
       <p>
-        Espacio preparado para incorporar
-        los logotipos de los clientes
-        y aliados de Media Machine.
+        Espacio preparado para incorporar los logotipos
+        de nuestros clientes y aliados.
       </p>
+
     </div>
 
   </div>
 </section>
 
-<!-- =====================================
+<!-- ==========================================
      CONTACT
-===================================== -->
+     ========================================== -->
 
 <section class="contact-section" id="contacto">
   <div class="container">
@@ -2250,9 +1844,9 @@ body {
 
 </main>
 
-<!-- =====================================
+<!-- ==========================================
      FOOTER
-===================================== -->
+     ========================================== -->
 
 <footer class="footer">
   <div class="container">
@@ -2301,7 +1895,7 @@ body {
 
         <p>
           Av. Colón y Reina Victoria E6-49<br>
-          Quito, Ecuador
+          Quito, Ecuador.
         </p>
 
         <a
@@ -2317,6 +1911,7 @@ body {
           rel="noopener noreferrer">
           WhatsApp ↗
         </a>
+
       </div>
 
     </div>
@@ -2329,7 +1924,9 @@ body {
   </div>
 </footer>
 
-<!-- FLOATING BUTTON -->
+<!-- ==========================================
+     FLOATING WHATSAPP
+     ========================================== -->
 
 <a
   class="floating-whatsapp"
@@ -2339,7 +1936,9 @@ body {
   WhatsApp ↗
 </a>
 
-<!-- LIGHTBOX -->
+<!-- ==========================================
+     LIGHTBOX
+     ========================================== -->
 
 <div
   class="lightbox"
@@ -2368,18 +1967,18 @@ body {
 
 </div>
 
-<!-- =====================================
-     JAVASCRIPT
-===================================== -->
+<!-- ==========================================
+     JAVASCRIPT — CORRECTED
+     ========================================== -->
 
 <script>
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* =====================================
-     IMAGE CONFIGURATION
-     ===================================== */
+  /* ========================================
+     1. CATALOG CONFIGURATION
+     ======================================== */
 
   const IMAGE_PREFIX =
     "Catalogo MM y IF abril 2026_page-";
@@ -2389,18 +1988,15 @@ document.addEventListener("DOMContentLoaded", function () {
     (_, i) => i + 2
   ).filter(n => n !== 13 && n !== 15);
 
-  /* =====================================
-     ELEMENTS
-     ===================================== */
+  /* ========================================
+     2. ELEMENT REFERENCES
+     ======================================== */
 
   const gallery =
     document.getElementById("galleryGrid");
 
   const counter =
     document.getElementById("galleryCount");
-
-  const heroImage =
-    document.getElementById("heroImage");
 
   const lightbox =
     document.getElementById("lightbox");
@@ -2414,9 +2010,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const lightboxClose =
     document.getElementById("lightboxClose");
 
-  /* =====================================
-     IMAGE NAMES
-     ===================================== */
+  const menuToggle =
+    document.getElementById("menuToggle");
+
+  const navigation =
+    document.getElementById("navigation");
+
+  /* ========================================
+     3. ORIGINAL IMAGE NAMES
+     ======================================== */
 
   function imageName(page) {
 
@@ -2426,9 +2028,9 @@ document.addEventListener("DOMContentLoaded", function () {
     return IMAGE_PREFIX + number + ".jpg";
   }
 
-  /* =====================================
-     PATH FALLBACKS
-     ===================================== */
+  /* ========================================
+     4. GITHUB PAGES IMAGE PATHS
+     ======================================== */
 
   function imagePaths(page) {
 
@@ -2439,17 +2041,15 @@ document.addEventListener("DOMContentLoaded", function () {
       document.baseURI
     );
 
-    const paths = [
+    return [
       new URL(filename, root).href,
       new URL("assets/catalog/" + filename, root).href
     ];
-
-    return [...new Set(paths)];
   }
 
-  /* =====================================
-     IMAGE LOADER
-     ===================================== */
+  /* ========================================
+     5. IMAGE LOADER
+     ======================================== */
 
   function assignImage(img, page, onSuccess, onFailure) {
 
@@ -2464,7 +2064,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       finished = true;
 
-      if (onSuccess) {
+      if (typeof onSuccess === "function") {
         onSuccess(img.currentSrc || img.src);
       }
     };
@@ -2478,7 +2078,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (index < paths.length) {
 
         console.warn(
-          "MEDIA MACHINE: probando ruta",
+          "Probando otra ruta:",
           paths[index]
         );
 
@@ -2489,30 +2089,29 @@ document.addEventListener("DOMContentLoaded", function () {
         finished = true;
 
         console.error(
-          "MEDIA MACHINE: imagen no encontrada",
+          "Imagen no encontrada:",
           imageName(page),
           paths
         );
 
-        if (onFailure) {
+        if (typeof onFailure === "function") {
           onFailure();
         }
       }
     };
 
     img.src = paths[0];
-
   }
 
-  /* =====================================
-     LIGHTBOX
-     ===================================== */
+  /* ========================================
+     6. LIGHTBOX
+     ======================================== */
 
-  let lastFocused = null;
+  let previousFocus = null;
 
   function openLightbox(src, page) {
 
-    lastFocused = document.activeElement;
+    previousFocus = document.activeElement;
 
     lightboxImage.src = src;
 
@@ -2545,9 +2144,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     lightboxImage.removeAttribute("src");
 
-    if (lastFocused &&
-        typeof lastFocused.focus === "function") {
-      lastFocused.focus();
+    if (
+      previousFocus &&
+      typeof previousFocus.focus === "function"
+    ) {
+      previousFocus.focus();
     }
   }
 
@@ -2556,26 +2157,26 @@ document.addEventListener("DOMContentLoaded", function () {
     closeLightbox
   );
 
-  lightbox.addEventListener("click", function (e) {
+  lightbox.addEventListener("click", function (event) {
 
-    if (e.target === lightbox) {
+    if (event.target === lightbox) {
       closeLightbox();
     }
   });
 
-  document.addEventListener("keydown", function (e) {
+  document.addEventListener("keydown", function (event) {
 
     if (
-      e.key === "Escape" &&
+      event.key === "Escape" &&
       lightbox.classList.contains("open")
     ) {
       closeLightbox();
     }
   });
 
-  /* =====================================
-     CREATE GALLERY CARD
-     ===================================== */
+  /* ========================================
+     7. CREATE GALLERY CARD
+     ======================================== */
 
   function createCard(page) {
 
@@ -2587,8 +2188,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const button =
       document.createElement("button");
 
-    button.type = "button";
     button.className = "gallery-button";
+    button.type = "button";
 
     button.setAttribute(
       "aria-label",
@@ -2602,9 +2203,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "Media Machine - Proyecto " + page;
 
     image.decoding = "async";
-
-    image.loading =
-      page <= 8 ? "eager" : "lazy";
+    image.loading = page <= 8 ? "eager" : "lazy";
 
     const info =
       document.createElement("div");
@@ -2624,43 +2223,37 @@ document.addEventListener("DOMContentLoaded", function () {
     subtitle.textContent = "Ampliar ↗";
 
     info.append(title, subtitle);
-
     button.append(image, info);
     card.appendChild(button);
 
-    // Image source will be assigned
-    // after card insertion.
-
     return {
       card,
-      image,
       button,
+      image,
       subtitle
     };
   }
 
-  /* =====================================
-     GALLERY RENDER
-     ===================================== */
+  /* ========================================
+     8. GALLERY RENDER
+     ======================================== */
 
-  let currentView = "all";
   let renderVersion = 0;
 
   function renderGallery(mode = "all") {
 
-    currentView = mode;
     renderVersion++;
 
-    const version = renderVersion;
+    const currentVersion = renderVersion;
 
-    const selected =
+    const selectedPages =
       mode === "featured"
         ? pages.slice(0, 9)
         : pages;
 
     gallery.replaceChildren();
 
-    const cards = selected.map(page => ({
+    const cards = selectedPages.map(page => ({
       page,
       ...createCard(page)
     }));
@@ -2677,21 +2270,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let loaded = 0;
     let failed = 0;
 
-    counter.textContent =
-      "0 de " + selected.length +
-      " fotografías cargadas";
-
     function updateCounter() {
 
-      if (version !== renderVersion) return;
+      if (currentVersion !== renderVersion) return;
 
       counter.textContent =
-        loaded + " de " + selected.length +
+        loaded + " de " +
+        selectedPages.length +
         " fotografías cargadas" +
         (failed
           ? " · " + failed + " no disponibles"
           : "");
     }
+
+    updateCounter();
 
     cards.forEach(item => {
 
@@ -2702,7 +2294,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function (src) {
 
-          if (version !== renderVersion) return;
+          if (currentVersion !== renderVersion) return;
 
           loaded++;
           updateCounter();
@@ -2713,12 +2305,11 @@ document.addEventListener("DOMContentLoaded", function () {
               openLightbox(src, item.page);
             }
           );
-
         },
 
         function () {
 
-          if (version !== renderVersion) return;
+          if (currentVersion !== renderVersion) return;
 
           failed++;
           updateCounter();
@@ -2743,10 +2334,7 @@ document.addEventListener("DOMContentLoaded", function () {
           filename.textContent =
             imageName(item.page);
 
-          placeholder.append(
-            message,
-            filename
-          );
+          placeholder.append(message, filename);
 
           item.button.prepend(placeholder);
 
@@ -2754,7 +2342,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
           item.subtitle.textContent =
             "Verificar archivo";
-
         }
 
       );
@@ -2762,9 +2349,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* =====================================
-     FILTER TABS
-     ===================================== */
+  /* ========================================
+     9. GALLERY FILTERS
+     ======================================== */
 
   document.querySelectorAll(".gallery-tab")
     .forEach(tab => {
@@ -2773,120 +2360,88 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.querySelectorAll(".gallery-tab")
           .forEach(other => {
-            other.classList.remove("active");
+
+            const active = other === tab;
+
+            other.classList.toggle("active", active);
+
+            other.setAttribute(
+              "aria-pressed",
+              String(active)
+            );
           });
 
-        tab.classList.add("active");
-
-        renderGallery(
-          tab.dataset.view || "all"
-        );
-
+        renderGallery(tab.dataset.view || "all");
       });
-
     });
 
-  /* =====================================
-     HERO IMAGE
-     ===================================== */
+  /* ========================================
+     10. MOBILE MENU
+     ======================================== */
 
-  heroImage.loading = "eager";
+  if (menuToggle && navigation) {
 
-  assignImage(
+    menuToggle.addEventListener("click", function () {
 
-    heroImage,
-    2,
+      const isOpen =
+        navigation.classList.toggle("open");
 
-    function () {
-      heroImage.hidden = false;
-    },
-
-    function () {
-      console.warn(
-        "No se encontró la imagen principal."
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
       );
-    }
-
-  );
-
-  /* =====================================
-     MOBILE MENU
-     ===================================== */
-
-  const menuToggle =
-    document.getElementById("menuToggle");
-
-  const navigation =
-    document.getElementById("navigation");
-
-  menuToggle.addEventListener("click", function () {
-
-    const open =
-      navigation.classList.toggle("open");
-
-    menuToggle.setAttribute(
-      "aria-expanded",
-      String(open)
-    );
-  });
-
-  navigation.querySelectorAll("a")
-    .forEach(link => {
-
-      link.addEventListener("click", function () {
-
-        navigation.classList.remove("open");
-
-        menuToggle.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-      });
-
     });
 
-  /* =====================================
-     SCROLL ANIMATIONS
-     ===================================== */
+    navigation.querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener("click", function () {
+
+          navigation.classList.remove("open");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+        });
+      });
+  }
+
+  /* ========================================
+     11. SAFE SCROLL ANIMATIONS
+     ======================================== */
 
   const revealItems =
     document.querySelectorAll(".reveal");
 
-  if ("IntersectionObserver" in window) {
+  if (
+    "IntersectionObserver" in window &&
+    !window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches
+  ) {
 
-    const observer =
-      new IntersectionObserver(entries => {
-
-        entries.forEach(entry => {
-
-          if (entry.isIntersecting) {
-
-            entry.target.classList.add("visible");
-
-            observer.unobserve(entry.target);
-          }
-
-        });
-
-      }, {
-        threshold: 0.10
-      });
+    // Make all elements visible first.
+    // Animation initialization cannot hide
+    // sections if another script fails.
 
     revealItems.forEach(item => {
-      observer.observe(item);
+      item.classList.add("visible");
     });
+
+    // The website remains fully visible.
+    // Hover and lighting effects still work.
 
   } else {
 
     revealItems.forEach(item => {
       item.classList.add("visible");
     });
-
   }
 
-  /* =====================================
-     INITIALIZATION
-     ===================================== */
+  /* ========================================
+     12. INITIALIZE
+     ======================================== */
 
   renderGallery("all");
 
