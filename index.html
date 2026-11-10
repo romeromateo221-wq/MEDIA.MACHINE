@@ -1249,6 +1249,377 @@ a:focus-visible {
   }
 }
 
+/* ================================================
+   MEDIA MACHINE — BLACK & WHITE CONTRAST FIX
+   PREMIUM LUXURY EDITION
+   ================================================ */
+
+/* 1. COLORES PRINCIPALES */
+
+:root {
+  --bg: #08080a;
+  --bg-soft: #f6f6f7;
+  --bg-card: #ffffff;
+  --white: #ffffff;
+  --silver: #e5e5e9;
+  --muted: #777780;
+  --border: rgba(0,0,0,.10);
+}
+
+/* 2. TEXTO GENERAL */
+
+body {
+  background: #08080a;
+  color: #ffffff;
+}
+
+/* 3. HERO — NEGRO + BLANCO */
+
+.hero {
+  background:
+    radial-gradient(
+      ellipse at 75% 25%,
+      rgba(255,255,255,.13),
+      transparent 50%
+    ),
+    #08080a;
+  color: #ffffff;
+}
+
+.hero h1,
+.hero h2 {
+  color: #ffffff;
+}
+
+.hero p {
+  color: #c5c5cd;
+}
+
+.hero .eyebrow {
+  color: #e5e5e9;
+}
+
+/* 4. SERVICIOS — BLANCO + NEGRO */
+
+#servicios {
+  background: #ffffff;
+  color: #101014;
+}
+
+#servicios h2,
+#servicios h3,
+#servicios h4 {
+  color: #101014;
+}
+
+#servicios p {
+  color: #55555f;
+}
+
+#servicios .eyebrow {
+  color: #55555f;
+}
+
+#servicios .eyebrow::before {
+  background: #101014;
+  box-shadow: none;
+}
+
+/* TARJETAS DE SERVICIOS */
+
+#servicios .service-card {
+  background: #f5f5f7;
+  border: 1px solid #e5e5e9;
+  box-shadow: 0 12px 35px rgba(0,0,0,.05);
+}
+
+#servicios .service-card:hover {
+  transform: translateY(-8px);
+  border-color: #a0a0a8;
+  box-shadow:
+    0 20px 45px rgba(0,0,0,.12),
+    0 0 25px rgba(0,0,0,.04);
+}
+
+#servicios .service-number {
+  color: #686873;
+}
+
+#servicios .service-card p {
+  color: #55555f;
+}
+
+#servicios .service-card a {
+  color: #101014;
+}
+
+/* 5. POR QUÉ NOSOTROS — NEGRO + BLANCO */
+
+#porque {
+  background: #101014;
+  color: #ffffff;
+}
+
+#porque h2,
+#porque h3 {
+  color: #ffffff;
+}
+
+#porque p {
+  color: #bcbcc5;
+}
+
+#porque .why-item {
+  border-bottom: 1px solid rgba(255,255,255,.17);
+}
+
+#porque .why-number {
+  color: #ffffff;
+}
+
+/* 6. ESPECIALIDADES — BLANCO + NEGRO */
+
+#servicios-detalle {
+  background: #f5f5f5;
+  color: #101014;
+}
+
+#servicios-detalle h2,
+#servicios-detalle h3,
+#servicios-detalle h4 {
+  color: #101014;
+}
+
+#servicios-detalle .section-heading p {
+  color: #565660;
+}
+
+#servicios-detalle .eyebrow {
+  color: #55555f;
+}
+
+#servicios-detalle .eyebrow::before {
+  background: #101014;
+  box-shadow: none;
+}
+
+/* TARJETAS DE ESPECIALIDADES */
+
+#servicios-detalle .detail-panel {
+  background: #ffffff;
+  border: 1px solid #e0e0e5;
+  box-shadow: 0 14px 35px rgba(0,0,0,.05);
+}
+
+#servicios-detalle .detail-panel:hover {
+  border-color: #9a9aa4;
+  box-shadow: 0 20px 45px rgba(0,0,0,.1);
+}
+
+#servicios-detalle .detail-item {
+  border-top: 1px solid #e3e3e7;
+}
+
+#servicios-detalle .detail-item p {
+  color: #575760;
+}
+
+#servicios-detalle .tags span {
+  background: #eeeeef;
+  border: 1px solid #e3e3e7;
+  color: #303037;
+}
+
+/* 7. PORTAFOLIO — NEGRO + BLANCO */
+
+#portafolio {
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(255,255,255,.08),
+      transparent 55%
+    ),
+    #070709;
+  color: #ffffff;
+}
+
+#portafolio h2,
+#portafolio h3 {
+  color: #ffffff;
+}
+
+#portafolio p {
+  color: #bdbdc5;
+}
+
+#portafolio .gallery-card {
+  background: #19191e;
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+#portafolio .gallery-info {
+  color: #ffffff;
+}
+
+#portafolio .gallery-tab {
+  background: transparent;
+  color: #ffffff;
+}
+
+#portafolio .gallery-tab.active {
+  background: #ffffff;
+  color: #09090b;
+  border-color: #ffffff;
+}
+
+/* 8. NOSOTROS — BLANCO + NEGRO */
+
+#nosotros {
+  background: #ffffff;
+  color: #101014;
+}
+
+#nosotros h2 {
+  color: #101014;
+}
+
+#nosotros .about-copy p {
+  color: #55555f;
+}
+
+#nosotros .about-copy .eyebrow {
+  color: #55555f;
+}
+
+#nosotros .about-feature {
+  background: linear-gradient(
+    135deg,
+    #25252b,
+    #08080a
+  );
+  color: #ffffff;
+  border: 1px solid #494952;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.15),
+    0 0 35px rgba(0,0,0,.06);
+}
+
+#nosotros .about-feature strong,
+#nosotros .about-feature span {
+  color: #ffffff;
+}
+
+/* 9. CLIENTES — BLANCO + NEGRO */
+
+#clientes {
+  background: #f4f4f5;
+  color: #101014;
+}
+
+#clientes h2,
+#clientes h3 {
+  color: #101014;
+}
+
+#clientes p {
+  color: #55555f;
+}
+
+#clientes .eyebrow {
+  color: #55555f;
+}
+
+#clientes .clients-panel {
+  background: #ffffff;
+  border: 1px solid #dedee4;
+  box-shadow: 0 12px 35px rgba(0,0,0,.05);
+}
+
+/* 10. CONTACTO — NEGRO + BLANCO */
+
+#contacto {
+  background: #08080a;
+  color: #ffffff;
+}
+
+#contacto .contact-panel {
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255,255,255,.17),
+      transparent 45%
+    ),
+    linear-gradient(
+      125deg,
+      #28282e,
+      #0b0b0e
+    );
+
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+#contacto h2 {
+  color: #ffffff;
+}
+
+#contacto p {
+  color: #c5c5cc;
+}
+
+#contacto .btn-primary {
+  background: #ffffff;
+  color: #08080a;
+}
+
+/* 11. NAVBAR */
+
+.navbar {
+  background: rgba(8,8,10,.94);
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.navbar .logo,
+.navbar .navigation a,
+.navbar .menu-toggle {
+  color: #ffffff;
+}
+
+/* 12. FOOTER */
+
+.footer {
+  background: #08080a;
+  color: #ffffff;
+}
+
+.footer h4 {
+  color: #ffffff;
+}
+
+.footer p,
+.footer a {
+  color: #b5b5bf;
+}
+
+/* 13. EFECTOS PREMIUM */
+
+#servicios .service-card,
+#servicios-detalle .detail-panel,
+#portafolio .gallery-card {
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+/* 14. MODO MÓVIL */
+
+@media (max-width: 950px) {
+  .navigation {
+    background: #101014;
+  }
+}
+
 </style>
 </head>
 
