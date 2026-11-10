@@ -19,15 +19,15 @@
    =============================== */
 
 :root {
-  --black: #141418;
-  --dark: #201d29;
+  --black: #050506;
+  --dark: #101013;
   --white: #ffffff;
-  --cream: #faf9f7;
-  --gray: #73717b;
-  --border: #e9e7e5;
-  --purple: #7045ff;
-  --coral: #ff6f60;
-  --lime: #d8f668;
+  --cream: #09090b;
+  --gray: #a5a5ad;
+  --border: #303036;
+  --purple: #e5e5eb;
+  --coral: #c9c9d2;
+  --lime: #ffffff;
 }
 
 * {
@@ -923,6 +923,333 @@ section[id] {
 
 </style>
 </head>
+
+/* ==========================================
+   MEDIA MACHINE — BLACK & WHITE LUXURY
+   Pegar al FINAL del CSS
+   ========================================== */
+
+/* FONDO GENERAL */
+
+body {
+  background: #050506;
+  color: #f7f7f8;
+}
+
+/* NAVBAR PREMIUM */
+
+.navbar {
+  background: rgba(8, 8, 10, 0.90);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(22px);
+}
+
+.navigation a {
+  color: #f5f5f5;
+}
+
+.navigation a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(255,255,255,.6);
+}
+
+.logo {
+  color: #ffffff;
+}
+
+.logo span {
+  color: #d9d9e0;
+}
+
+/* HERO CON ILUMINACIÓN */
+
+.hero {
+  position: relative;
+  background:
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(255,255,255,.11),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 10% 90%,
+      rgba(170,170,190,.09),
+      transparent 45%
+    ),
+    #050506;
+}
+
+.hero h1 {
+  color: #ffffff;
+}
+
+.hero h1 span {
+  color: #ffffff;
+  text-shadow:
+    0 0 18px rgba(255,255,255,.35),
+    0 0 45px rgba(255,255,255,.12);
+}
+
+.hero p {
+  color: #b7b7bf;
+}
+
+/* ILUMINACIÓN DEL HERO VISUAL */
+
+.hero-visual {
+  background: #09090d;
+  border: 1px solid rgba(255,255,255,.20);
+
+  box-shadow:
+    0 0 30px rgba(255,255,255,.08),
+    0 0 90px rgba(255,255,255,.05),
+    0 30px 70px rgba(0,0,0,.65);
+}
+
+.hero-visual::before {
+  background: conic-gradient(
+    #ffffff,
+    #44444f,
+    #050506,
+    #a8a8b3,
+    #ffffff
+  );
+
+  filter: blur(70px);
+}
+
+/* TODAS LAS SECCIONES */
+
+.section {
+  background: #080809;
+}
+
+.section-light {
+  background: #111114;
+}
+
+.section-dark {
+  background: #050506;
+}
+
+.section-heading h2,
+.about-copy h2 {
+  color: #ffffff;
+}
+
+.section-heading p,
+.about-copy p {
+  color: #adadb6;
+}
+
+.eyebrow {
+  color: #d9d9e0;
+}
+
+/* TARJETAS DE SERVICIOS */
+
+.service-card,
+.service-card:nth-child(2),
+.service-card:nth-child(3) {
+  background: linear-gradient(
+    145deg,
+    #202025,
+    #101013
+  );
+
+  border: 1px solid rgba(255,255,255,.14);
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.35);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(255,255,255,.5);
+
+  box-shadow:
+    0 0 25px rgba(255,255,255,.13),
+    0 20px 50px rgba(0,0,0,.6);
+}
+
+.service-card h3,
+.service-card a {
+  color: #ffffff;
+}
+
+.service-card p {
+  color: #b5b5be;
+}
+
+.service-number {
+  color: #e5e5e9;
+}
+
+/* POR QUÉ NOSOTROS */
+
+.why-item {
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.why-item h3 {
+  color: #ffffff;
+}
+
+.why-item p {
+  color: #aaaaaf;
+}
+
+.why-number {
+  color: #ffffff;
+}
+
+/* SERVICIOS DETALLADOS */
+
+.detail-panel {
+  background: linear-gradient(
+    145deg,
+    #1a1a1f,
+    #0d0d0f
+  );
+
+  border: 1px solid rgba(255,255,255,.14);
+}
+
+.detail-panel h3,
+.detail-item h4 {
+  color: #ffffff;
+}
+
+.detail-item {
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.detail-item p {
+  color: #b0b0b8;
+}
+
+.tags span {
+  background: #29292f;
+  color: #eeeeef;
+}
+
+/* GALERÍA */
+
+.gallery-card {
+  background: #151518;
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.gallery-card:hover {
+  border-color: rgba(255,255,255,.55);
+
+  box-shadow:
+    0 0 25px rgba(255,255,255,.10),
+    0 25px 60px rgba(0,0,0,.65);
+}
+
+.gallery-tab {
+  color: white;
+}
+
+.gallery-tab.active {
+  background: #ffffff;
+  color: #050506;
+  border-color: white;
+}
+
+/* SOBRE NOSOTROS */
+
+.about-feature {
+  background: linear-gradient(
+    135deg,
+    #35353c,
+    #0b0b0f
+  );
+
+  border: 1px solid rgba(255,255,255,.25);
+
+  box-shadow:
+    0 0 55px rgba(255,255,255,.08);
+}
+
+/* CLIENTES */
+
+.clients-panel {
+  background: #151518;
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+.clients-panel h3 {
+  color: #ffffff;
+}
+
+/* CONTACTO */
+
+.contact-section {
+  background: #050506;
+}
+
+.contact-panel {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255,255,255,.18),
+      transparent 50%
+    ),
+    linear-gradient(
+      120deg,
+      #25252b,
+      #08080b
+    );
+
+  border: 1px solid rgba(255,255,255,.22);
+
+  box-shadow:
+    0 0 55px rgba(255,255,255,.07);
+}
+
+/* BOTONES */
+
+.btn-primary {
+  background: #ffffff;
+  color: #050506;
+
+  box-shadow:
+    0 0 25px rgba(255,255,255,.15);
+}
+
+.btn-primary:hover {
+  box-shadow:
+    0 0 35px rgba(255,255,255,.35);
+}
+
+.btn-outline {
+  color: #ffffff;
+  border-color: rgba(255,255,255,.4);
+}
+
+.btn-outline:hover {
+  background: #ffffff;
+  color: #050506;
+}
+
+/* MENÚ MÓVIL */
+
+@media(max-width:950px) {
+  .navigation {
+    background: #111114;
+  }
+}
+
+/* ACCESIBILIDAD */
+
+@media(prefers-reduced-motion:reduce) {
+  .hero-visual::before {
+    animation: none;
+  }
+}
 
 <body>
 
