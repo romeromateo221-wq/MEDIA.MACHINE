@@ -1651,357 +1651,497 @@ section[id] {
 </div>
 
 <script>
-
-/* ======================================
-   MEDIA MACHINE — COMPLETE GALLERY
-   Compatible with GitHub Pages
-   ====================================== */
-
 "use strict";
 
-// ELEMENTS
+/*
+====================================================
+MEDIA MACHINE — GALLERY PREMIUM PRO
+GitHub Pages compatible
+Repository: MEDIA.MACHINE
+51 original catalog images
+====================================================
+*/
 
-const gallery = document.getElementById("galleryGrid");
-const galleryCount = document.getElementById("galleryCount");
+document.addEventListener("DOMContentLoaded", function () {
 
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
-const lightboxClose = document.getElementById("lightboxClose");
-const lightboxCaption = document.getElementById("lightboxCaption");
+  // ==============================================
+  // 1. REPOSITORIO Y DIRECCIONES DE LAS IMÁGENES
+  // ==============================================
 
-const heroImage = document.getElementById("heroImage");
+  const BASE_URL = "./";
 
-const menuToggle = document.getElementById("menuToggle");
-const navigation = document.getElementById("navigation");
+  const IMAGE_PREFIX = "Catalogo MM y IF abril 2026_page-";
 
-// ======================================
-// ORIGINAL IMAGE NAMES
-// ======================================
+  // Fotos existentes en GitHub.
+  // Se excluyen 0013 y 0015 como en el original.
 
-// Pages 0002 through 0054.
-// Original pages 0013 and 0015 excluded.
-// Total: 51 images.
+  const pages = Array.from(
+    { length: 53 },
+    (_, i) => i + 2
+  ).filter(n => n !== 13 && n !== 15);
 
-const pages = Array.from(
-  { length: 53 },
-  (_, i) => i + 2
-).filter(page => page !== 13 && page !== 15);
+  // ==============================================
+  // 2. ELEMENTOS DE LA PÁGINA
+  // ==============================================
 
-// Exact original naming pattern.
+  const gallery = document.getElementById("galleryGrid");
+  const galleryCount = document.getElementById("galleryCount");
 
-function filenameFor(page) {
-  const number = String(page).padStart(4, "0");
+  const heroImage = document.getElementById("heroImage");
 
-  return `Catalogo MM y IF abril 2026_page-${number}.jpg`;
-}
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const lightboxCaption = document.getElementById("lightboxCaption");
+  const lightboxClose = document.getElementById("lightboxClose");
 
-// First search next to index.html.
-// Then search inside assets/catalog/.
+  const menuToggle = document.getElementById("menuToggle");
+  const navigation = document.getElementById("navigation");
 
-function imagePaths(page) {
-  const filename = filenameFor(page);
-
-  return [
-    filename,
-    `assets/catalog/${filename}`
-  ];
-}
-
-// ======================================
-// IMAGE FALLBACK
-// ======================================
-
-function loadImage(page, onSuccess, onFailure) {
-
-  const paths = imagePaths(page);
-
-  const img = document.createElement("img");
-
-  img.alt = `Proyecto Media Machine ${page}`;
-  img.loading = "lazy";
-  img.decoding = "async";
-
-  let current = 0;
-
-  img.onload = function() {
-    onSuccess(img);
-  };
-
-  img.onerror = function() {
-
-    current++;
-
-    if (current < paths.length) {
-      img.src = paths[current];
-    } else {
-      onFailure();
-    }
-
-  };
-
-  img.src = paths[current];
-
-  return img;
-}
-
-// ======================================
-// HERO IMAGE
-// ======================================
-
-loadImage(
-  2,
-
-  function(img) {
-    heroImage.src = img.src;
-    heroImage.hidden = false;
-  },
-
-  function() {
-    // Keep the gradient background.
-  }
-);
-
-// ======================================
-// LIGHTBOX
-// ======================================
-
-let previousFocus = null;
-
-function openLightbox(source, page) {
-
-  previousFocus = document.activeElement;
-
-  lightboxImage.src = source;
-
-  lightboxCaption.textContent =
-    `MEDIA MACHINE · CATÁLOGO / PÁGINA ${page}`;
-
-  lightbox.classList.add("open");
-
-  lightbox.setAttribute("aria-hidden", "false");
-
-  document.body.style.overflow = "hidden";
-
-  lightboxClose.focus();
-}
-
-function closeLightbox() {
-
-  lightbox.classList.remove("open");
-
-  lightbox.setAttribute("aria-hidden", "true");
-
-  lightboxImage.removeAttribute("src");
-
-  document.body.style.overflow = "";
-
-  if (previousFocus) {
-    previousFocus.focus();
+  if (!gallery) {
+    console.error(
+      "MEDIA MACHINE: No existe el elemento #galleryGrid."
+    );
+    return;
   }
 
-}
+  // ==============================================
+  // 3. NOMBRES ORIGINALES EXACTOS
+  // ==============================================
 
-lightboxClose.addEventListener(
-  "click",
-  closeLightbox
-);
+  function imageName(page, copy = false) {
 
-lightbox.addEventListener("click", function(event) {
+    const number = String(page).padStart(4, "0");
 
-  if (event.target === lightbox) {
-    closeLightbox();
-  }
-
-});
-
-document.addEventListener("keydown", function(event) {
-
-  if (
-    event.key === "Escape" &&
-    lightbox.classList.contains("open")
-  ) {
-    closeLightbox();
-  }
-
-});
-
-// ======================================
-// CREATE GALLERY CARD
-// ======================================
-
-function createGalleryCard(page) {
-
-  const card = document.createElement("div");
-  card.className = "gallery-card";
-
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "gallery-button";
-
-  button.setAttribute(
-    "aria-label",
-    `Ampliar proyecto ${page}`
-  );
-
-  const info = document.createElement("div");
-  info.className = "gallery-info";
-
-  const title = document.createElement("span");
-  title.textContent =
-    `MEDIA MACHINE / ${String(page).padStart(2, "0")}`;
-
-  const detail = document.createElement("small");
-  detail.textContent = "Ver proyecto ↗";
-
-  info.append(title, detail);
-
-  button.appendChild(info);
-
-  card.appendChild(button);
-
-  loadImage(
-
-    page,
-
-    function(img) {
-
-      button.prepend(img);
-
-      button.addEventListener("click", function() {
-        openLightbox(img.currentSrc || img.src, page);
-      });
-
-    },
-
-    function() {
-
-      const error = document.createElement("div");
-      error.className = "image-error";
-
-      const titleError = document.createElement("strong");
-      titleError.textContent =
-        `Imagen ${page} no encontrada`;
-
-      const fileError = document.createElement("small");
-      fileError.textContent = filenameFor(page);
-
-      const hint = document.createElement("small");
-      hint.textContent =
-        "Verifica el archivo JPG en GitHub.";
-
-      error.append(
-        titleError,
-        fileError,
-        hint
-      );
-
-      button.prepend(error);
-
-      button.disabled = true;
-
-      detail.textContent = "Archivo no encontrado";
-
-    }
-
-  );
-
-  return card;
-}
-
-// ======================================
-// ALL IMAGES LOADED AUTOMATICALLY
-// ======================================
-
-let galleryView = "all";
-
-function renderGallery() {
-
-  gallery.replaceChildren();
-
-  const selectedPages =
-    galleryView === "featured"
-      ? pages.slice(0, 9)
-      : pages;
-
-  const fragment = document.createDocumentFragment();
-
-  selectedPages.forEach(function(page) {
-
-    const card = createGalleryCard(page);
-
-    fragment.appendChild(card);
-
-  });
-
-  gallery.appendChild(fragment);
-
-  galleryCount.textContent =
-    `${selectedPages.length} imágenes del catálogo`;
-
-}
-
-// ======================================
-// GALLERY FILTERS
-// ======================================
-
-const galleryTabs =
-  document.querySelectorAll(".gallery-tab");
-
-galleryTabs.forEach(function(tab) {
-
-  tab.addEventListener("click", function() {
-
-    galleryView = tab.dataset.view;
-
-    galleryTabs.forEach(function(otherTab) {
-      otherTab.classList.remove("active");
-    });
-
-    tab.classList.add("active");
-
-    renderGallery();
-
-  });
-
-});
-
-// ======================================
-// RESPONSIVE MENU
-// ======================================
-
-menuToggle.addEventListener("click", function() {
-
-  const isOpen =
-    navigation.classList.toggle("open");
-
-  menuToggle.setAttribute(
-    "aria-expanded",
-    String(isOpen)
-  );
-
-});
-
-navigation.querySelectorAll("a").forEach(function(link) {
-
-  link.addEventListener("click", function() {
-
-    navigation.classList.remove("open");
-
-    menuToggle.setAttribute(
-      "aria-expanded",
-      "false"
+    return (
+      IMAGE_PREFIX +
+      number +
+      (copy ? " - copia.jpg" : ".jpg")
     );
 
+  }
+
+  // ==============================================
+  // 4. RUTAS CORRECTAS PARA GITHUB PAGES
+  // ==============================================
+
+  function imageSources(page) {
+
+    const filename = imageName(page);
+    const copyName = imageName(page, true);
+
+    return [
+      BASE_URL + encodeURIComponent(filename),
+
+      BASE_URL + encodeURIComponent(copyName),
+
+      "assets/catalog/" + encodeURIComponent(filename),
+
+      "assets/catalog/" + encodeURIComponent(copyName)
+    ];
+
+  }
+
+  // ==============================================
+  // 5. SISTEMA DE CARGA Y RECUPERACIÓN
+  // ==============================================
+
+  function setImageWithFallback(img, page, success, failure) {
+
+    const sources = imageSources(page);
+
+    let attempt = 0;
+
+    img.addEventListener("load", function () {
+
+      if (typeof success === "function") {
+        success(img.currentSrc || img.src);
+      }
+
+    });
+
+    img.addEventListener("error", function () {
+
+      attempt++;
+
+      if (attempt < sources.length) {
+
+        console.warn(
+          "Probando otra ruta para imagen:",
+          page,
+          sources[attempt]
+        );
+
+        img.src = sources[attempt];
+
+      } else {
+
+        console.error(
+          "No se pudo cargar la imagen:",
+          page,
+          sources
+        );
+
+        if (typeof failure === "function") {
+          failure();
+        }
+
+      }
+
+    });
+
+    img.src = sources[attempt];
+
+  }
+
+  // ==============================================
+  // 6. VISOR PREMIUM
+  // ==============================================
+
+  function openLightbox(src, page) {
+
+    if (!lightbox || !lightboxImage) return;
+
+    lightboxImage.src = src;
+
+    if (lightboxCaption) {
+      lightboxCaption.textContent =
+        "MEDIA MACHINE | PROYECTO " +
+        String(page).padStart(4, "0");
+    }
+
+    lightbox.classList.add("open");
+
+    lightbox.setAttribute("aria-hidden", "false");
+
+    document.body.style.overflow = "hidden";
+
+  }
+
+  function closeLightbox() {
+
+    if (!lightbox) return;
+
+    lightbox.classList.remove("open");
+
+    lightbox.setAttribute("aria-hidden", "true");
+
+    document.body.style.overflow = "";
+
+    if (lightboxImage) {
+      lightboxImage.removeAttribute("src");
+    }
+
+  }
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener(
+      "click",
+      closeLightbox
+    );
+  }
+
+  if (lightbox) {
+
+    lightbox.addEventListener("click", function (event) {
+
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+
+    });
+
+  }
+
+  document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+
   });
 
+  // ==============================================
+  // 7. CONSTRUIR CADA TARJETA DEL CATÁLOGO
+  // ==============================================
+
+  let loadedImages = 0;
+  let failedImages = 0;
+  let galleryTotal = pages.length;
+
+  function updateCounter() {
+
+    if (!galleryCount) return;
+
+    galleryCount.textContent =
+      loadedImages + " fotografías cargadas de " +
+      galleryTotal +
+      (failedImages > 0
+        ? " | " + failedImages + " pendientes"
+        : "");
+
+  }
+
+  function createGalleryCard(page) {
+
+    const card = document.createElement("article");
+
+    card.className = "gallery-card";
+
+    const button = document.createElement("button");
+
+    button.type = "button";
+    button.className = "gallery-button";
+
+    button.setAttribute(
+      "aria-label",
+      "Ver imagen del proyecto " + page
+    );
+
+    const img = document.createElement("img");
+
+    img.alt = "Media Machine - Proyecto " + page;
+
+    img.decoding = "async";
+
+    // Las primeras fotos se cargan inmediatamente.
+    // Las restantes se cargan al acercarse a la pantalla.
+
+    img.loading = page <= 8 ? "eager" : "lazy";
+
+    if (page <= 4) {
+      img.fetchPriority = "high";
+    }
+
+    const info = document.createElement("div");
+
+    info.className = "gallery-info";
+
+    const title = document.createElement("span");
+
+    title.textContent =
+      "MEDIA MACHINE / " +
+      String(page).padStart(4, "0");
+
+    const detail = document.createElement("small");
+
+    detail.textContent = "Ver imagen ↗";
+
+    info.appendChild(title);
+
+    info.appendChild(detail);
+
+    button.appendChild(img);
+
+    button.appendChild(info);
+
+    card.appendChild(button);
+
+    // IMPORTANTE:
+    // La tarjeta se inserta en la galería
+    // ANTES de comenzar a cargar la imagen.
+
+    gallery.appendChild(card);
+
+    setImageWithFallback(
+
+      img,
+
+      page,
+
+      function (src) {
+
+        loadedImages++;
+
+        updateCounter();
+
+        button.addEventListener("click", function () {
+          openLightbox(src, page);
+        });
+
+      },
+
+      function () {
+
+        failedImages++;
+
+        updateCounter();
+
+        button.disabled = true;
+
+        img.style.display = "none";
+
+        const error = document.createElement("div");
+
+        error.className = "image-error";
+
+        const message = document.createElement("strong");
+
+        message.textContent =
+          "Imagen " + page + " no disponible";
+
+        const filename = document.createElement("small");
+
+        filename.textContent = imageName(page);
+
+        error.appendChild(message);
+
+        error.appendChild(filename);
+
+        button.prepend(error);
+
+        detail.textContent = "Revisar imagen";
+
+      }
+
+    );
+
+  }
+
+  // ==============================================
+  // 8. MOSTRAR TODAS LAS IMÁGENES
+  // ==============================================
+
+  function renderGallery(mode = "all") {
+
+    gallery.innerHTML = "";
+
+    loadedImages = 0;
+
+    failedImages = 0;
+
+    const selectedPages =
+      mode === "featured"
+        ? pages.slice(0, 9)
+        : pages;
+
+    galleryTotal = selectedPages.length;
+
+    updateCounter();
+
+    selectedPages.forEach(function (page) {
+
+      createGalleryCard(page);
+
+    });
+
+    console.log(
+      "MEDIA MACHINE:",
+      selectedPages.length,
+      "imágenes preparadas."
+    );
+
+  }
+
+  // ==============================================
+  // 9. FILTROS DEL CATÁLOGO
+  // ==============================================
+
+  const tabs = document.querySelectorAll(".gallery-tab");
+
+  tabs.forEach(function (tab) {
+
+    tab.addEventListener("click", function () {
+
+      tabs.forEach(function (other) {
+
+        other.classList.remove("active");
+
+      });
+
+      tab.classList.add("active");
+
+      renderGallery(tab.dataset.view || "all");
+
+    });
+
+  });
+
+  // ==============================================
+  // 10. IMAGEN PRINCIPAL DEL HERO
+  // ==============================================
+
+  if (heroImage) {
+
+    heroImage.loading = "eager";
+
+    heroImage.decoding = "async";
+
+    heroImage.fetchPriority = "high";
+
+    // Iniciar carga después de tener
+    // la imagen conectada al documento.
+
+    setImageWithFallback(
+
+      heroImage,
+
+      2,
+
+      function () {
+
+        heroImage.hidden = false;
+
+        heroImage.style.display = "block";
+
+      },
+
+      function () {
+
+        console.warn(
+          "Hero sin fotografía. Se conserva el fondo."
+        );
+
+      }
+
+    );
+
+  }
+
+  // ==============================================
+  // 11. MENÚ RESPONSIVE
+  // ==============================================
+
+  if (menuToggle && navigation) {
+
+    menuToggle.addEventListener("click", function () {
+
+      const isOpen = navigation.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+    });
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        navigation.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      });
+
+    });
+
+  }
+
+  // ==============================================
+  // 12. INICIALIZACIÓN
+  // ==============================================
+
+  renderGallery("all");
+
+  console.log(
+    "MEDIA MACHINE PREMIUM PRO - Catálogo iniciado"
+  );
+
 });
-
-// ======================================
-// INITIALIZE
-// ======================================
-
-renderGallery();
-
 </script>
 
 </body>
