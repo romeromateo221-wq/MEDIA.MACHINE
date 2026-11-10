@@ -12,7 +12,70 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
+
+/* ========================================
+   MEDIA MACHINE — NAVBAR LOGO + GEAR
+   ======================================== */
+
+.logo-navbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.logo-navbar .logo-text {
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.logo-navbar .logo-text span {
+  color: #bdbdc5;
+}
+
+.logo-gear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  color: #ffffff;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,.24));
+  transition: transform .6s ease, filter .4s ease;
+}
+
+.logo-gear svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-navbar:hover .logo-gear {
+  transform: rotate(35deg);
+  filter: drop-shadow(0 0 11px rgba(255,255,255,.55));
+}
+
+@media (max-width: 650px) {
+  .logo-navbar {
+    gap: 8px;
+  }
+
+  .logo-navbar .logo-text {
+    font-size: 18px;
+  }
+
+  .logo-gear {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+   <style>
 /* ==========================================
    MEDIA MACHINE — BLACK & WHITE LUXURY PRO
    ========================================== */
@@ -1202,9 +1265,30 @@ a:focus-visible {
 <nav class="navbar">
   <div class="container nav-content">
 
-    <a class="logo" href="#inicio">
-      MEDIA<span>MACHINE.</span>
-    </a>
+<a class="logo logo-navbar" href="#inicio">
+  <span class="logo-text">
+    MEDIA<span>MACHINE.</span>
+  </span>
+
+  <span class="logo-gear" aria-hidden="true">
+    <svg viewBox="0 0 100 100" fill="none">
+      <path
+        d="M42 3H58L61 13L70 17L79 11L90 22L84 31L88 40L98 43V57L88 60L84 69L90 78L79 89L70 83L61 87L58 97H42L39 87L30 83L21 89L10 78L16 69L12 60L2 57V43L12 40L16 31L10 22L21 11L30 17L39 13Z"
+        stroke="currentColor"
+        stroke-width="5"
+        fill="none"/>
+      <circle cx="50" cy="50" r="29"
+        stroke="currentColor"
+        stroke-width="5"/>
+      <text x="50" y="61"
+        font-size="33"
+        font-weight="900"
+        text-anchor="middle"
+        fill="currentColor">M</text>
+    </svg>
+  </span>
+</a>
+
 
     <div class="navigation" id="navigation">
       <a href="#inicio">Inicio</a>
