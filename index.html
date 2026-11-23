@@ -1369,14 +1369,25 @@ Hablemos de tu idea
 
 <!-- OFFICIAL MEDIA MACHINE + IF LOGO -->
 
-<div class="hero-visual hero-logo">
+<div class="hero-visual hero-logo" style="
+  width: 500px;   /* aumenta ancho */
+  height: 500px;  /* aumenta alto */
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(255,255,255,0.2);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+">
   <video 
     class="hero-brand-image" 
     autoplay 
-    muted 
     loop 
-    playsinline
-    >
+    playsinline 
+    controls
+    style="width: 100%; height: 100%; object-fit: cover;"
+  >
     <source src="MM VIDEO.mp4" type="video/mp4" />
     Tu navegador no soporta videos HTML5.
   </video>
