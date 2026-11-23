@@ -12,6 +12,29 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+  .hero-visual.hero-logo {
+  width: 1000px !important;
+  height: 1000px !important;
+  max-width: 100%;      /* evita desbordes en pantallas pequeñas */
+  max-height: 100vh;    /* limita altura máxima a vista */
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(255,255,255,0.2);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-visual.hero-logo video.hero-brand-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 26px;
+  display: block;
+}
+
+
+  
 /* ========================================
 MEDIA MACHINE — NAVBAR LOGO + GEAR
 ======================================== */
@@ -1369,24 +1392,13 @@ Hablemos de tu idea
 
 <!-- OFFICIAL MEDIA MACHINE + IF LOGO -->
 
-<div class="hero-visual hero-logo" style="
-  width: 500px;   /* aumenta ancho */
-  height: 500px;  /* aumenta alto */
-  border-radius: 26px;
-  overflow: hidden;
-  box-shadow: 0 0 60px rgba(255,255,255,0.2);
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-">
+<div class="hero-visual hero-logo">
   <video 
     class="hero-brand-image" 
     autoplay 
     loop 
     playsinline 
     controls
-    style="width: 100%; height: 100%; object-fit: cover;"
   >
     <source src="MM VIDEO.mp4" type="video/mp4" />
     Tu navegador no soporta videos HTML5.
