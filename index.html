@@ -2065,9 +2065,9 @@ document.addEventListener("DOMContentLoaded", function () {
      ======================================== */
 
   const IMAGE_PREFIX =
-    "Catalogo MM y IF abril 2026_page-";
+    "Catalogo MM y IF abril 2026_-";
 
-  const pages = Array.from(
+  const s = Array.from(
     { length: 53 },
     (_, i) => i + 2
   ).filter(n => n !== 13 && n !== 15);
@@ -2104,10 +2104,10 @@ document.addEventListener("DOMContentLoaded", function () {
      3. ORIGINAL IMAGE NAMES
      ======================================== */
 
-  function imageName(page) {
+  function imageName() {
 
     const number =
-      String(page).padStart(4, "0");
+      String(page).padStart(2, "0");
 
     return IMAGE_PREFIX + number + ".jpg";
   }
