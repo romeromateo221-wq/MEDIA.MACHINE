@@ -1248,10 +1248,22 @@ transform: none;
 </head>
 
 <body>
-<audio autoplay loop controls style="position: fixed; bottom: 10px; right: 10px; width: 200px; z-index: 9999;">
+<audio id="audioPlayer" autoplay loop controls style="
+  position: fixed;    /* fijo en pantalla */
+  bottom: 15px;       /* a 15px del borde inferior */
+  right: 15px;        /* a 15px del borde derecho */
+  width: 150px;       /* ancho reducido */
+  height: 30px;       /* alto reducido */
+  border-radius: 15px; /* bordes redondeados */
+  box-shadow: 0 0 8px rgba(255,255,255,0.3);
+  background: black;  /* fondo negro para contraste */
+  opacity: 0.85;      /* un poco transparente */
+  z-index: 9999;
+">
   <source src="MM MUSIC.mp3" type="audio/mpeg">
-  Tu navegador no soporta el elemento de audio.
+  Tu navegador no soporta audio HTML5.
 </audio>
+
 <!-- ==========================================
 TOP BAR
 ========================================== -->
@@ -1358,11 +1370,18 @@ Hablemos de tu idea
 <!-- OFFICIAL MEDIA MACHINE + IF LOGO -->
 
 <div class="hero-visual hero-logo">
-<img
-src="./MediaMachine_IF_Logo.png"
-alt="Media Machine y La Franquicia"
-class="hero-brand-image">
+  <video 
+    class="hero-brand-image" 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+    >
+    <source src="MM VIDEO.mp4" type="video/mp4" />
+    Tu navegador no soporta videos HTML5.
+  </video>
 </div>
+
 
 </div>
 </section>
