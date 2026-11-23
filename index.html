@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,1235 +13,1235 @@
 
 <style>
 /* ========================================
-   MEDIA MACHINE — NAVBAR LOGO + GEAR
-   ======================================== */
+MEDIA MACHINE — NAVBAR LOGO + GEAR
+======================================== */
 
 .logo-navbar {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  flex-shrink: 0;
+display: inline-flex;
+align-items: center;
+gap: 14px;
+flex-shrink: 0;
 }
 
 .logo-navbar .logo-text {
-  font-family: var(--display);
-  font-size: 23px;
-  font-weight: 800;
-  letter-spacing: -1.5px;
-  color: #ffffff;
-  white-space: nowrap;
+font-family: var(--display);
+font-size: 23px;
+font-weight: 800;
+letter-spacing: -1.5px;
+color: #ffffff;
+white-space: nowrap;
 }
 
 .logo-navbar .logo-text span {
-  color: #bdbdc5;
+color: #bdbdc5;
 }
 
 .logo-gear {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  color: #ffffff;
-  flex-shrink: 0;
-  filter: drop-shadow(0 0 6px rgba(255,255,255,.24));
-  transition: transform .6s ease, filter .4s ease;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 45px;
+height: 45px;
+color: #ffffff;
+flex-shrink: 0;
+filter: drop-shadow(0 0 6px rgba(255,255,255,.24));
+transition: transform .6s ease, filter .4s ease;
 }
 
 .logo-gear svg {
-  display: block;
-  width: 100%;
-  height: 100%;
+display: block;
+width: 100%;
+height: 100%;
 }
 
 .logo-navbar:hover .logo-gear {
-  transform: rotate(35deg);
-  filter: drop-shadow(0 0 11px rgba(255,255,255,.55));
+transform: rotate(35deg);
+filter: drop-shadow(0 0 11px rgba(255,255,255,.55));
 }
 
 @media (max-width: 650px) {
-  .logo-navbar {
-    gap: 8px;
-  }
-
-  .logo-navbar .logo-text {
-    font-size: 18px;
-  }
-
-  .logo-gear {
-    width: 34px;
-    height: 34px;
-  }
+.logo-navbar {
+gap: 8px;
 }
 
-   
+.logo-navbar .logo-text {
+font-size: 18px;
+}
+
+.logo-gear {
+width: 34px;
+height: 34px;
+}
+}
+
+
 /* ==========================================
-   MEDIA MACHINE — BLACK & WHITE LUXURY PRO
-   ========================================== */
+MEDIA MACHINE — BLACK & WHITE LUXURY PRO
+========================================== */
 
 :root {
-  --black: #08080a;
-  --dark: #111114;
-  --white: #ffffff;
-  --light: #f6f6f7;
-  --gray: #62626a;
-  --silver: #c6c6ce;
-  --line: rgba(255,255,255,.15);
-  --font: "DM Sans", sans-serif;
-  --display: "Manrope", sans-serif;
+--black: #08080a;
+--dark: #111114;
+--white: #ffffff;
+--light: #f6f6f7;
+--gray: #62626a;
+--silver: #c6c6ce;
+--line: rgba(255,255,255,.15);
+--font: "DM Sans", sans-serif;
+--display: "Manrope", sans-serif;
 }
 
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+scroll-behavior: smooth;
+scroll-padding-top: 100px;
 }
 
 body {
-  margin: 0;
-  background: var(--black);
-  color: var(--white);
-  font-family: var(--font);
-  overflow-x: hidden;
+margin: 0;
+background: var(--black);
+color: var(--white);
+font-family: var(--font);
+overflow-x: hidden;
 }
 
 body.no-scroll {
-  overflow: hidden;
+overflow: hidden;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+text-decoration: none;
+color: inherit;
 }
 
 button {
-  cursor: pointer;
-  font: inherit;
+cursor: pointer;
+font: inherit;
 }
 
 img {
-  max-width: 100%;
+max-width: 100%;
 }
 
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 4px;
+outline: 2px solid #ffffff;
+outline-offset: 4px;
 }
 
 .container {
-  width: min(1240px, calc(100% - 44px));
-  margin: auto;
+width: min(1240px, calc(100% - 44px));
+margin: auto;
 }
 
 /* ==========================================
-   TOP BAR
-   ========================================== */
+TOP BAR
+========================================== */
 
 .topbar {
-  text-align: center;
-  background: #111114;
-  color: #c7c7cf;
-  padding: 11px 15px;
-  font-size: 10px;
-  letter-spacing: 2px;
-  font-weight: 700;
-  border-bottom: 1px solid var(--line);
+text-align: center;
+background: #111114;
+color: #c7c7cf;
+padding: 11px 15px;
+font-size: 10px;
+letter-spacing: 2px;
+font-weight: 700;
+border-bottom: 1px solid var(--line);
 }
 
 /* ==========================================
-   NAVBAR
-   ========================================== */
+NAVBAR
+========================================== */
 
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 500;
-  background: rgba(8,8,10,.94);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+position: sticky;
+top: 0;
+z-index: 500;
+background: rgba(8,8,10,.94);
+border-bottom: 1px solid var(--line);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
 }
 
 .nav-content {
-  min-height: 82px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
+min-height: 82px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 25px;
 }
 
 .logo {
-  font-family: var(--display);
-  font-size: 23px;
-  font-weight: 800;
-  color: white;
-  letter-spacing: -1.5px;
-  white-space: nowrap;
+font-family: var(--display);
+font-size: 23px;
+font-weight: 800;
+color: white;
+letter-spacing: -1.5px;
+white-space: nowrap;
 }
 
 .logo span {
-  color: #bbbbc5;
+color: #bbbbc5;
 }
 
 .navigation {
-  display: flex;
-  align-items: center;
-  gap: 23px;
+display: flex;
+align-items: center;
+gap: 23px;
 }
 
 .navigation a {
-  color: #e2e2e7;
-  font-size: 12px;
-  font-weight: 700;
-  transition: color .3s;
+color: #e2e2e7;
+font-size: 12px;
+font-weight: 700;
+transition: color .3s;
 }
 
 .navigation a:hover {
-  color: white;
-  text-shadow: 0 0 14px rgba(255,255,255,.65);
+color: white;
+text-shadow: 0 0 14px rgba(255,255,255,.65);
 }
 
 .menu-toggle {
-  display: none;
-  background: none;
-  border: 0;
-  color: white;
-  font-size: 28px;
+display: none;
+background: none;
+border: 0;
+color: white;
+font-size: 28px;
 }
 
 /* ==========================================
-   BUTTONS
-   ========================================== */
+BUTTONS
+========================================== */
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 27px;
-  border-radius: 50px;
-  border: 1px solid transparent;
-  font-size: 13px;
-  font-weight: 800;
-  transition: transform .3s, box-shadow .3s, background .3s;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 16px 27px;
+border-radius: 50px;
+border: 1px solid transparent;
+font-size: 13px;
+font-weight: 800;
+transition: transform .3s, box-shadow .3s, background .3s;
 }
 
 .btn:hover {
-  transform: translateY(-4px);
+transform: translateY(-4px);
 }
 
 .btn-primary {
-  color: #08080a;
-  background: white;
-  box-shadow: 0 0 24px rgba(255,255,255,.18);
+color: #08080a;
+background: white;
+box-shadow: 0 0 24px rgba(255,255,255,.18);
 }
 
 .btn-primary:hover {
-  background: #f0f0f2;
-  box-shadow: 0 0 42px rgba(255,255,255,.36);
+background: #f0f0f2;
+box-shadow: 0 0 42px rgba(255,255,255,.36);
 }
 
 .btn-outline {
-  background: transparent;
-  border-color: rgba(255,255,255,.55);
-  color: white;
+background: transparent;
+border-color: rgba(255,255,255,.55);
+color: white;
 }
 
 .btn-outline:hover {
-  background: white;
-  color: #08080a;
+background: white;
+color: #08080a;
 }
 
 /* ==========================================
-   HERO — BLACK LUXURY WITH LIGHTS
-   ========================================== */
+HERO — BLACK LUXURY WITH LIGHTS
+========================================== */
 
 .hero {
-  background: #08080a;
-  color: white;
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  padding: 110px 0;
+background: #08080a;
+color: white;
+position: relative;
+isolation: isolate;
+overflow: hidden;
+padding: 110px 0;
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 750px;
-  height: 750px;
-  left: -350px;
-  top: -250px;
+content: "";
+position: absolute;
+z-index: -1;
+width: 750px;
+height: 750px;
+left: -350px;
+top: -250px;
 
-  background: radial-gradient(
-    circle,
-    rgba(255,255,255,.14),
-    rgba(160,160,180,.05) 40%,
-    transparent 70%
-  );
+background: radial-gradient(
+circle,
+rgba(255,255,255,.14),
+rgba(160,160,180,.05) 40%,
+transparent 70%
+);
 
-  filter: blur(55px);
-  animation: floatLight 13s ease-in-out infinite alternate;
+filter: blur(55px);
+animation: floatLight 13s ease-in-out infinite alternate;
 }
 
 .hero::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 850px;
-  height: 850px;
-  right: -400px;
-  bottom: -400px;
+content: "";
+position: absolute;
+z-index: -1;
+width: 850px;
+height: 850px;
+right: -400px;
+bottom: -400px;
 
-  background: radial-gradient(
-    circle,
-    rgba(255,255,255,.11),
-    transparent 70%
-  );
+background: radial-gradient(
+circle,
+rgba(255,255,255,.11),
+transparent 70%
+);
 
-  filter: blur(70px);
-  animation: floatLight 16s ease-in-out infinite alternate-reverse;
+filter: blur(70px);
+animation: floatLight 16s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes floatLight {
-  from {
-    transform: translate(0,0) scale(1);
-  }
-  to {
-    transform: translate(70px,40px) scale(1.12);
-  }
+from {
+transform: translate(0,0) scale(1);
+}
+to {
+transform: translate(70px,40px) scale(1.12);
+}
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  align-items: center;
-  gap: 65px;
+display: grid;
+grid-template-columns: 1.05fr .95fr;
+align-items: center;
+gap: 65px;
 }
 
 .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 2px;
+display: inline-flex;
+align-items: center;
+gap: 12px;
+text-transform: uppercase;
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 2px;
 }
 
 .eyebrow::before {
-  content: "";
-  width: 24px;
-  height: 2px;
-  background: currentColor;
+content: "";
+width: 24px;
+height: 2px;
+background: currentColor;
 }
 
 .hero h1 {
-  font-family: var(--display);
-  font-size: clamp(46px,6.2vw,86px);
-  line-height: 1.07;
-  letter-spacing: -4px;
-  margin: 28px 0;
-  font-weight: 800;
+font-family: var(--display);
+font-size: clamp(46px,6.2vw,86px);
+line-height: 1.07;
+letter-spacing: -4px;
+margin: 28px 0;
+font-weight: 800;
 }
 
 .hero h1 span {
-  display: inline-block;
-  color: white;
-  text-shadow:
-    0 0 15px rgba(255,255,255,.4),
-    0 0 50px rgba(255,255,255,.18);
+display: inline-block;
+color: white;
+text-shadow:
+0 0 15px rgba(255,255,255,.4),
+0 0 50px rgba(255,255,255,.18);
 }
 
 .hero p {
-  color: #c7c7cf;
-  font-size: 17px;
-  line-height: 1.85;
-  max-width: 540px;
+color: #c7c7cf;
+font-size: 17px;
+line-height: 1.85;
+max-width: 540px;
 }
 
 .hero-buttons {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 36px;
+display: flex;
+gap: 14px;
+flex-wrap: wrap;
+margin-top: 36px;
 }
 
 /* ==========================================
-   OFFICIAL MEDIA MACHINE + IF LOGO
-   ========================================== */
+OFFICIAL MEDIA MACHINE + IF LOGO
+========================================== */
 
 .hero-visual.hero-logo {
-  position: relative;
-  isolation: isolate;
-  height: 440px;
-  min-width: 0;
-  overflow: hidden;
-  border-radius: 26px;
+position: relative;
+isolation: isolate;
+height: 440px;
+min-width: 0;
+overflow: hidden;
+border-radius: 26px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
 
-  background: #030505;
-  border: 1px solid rgba(255,255,255,.22);
+background: #030505;
+border: 1px solid rgba(255,255,255,.22);
 
-  box-shadow:
-    0 0 25px rgba(255,255,255,.1),
-    0 0 85px rgba(255,255,255,.05),
-    0 35px 80px rgba(0,0,0,.65);
+box-shadow:
+0 0 25px rgba(255,255,255,.1),
+0 0 85px rgba(255,255,255,.05),
+0 35px 80px rgba(0,0,0,.65);
 }
 
 .hero-visual.hero-logo::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
+content: "";
+position: absolute;
+inset: 0;
+pointer-events: none;
+z-index: 1;
 
-  background: radial-gradient(
-    circle at center,
-    rgba(255,255,255,.07),
-    transparent 70%
-  );
+background: radial-gradient(
+circle at center,
+rgba(255,255,255,.07),
+transparent 70%
+);
 }
 
 .hero-brand-image {
-  display: block;
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 18px;
-  filter: drop-shadow(0 0 14px rgba(255,255,255,.1));
+display: block;
+position: relative;
+z-index: 2;
+width: 100%;
+height: 100%;
+object-fit: contain;
+padding: 18px;
+filter: drop-shadow(0 0 14px rgba(255,255,255,.1));
 }
 
 /* ==========================================
-   GENERAL SECTIONS
-   ========================================== */
+GENERAL SECTIONS
+========================================== */
 
 .section {
-  padding: 105px 0;
-  position: relative;
+padding: 105px 0;
+position: relative;
 }
 
 .section-heading {
-  max-width: 850px;
-  margin-bottom: 52px;
+max-width: 850px;
+margin-bottom: 52px;
 }
 
 .section-heading h2 {
-  font-family: var(--display);
-  font-size: clamp(36px,4.5vw,62px);
-  line-height: 1.13;
-  letter-spacing: -2px;
-  font-weight: 800;
-  margin: 20px 0;
+font-family: var(--display);
+font-size: clamp(36px,4.5vw,62px);
+line-height: 1.13;
+letter-spacing: -2px;
+font-weight: 800;
+margin: 20px 0;
 }
 
 .section-heading p {
-  font-size: 16px;
-  line-height: 1.85;
+font-size: 16px;
+line-height: 1.85;
 }
 
 /* ==========================================
-   SERVICES — WHITE BACKGROUND
-   ========================================== */
+SERVICES — WHITE BACKGROUND
+========================================== */
 
 #servicios {
-  background: white;
-  color: #101014;
+background: white;
+color: #101014;
 }
 
 #servicios .section-heading p {
-  color: #565660;
+color: #565660;
 }
 
 #servicios .eyebrow {
-  color: #50505a;
+color: #50505a;
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 23px;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 23px;
 }
 
 .service-card {
-  position: relative;
-  overflow: hidden;
-  min-height: 360px;
-  padding: 38px;
-  border-radius: 22px;
-  display: flex;
-  flex-direction: column;
+position: relative;
+overflow: hidden;
+min-height: 360px;
+padding: 38px;
+border-radius: 22px;
+display: flex;
+flex-direction: column;
 
-  background: #f5f5f7;
-  border: 1px solid #e4e4e8;
+background: #f5f5f7;
+border: 1px solid #e4e4e8;
 
-  transition: transform .35s, box-shadow .35s, border-color .35s;
+transition: transform .35s, box-shadow .35s, border-color .35s;
 }
 
 .service-card::before {
-  content: "";
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  right: -120px;
-  top: -120px;
+content: "";
+position: absolute;
+width: 250px;
+height: 250px;
+right: -120px;
+top: -120px;
 
-  background: radial-gradient(
-    circle,
-    rgba(0,0,0,.08),
-    transparent 70%
-  );
+background: radial-gradient(
+circle,
+rgba(0,0,0,.08),
+transparent 70%
+);
 
-  pointer-events: none;
+pointer-events: none;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  border-color: #aaaab3;
+transform: translateY(-8px);
+border-color: #aaaab3;
 
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.12),
-    0 0 20px rgba(0,0,0,.035);
+box-shadow:
+0 20px 50px rgba(0,0,0,.12),
+0 0 20px rgba(0,0,0,.035);
 }
 
 .service-number {
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #656570;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 1px;
+color: #656570;
 }
 
 .service-card h3 {
-  font-family: var(--display);
-  font-size: 28px;
-  letter-spacing: -1px;
-  margin: auto 0 17px;
-  color: #111114;
+font-family: var(--display);
+font-size: 28px;
+letter-spacing: -1px;
+margin: auto 0 17px;
+color: #111114;
 }
 
 .service-card p {
-  color: #55555f;
-  font-size: 14px;
-  line-height: 1.85;
+color: #55555f;
+font-size: 14px;
+line-height: 1.85;
 }
 
 .service-card a {
-  color: #101014;
-  font-weight: 800;
-  font-size: 13px;
-  margin-top: 25px;
+color: #101014;
+font-weight: 800;
+font-size: 13px;
+margin-top: 25px;
 }
 
 /* ==========================================
-   WHY US — DARK BACKGROUND
-   ========================================== */
+WHY US — DARK BACKGROUND
+========================================== */
 
 #porque {
-  background: #101014;
-  color: white;
+background: #101014;
+color: white;
 }
 
 #porque .section-heading p {
-  color: #bdbdc6;
+color: #bdbdc6;
 }
 
 .why-grid {
-  display: grid;
-  grid-template-columns: .85fr 1.15fr;
-  gap: 70px;
+display: grid;
+grid-template-columns: .85fr 1.15fr;
+gap: 70px;
 }
 
 .why-item {
-  display: grid;
-  grid-template-columns: 45px 1fr;
-  gap: 20px;
-  padding: 28px 0;
-  border-bottom: 1px solid rgba(255,255,255,.17);
+display: grid;
+grid-template-columns: 45px 1fr;
+gap: 20px;
+padding: 28px 0;
+border-bottom: 1px solid rgba(255,255,255,.17);
 }
 
 .why-number {
-  color: white;
-  font-weight: 800;
+color: white;
+font-weight: 800;
 }
 
 .why-item h3 {
-  font-family: var(--display);
-  font-size: 23px;
-  margin: 0 0 12px;
+font-family: var(--display);
+font-size: 23px;
+margin: 0 0 12px;
 }
 
 .why-item p {
-  color: #bdbdc6;
-  font-size: 14px;
-  line-height: 1.85;
+color: #bdbdc6;
+font-size: 14px;
+line-height: 1.85;
 }
 
 /* ==========================================
-   DETAILED SERVICES — WHITE
-   ========================================== */
+DETAILED SERVICES — WHITE
+========================================== */
 
 #servicios-detalle {
-  background: #f5f5f6;
-  color: #101014;
+background: #f5f5f6;
+color: #101014;
 }
 
 #servicios-detalle .eyebrow {
-  color: #55555f;
+color: #55555f;
 }
 
 .details-grid {
-  display: grid;
-  gap: 28px;
+display: grid;
+gap: 28px;
 }
 
 .detail-panel {
-  background: white;
-  border: 1px solid #e0e0e5;
-  border-radius: 23px;
-  padding: 43px;
+background: white;
+border: 1px solid #e0e0e5;
+border-radius: 23px;
+padding: 43px;
 
-  box-shadow: 0 12px 35px rgba(0,0,0,.04);
+box-shadow: 0 12px 35px rgba(0,0,0,.04);
 
-  transition: box-shadow .35s, border-color .35s;
+transition: box-shadow .35s, border-color .35s;
 }
 
 .detail-panel:hover {
-  border-color: #a0a0a8;
-  box-shadow: 0 20px 50px rgba(0,0,0,.1);
+border-color: #a0a0a8;
+box-shadow: 0 20px 50px rgba(0,0,0,.1);
 }
 
 .detail-panel h3 {
-  font-family: var(--display);
-  font-size: 35px;
-  letter-spacing: -1px;
-  margin: 15px 0 35px;
-  color: #101014;
+font-family: var(--display);
+font-size: 35px;
+letter-spacing: -1px;
+margin: 15px 0 35px;
+color: #101014;
 }
 
 .detail-columns {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 30px;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 30px;
 }
 
 .detail-item {
-  border-top: 1px solid #e1e1e6;
-  padding-top: 23px;
+border-top: 1px solid #e1e1e6;
+padding-top: 23px;
 }
 
 .detail-item h4 {
-  font-size: 17px;
-  color: #101014;
-  margin: 0 0 14px;
+font-size: 17px;
+color: #101014;
+margin: 0 0 14px;
 }
 
 .detail-item p {
-  color: #55555f;
-  font-size: 13px;
-  line-height: 1.85;
+color: #55555f;
+font-size: 13px;
+line-height: 1.85;
 }
 
 .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 20px;
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-top: 20px;
 }
 
 .tags span {
-  font-size: 11px;
-  padding: 9px 12px;
-  background: #eeeeef;
-  border: 1px solid #e1e1e5;
-  border-radius: 30px;
-  color: #303039;
+font-size: 11px;
+padding: 9px 12px;
+background: #eeeeef;
+border: 1px solid #e1e1e5;
+border-radius: 30px;
+color: #303039;
 }
 
 /* ==========================================
-   PORTFOLIO — BLACK
-   ========================================== */
+PORTFOLIO — BLACK
+========================================== */
 
 #portafolio {
-  background:
-    radial-gradient(
-      ellipse at 50% 0%,
-      rgba(255,255,255,.07),
-      transparent 50%
-    ),
-    #070709;
+background:
+radial-gradient(
+ellipse at 50% 0%,
+rgba(255,255,255,.07),
+transparent 50%
+),
+#070709;
 
-  color: white;
+color: white;
 }
 
 #portafolio .section-heading p {
-  color: #bdbdc6;
+color: #bdbdc6;
 }
 
 .gallery-controls {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 35px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+margin-bottom: 35px;
 }
 
 .gallery-tabs {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
 }
 
 .gallery-tab {
-  padding: 12px 20px;
-  background: transparent;
-  color: white;
-  border: 1px solid #57575f;
-  border-radius: 50px;
-  font-size: 12px;
-  font-weight: 700;
+padding: 12px 20px;
+background: transparent;
+color: white;
+border: 1px solid #57575f;
+border-radius: 50px;
+font-size: 12px;
+font-weight: 700;
 }
 
 .gallery-tab.active {
-  background: white;
-  border-color: white;
-  color: #08080a;
+background: white;
+border-color: white;
+color: #08080a;
 }
 
 .gallery-count {
-  font-size: 13px;
-  color: #b4b4bd;
+font-size: 13px;
+color: #b4b4bd;
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 22px;
+display: grid;
+grid-template-columns: repeat(3,minmax(0,1fr));
+gap: 22px;
 }
 
 .gallery-card {
-  overflow: hidden;
-  background: #18181d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 18px;
+overflow: hidden;
+background: #18181d;
+border: 1px solid rgba(255,255,255,.15);
+border-radius: 18px;
 
-  transition: transform .35s, border-color .35s, box-shadow .35s;
+transition: transform .35s, border-color .35s, box-shadow .35s;
 }
 
 .gallery-card:hover {
-  transform: translateY(-7px);
-  border-color: rgba(255,255,255,.6);
+transform: translateY(-7px);
+border-color: rgba(255,255,255,.6);
 
-  box-shadow:
-    0 0 30px rgba(255,255,255,.12),
-    0 25px 55px rgba(0,0,0,.6);
+box-shadow:
+0 0 30px rgba(255,255,255,.12),
+0 25px 55px rgba(0,0,0,.6);
 }
 
 .gallery-button {
-  display: block;
-  width: 100%;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  color: white;
-  text-align: left;
+display: block;
+width: 100%;
+padding: 0;
+background: transparent;
+border: 0;
+color: white;
+text-align: left;
 }
 
 .gallery-button img {
-  display: block;
-  width: 100%;
-  height: 350px;
-  object-fit: contain;
-  background: #202025;
+display: block;
+width: 100%;
+height: 350px;
+object-fit: contain;
+background: #202025;
 }
 
 .gallery-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 18px;
-  color: white;
-  font-size: 12px;
-  font-weight: 800;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+padding: 18px;
+color: white;
+font-size: 12px;
+font-weight: 800;
 }
 
 .gallery-info small {
-  color: #c4c4cc;
-  font-size: 11px;
-  font-weight: 500;
+color: #c4c4cc;
+font-size: 11px;
+font-weight: 500;
 }
 
 .image-error {
-  min-height: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 12px;
-  padding: 25px;
-  color: #d2d2da;
+min-height: 350px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+gap: 12px;
+padding: 25px;
+color: #d2d2da;
 }
 
 .image-error small {
-  font-size: 11px;
-  overflow-wrap: anywhere;
+font-size: 11px;
+overflow-wrap: anywhere;
 }
 
 .gallery-note {
-  color: #aaaab4;
-  font-size: 12px;
-  line-height: 1.8;
-  margin-top: 28px;
+color: #aaaab4;
+font-size: 12px;
+line-height: 1.8;
+margin-top: 28px;
 }
 
 /* ==========================================
-   ABOUT — WHITE
-   ========================================== */
+ABOUT — WHITE
+========================================== */
 
 #nosotros {
-  background: white;
-  color: #101014;
+background: white;
+color: #101014;
 }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
-  align-items: center;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 55px;
+align-items: center;
 }
 
 .about-feature {
-  position: relative;
-  overflow: hidden;
-  min-height: 430px;
-  padding: 45px;
-  border-radius: 25px;
+position: relative;
+overflow: hidden;
+min-height: 430px;
+padding: 45px;
+border-radius: 25px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 
-  background: linear-gradient(135deg,#35353c,#09090d);
-  border: 1px solid #494952;
-  color: white;
+background: linear-gradient(135deg,#35353c,#09090d);
+border: 1px solid #494952;
+color: white;
 
-  box-shadow: 0 25px 60px rgba(0,0,0,.16);
+box-shadow: 0 25px 60px rgba(0,0,0,.16);
 }
 
 .about-feature::before {
-  content: "";
-  position: absolute;
-  top: -180px;
-  right: -180px;
-  width: 450px;
-  height: 450px;
-  pointer-events: none;
+content: "";
+position: absolute;
+top: -180px;
+right: -180px;
+width: 450px;
+height: 450px;
+pointer-events: none;
 
-  background: radial-gradient(
-    circle,
-    rgba(255,255,255,.18),
-    transparent 70%
-  );
+background: radial-gradient(
+circle,
+rgba(255,255,255,.18),
+transparent 70%
+);
 }
 
 .about-feature strong {
-  position: relative;
-  font-family: var(--display);
-  font-size: clamp(35px,4vw,54px);
-  line-height: 1.15;
-  letter-spacing: -2px;
+position: relative;
+font-family: var(--display);
+font-size: clamp(35px,4vw,54px);
+line-height: 1.15;
+letter-spacing: -2px;
 }
 
 .about-feature span {
-  position: relative;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 2px;
+position: relative;
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 2px;
 }
 
 .about-copy .eyebrow {
-  color: #565660;
+color: #565660;
 }
 
 .about-copy h2 {
-  font-family: var(--display);
-  font-size: clamp(35px,4vw,54px);
-  line-height: 1.13;
-  letter-spacing: -2px;
-  color: #101014;
+font-family: var(--display);
+font-size: clamp(35px,4vw,54px);
+line-height: 1.13;
+letter-spacing: -2px;
+color: #101014;
 }
 
 .about-copy p {
-  font-size: 15px;
-  color: #55555f;
-  line-height: 2;
+font-size: 15px;
+color: #55555f;
+line-height: 2;
 }
 
 /* ==========================================
-   CLIENTS — LIGHT
-   ========================================== */
+CLIENTS — LIGHT
+========================================== */
 
 #clientes {
-  background: #f4f4f5;
-  color: #101014;
+background: #f4f4f5;
+color: #101014;
 }
 
 #clientes .eyebrow {
-  color: #55555f;
+color: #55555f;
 }
 
 #clientes .section-heading p {
-  color: #55555f;
+color: #55555f;
 }
 
 .clients-panel {
-  padding: 55px;
-  background: white;
-  border: 1px solid #dedee4;
-  border-radius: 22px;
-  text-align: center;
-  box-shadow: 0 12px 35px rgba(0,0,0,.05);
+padding: 55px;
+background: white;
+border: 1px solid #dedee4;
+border-radius: 22px;
+text-align: center;
+box-shadow: 0 12px 35px rgba(0,0,0,.05);
 }
 
 .clients-panel h3 {
-  color: #101014;
+color: #101014;
 }
 
 .clients-panel p {
-  color: #55555f;
-  line-height: 1.85;
+color: #55555f;
+line-height: 1.85;
 }
 
 /* ==========================================
-   CONTACT — BLACK WITH LIGHT
-   ========================================== */
+CONTACT — BLACK WITH LIGHT
+========================================== */
 
 .contact-section {
-  background: #08080a;
-  color: white;
-  padding: 90px 0;
+background: #08080a;
+color: white;
+padding: 90px 0;
 }
 
 .contact-panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 40px;
 
-  padding: 70px 65px;
-  border-radius: 28px;
-  overflow: hidden;
-  position: relative;
+padding: 70px 65px;
+border-radius: 28px;
+overflow: hidden;
+position: relative;
 
-  background:
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(255,255,255,.18),
-      transparent 45%
-    ),
-    linear-gradient(120deg,#303038,#09090d);
+background:
+radial-gradient(
+circle at 85% 20%,
+rgba(255,255,255,.18),
+transparent 45%
+),
+linear-gradient(120deg,#303038,#09090d);
 
-  border: 1px solid rgba(255,255,255,.25);
+border: 1px solid rgba(255,255,255,.25);
 
-  box-shadow:
-    0 0 35px rgba(255,255,255,.06),
-    0 30px 70px rgba(0,0,0,.4);
+box-shadow:
+0 0 35px rgba(255,255,255,.06),
+0 30px 70px rgba(0,0,0,.4);
 }
 
 .contact-panel h2 {
-  font-family: var(--display);
-  font-size: clamp(35px,4.5vw,60px);
-  line-height: 1.12;
-  letter-spacing: -2px;
-  color: white;
+font-family: var(--display);
+font-size: clamp(35px,4.5vw,60px);
+line-height: 1.12;
+letter-spacing: -2px;
+color: white;
 }
 
 .contact-panel p {
-  color: #c8c8d0;
-  line-height: 1.85;
+color: #c8c8d0;
+line-height: 1.85;
 }
 
 /* ==========================================
-   FOOTER
-   ========================================== */
+FOOTER
+========================================== */
 
 .footer {
-  background: #08080a;
-  color: white;
-  padding: 75px 0 30px;
-  border-top: 1px solid var(--line);
+background: #08080a;
+color: white;
+padding: 75px 0 30px;
+border-top: 1px solid var(--line);
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 45px;
+display: grid;
+grid-template-columns: 1.4fr 1fr 1fr;
+gap: 45px;
 }
 
 .footer h4 {
-  color: white;
-  margin: 0 0 22px;
+color: white;
+margin: 0 0 22px;
 }
 
 .footer p,
 .footer a {
-  color: #bdbdc6;
-  font-size: 14px;
-  line-height: 1.9;
+color: #bdbdc6;
+font-size: 14px;
+line-height: 1.9;
 }
 
 .footer a {
-  display: block;
-  margin-bottom: 14px;
+display: block;
+margin-bottom: 14px;
 }
 
 .footer a:hover {
-  color: white;
+color: white;
 }
 
 .footer-bottom {
-  margin-top: 50px;
-  padding-top: 28px;
-  border-top: 1px solid var(--line);
-  color: #90909b;
-  font-size: 12px;
+margin-top: 50px;
+padding-top: 28px;
+border-top: 1px solid var(--line);
+color: #90909b;
+font-size: 12px;
 }
 
 /* ==========================================
-   LIGHTBOX
-   ========================================== */
+LIGHTBOX
+========================================== */
 
 .lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
+display: none;
+position: fixed;
+inset: 0;
+z-index: 9999;
 
-  background: rgba(3,3,5,.97);
-  padding: 25px;
+background: rgba(3,3,5,.97);
+padding: 25px;
 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
 .lightbox.open {
-  display: flex;
+display: flex;
 }
 
 .lightbox img {
-  max-width: 95vw;
-  max-height: 82vh;
-  object-fit: contain;
+max-width: 95vw;
+max-height: 82vh;
+object-fit: contain;
 }
 
 .lightbox-close {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  background: transparent;
-  color: white;
-  border: 0;
-  font-size: 44px;
+position: absolute;
+top: 15px;
+right: 25px;
+background: transparent;
+color: white;
+border: 0;
+font-size: 44px;
 }
 
 .lightbox-caption {
-  margin-top: 17px;
-  color: #bdbdc7;
-  font-size: 12px;
+margin-top: 17px;
+color: #bdbdc7;
+font-size: 12px;
 }
 
 /* ==========================================
-   FLOATING WHATSAPP
-   ========================================== */
+FLOATING WHATSAPP
+========================================== */
 
 .floating-whatsapp {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  z-index: 600;
+position: fixed;
+bottom: 22px;
+right: 22px;
+z-index: 600;
 
-  padding: 15px 23px;
-  border-radius: 50px;
+padding: 15px 23px;
+border-radius: 50px;
 
-  background: white;
-  color: #08080a;
+background: white;
+color: #08080a;
 
-  font-size: 13px;
-  font-weight: 800;
+font-size: 13px;
+font-weight: 800;
 
-  box-shadow:
-    0 0 22px rgba(255,255,255,.2),
-    0 12px 30px rgba(0,0,0,.3);
+box-shadow:
+0 0 22px rgba(255,255,255,.2),
+0 12px 30px rgba(0,0,0,.3);
 }
 
 .floating-whatsapp:hover {
-  box-shadow: 0 0 35px rgba(255,255,255,.4);
+box-shadow: 0 0 35px rgba(255,255,255,.4);
 }
 
 /* ==========================================
-   SAFE REVEAL ANIMATIONS
-   ========================================== */
+SAFE REVEAL ANIMATIONS
+========================================== */
 
 /* Visible by default, even if JS fails. */
 
 .reveal {
-  opacity: 1;
-  transform: none;
+opacity: 1;
+transform: none;
 }
 
 /* Animation only when JS has activated it. */
 
 .js-animations .reveal {
-  opacity: 0;
-  transform: translateY(25px);
-  transition: opacity .7s ease, transform .7s ease;
+opacity: 0;
+transform: translateY(25px);
+transition: opacity .7s ease, transform .7s ease;
 }
 
 .js-animations .reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+opacity: 1;
+transform: translateY(0);
 }
 
 /* ==========================================
-   RESPONSIVE
-   ========================================== */
+RESPONSIVE
+========================================== */
 
 @media(max-width:1050px) {
-  .navigation {
-    gap: 15px;
-  }
+.navigation {
+gap: 15px;
+}
 
-  .navigation a {
-    font-size: 11px;
-  }
+.navigation a {
+font-size: 11px;
+}
 }
 
 @media(max-width:950px) {
 
-  .hero-grid,
-  .why-grid,
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
+.hero-grid,
+.why-grid,
+.about-grid {
+grid-template-columns: 1fr;
+}
 
-  .services-grid,
-  .gallery-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
+.services-grid,
+.gallery-grid {
+grid-template-columns: repeat(2,1fr);
+}
 
-  .detail-columns {
-    grid-template-columns: 1fr;
-  }
+.detail-columns {
+grid-template-columns: 1fr;
+}
 
-  .navigation {
-    display: none;
-    position: absolute;
-    top: 82px;
-    left: 0;
-    right: 0;
+.navigation {
+display: none;
+position: absolute;
+top: 82px;
+left: 0;
+right: 0;
 
-    flex-direction: column;
-    gap: 22px;
-    padding: 30px;
+flex-direction: column;
+gap: 22px;
+padding: 30px;
 
-    background: #101014;
-    border-bottom: 1px solid var(--line);
-  }
+background: #101014;
+border-bottom: 1px solid var(--line);
+}
 
-  .navigation.open {
-    display: flex;
-  }
+.navigation.open {
+display: flex;
+}
 
-  .navigation a {
-    font-size: 14px;
-  }
+.navigation a {
+font-size: 14px;
+}
 
-  .menu-toggle {
-    display: block;
-  }
+.menu-toggle {
+display: block;
+}
 }
 
 @media(max-width:650px) {
 
-  .container {
-    width: min(100% - 32px,1240px);
-  }
+.container {
+width: min(100% - 32px,1240px);
+}
 
-  .hero {
-    padding: 70px 0;
-  }
+.hero {
+padding: 70px 0;
+}
 
-  .hero h1 {
-    letter-spacing: -2px;
-  }
+.hero h1 {
+letter-spacing: -2px;
+}
 
-  .hero-visual.hero-logo {
-    height: 260px;
-  }
+.hero-visual.hero-logo {
+height: 260px;
+}
 
-  .hero-brand-image {
-    padding: 8px;
-  }
+.hero-brand-image {
+padding: 8px;
+}
 
-  .section {
-    padding: 75px 0;
-  }
+.section {
+padding: 75px 0;
+}
 
-  .services-grid,
-  .gallery-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
+.services-grid,
+.gallery-grid,
+.footer-grid {
+grid-template-columns: 1fr;
+}
 
-  .service-card {
-    min-height: 310px;
-  }
+.service-card {
+min-height: 310px;
+}
 
-  .detail-panel {
-    padding: 28px;
-  }
+.detail-panel {
+padding: 28px;
+}
 
-  .gallery-button img {
-    height: auto;
-    max-height: 480px;
-  }
+.gallery-button img {
+height: auto;
+max-height: 480px;
+}
 
-  .about-feature {
-    padding: 30px;
-  }
+.about-feature {
+padding: 30px;
+}
 
-  .contact-panel {
-    padding: 45px 28px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.contact-panel {
+padding: 45px 28px;
+flex-direction: column;
+align-items: flex-start;
+}
 }
 
 @media(prefers-reduced-motion:reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-    scroll-behavior: auto !important;
-  }
+*,
+*::before,
+*::after {
+animation-duration: .01ms !important;
+transition-duration: .01ms !important;
+scroll-behavior: auto !important;
+}
 
-  .js-animations .reveal {
-    opacity: 1;
-    transform: none;
-  }
+.js-animations .reveal {
+opacity: 1;
+transform: none;
+}
 }
 
 </style>
@@ -1251,1287 +1250,1287 @@ a:focus-visible {
 <body>
 
 <!-- ==========================================
-     TOP BAR
-     ========================================== -->
+TOP BAR
+========================================== -->
 
 <div class="topbar">
-  MEDIA MACHINE · CREATIVE DESIGN & ADVERTISING · QUITO
+MEDIA MACHINE · CREATIVE DESIGN & ADVERTISING · QUITO
 </div>
 
 <!-- ==========================================
-     NAVIGATION
-     ========================================== -->
+NAVIGATION
+========================================== -->
 
 <nav class="navbar">
-  <div class="container nav-content">
+<div class="container nav-content">
 
 <a class="logo logo-navbar" href="#inicio">
-  <span class="logo-text">
-    MEDIA<span>MACHINE.</span>
-  </span>
+<span class="logo-text">
+MEDIA<span>MACHINE.</span>
+</span>
 
-  <span class="logo-gear" aria-hidden="true">
-    <svg viewBox="0 0 100 100" fill="none">
-      <path
-        d="M42 3H58L61 13L70 17L79 11L90 22L84 31L88 40L98 43V57L88 60L84 69L90 78L79 89L70 83L61 87L58 97H42L39 87L30 83L21 89L10 78L16 69L12 60L2 57V43L12 40L16 31L10 22L21 11L30 17L39 13Z"
-        stroke="currentColor"
-        stroke-width="5"
-        fill="none"/>
-      <circle cx="50" cy="50" r="29"
-        stroke="currentColor"
-        stroke-width="5"/>
-      <text x="50" y="61"
-        font-size="33"
-        font-weight="900"
-        text-anchor="middle"
-        fill="currentColor">M</text>
-    </svg>
-  </span>
+<span class="logo-gear" aria-hidden="true">
+<svg viewBox="0 0 100 100" fill="none">
+<path
+d="M42 3H58L61 13L70 17L79 11L90 22L84 31L88 40L98 43V57L88 60L84 69L90 78L79 89L70 83L61 87L58 97H42L39 87L30 83L21 89L10 78L16 69L12 60L2 57V43L12 40L16 31L10 22L21 11L30 17L39 13Z"
+stroke="currentColor"
+stroke-width="5"
+fill="none"/>
+<circle cx="50" cy="50" r="29"
+stroke="currentColor"
+stroke-width="5"/>
+<text x="50" y="61"
+font-size="33"
+font-weight="900"
+text-anchor="middle"
+fill="currentColor">M</text>
+</svg>
+</span>
 </a>
 
 
-    <div class="navigation" id="navigation">
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#porque">Por qué nosotros</a>
-      <a href="#portafolio">Portafolio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#clientes">Clientes</a>
-      <a href="#contacto">Contacto</a>
-    </div>
+<div class="navigation" id="navigation">
+<a href="#inicio">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#porque">Por qué nosotros</a>
+<a href="#portafolio">Portafolio</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#clientes">Clientes</a>
+<a href="#contacto">Contacto</a>
+</div>
 
-    <button
-      id="menuToggle"
-      class="menu-toggle"
-      type="button"
-      aria-label="Abrir menú"
-      aria-expanded="false">
-      ☰
-    </button>
+<button
+id="menuToggle"
+class="menu-toggle"
+type="button"
+aria-label="Abrir menú"
+aria-expanded="false">
+☰
+</button>
 
-  </div>
+</div>
 </nav>
 
 <main>
 
 <!-- ==========================================
-     HERO
-     ========================================== -->
+HERO
+========================================== -->
 
 <section class="hero" id="inicio">
-  <div class="container hero-grid">
+<div class="container hero-grid">
 
-    <div>
-      <span class="eyebrow">
-        Creative Design Studio
-      </span>
+<div>
+<span class="eyebrow">
+Creative Design Studio
+</span>
 
-      <h1>
-        Diseñamos ideas
-        que generan
-        <span>impacto.</span>
-      </h1>
+<h1>
+Diseñamos ideas
+que generan
+<span>impacto.</span>
+</h1>
 
-      <p>
-        Potenciamos e innovamos marcas a través
-        del diseño, la publicidad y la creación
-        de espacios memorables.
-        Convertimos tus ideas en experiencias
-        visuales extraordinarias.
-      </p>
+<p>
+Potenciamos e innovamos marcas a través
+del diseño, la publicidad y la creación
+de espacios memorables.
+Convertimos tus ideas en experiencias
+visuales extraordinarias.
+</p>
 
-      <div class="hero-buttons">
+<div class="hero-buttons">
 
-        <a href="#portafolio" class="btn btn-primary">
-          Explorar proyectos ↗
-        </a>
+<a href="#portafolio" class="btn btn-primary">
+Explorar proyectos ↗
+</a>
 
-        <a href="#contacto" class="btn btn-outline">
-          Hablemos de tu idea
-        </a>
+<a href="#contacto" class="btn btn-outline">
+Hablemos de tu idea
+</a>
 
-      </div>
-    </div>
+</div>
+</div>
 
-    <!-- OFFICIAL MEDIA MACHINE + IF LOGO -->
+<!-- OFFICIAL MEDIA MACHINE + IF LOGO -->
 
-    <div class="hero-visual hero-logo">
-      <img
-        src="./MediaMachine_IF_Logo.png"
-        alt="Media Machine y La Franquicia"
-        class="hero-brand-image">
-    </div>
+<div class="hero-visual hero-logo">
+<img
+src="./MediaMachine_IF_Logo.png"
+alt="Media Machine y La Franquicia"
+class="hero-brand-image">
+</div>
 
-  </div>
+</div>
 </section>
 
 <!-- ==========================================
-     SERVICES
-     ========================================== -->
+SERVICES
+========================================== -->
 
 <section class="section" id="servicios">
-  <div class="container">
+<div class="container">
 
-    <div class="section-heading reveal">
-      <span class="eyebrow">01 / Servicios</span>
+<div class="section-heading reveal">
+<span class="eyebrow">01 / Servicios</span>
 
-      <h2>
-        Creamos experiencias
-        que transforman marcas.
-      </h2>
+<h2>
+Creamos experiencias
+que transforman marcas.
+</h2>
 
-      <p>
-        Desde el diseño de identidad hasta
-        la transformación de espacios comerciales,
-        conectamos creatividad, estrategia y ejecución.
-      </p>
-    </div>
+<p>
+Desde el diseño de identidad hasta
+la transformación de espacios comerciales,
+conectamos creatividad, estrategia y ejecución.
+</p>
+</div>
 
-    <div class="services-grid">
+<div class="services-grid">
 
-      <article class="service-card reveal">
-        <span class="service-number">
-          01 / BRAND MARKETING
-        </span>
+<article class="service-card reveal">
+<span class="service-number">
+01 / BRAND MARKETING
+</span>
 
-        <h3>Diseño & Publicidad</h3>
+<h3>Diseño & Publicidad</h3>
 
-        <p>
-          Potencia e innova tu marca.
-          Fusionamos diseño y publicidad
-          para crear impacto visual
-          y conectar con tu audiencia.
-        </p>
+<p>
+Potencia e innova tu marca.
+Fusionamos diseño y publicidad
+para crear impacto visual
+y conectar con tu audiencia.
+</p>
 
-        <a href="#detalle-publicidad">
-          Explorar servicios ↗
-        </a>
-      </article>
+<a href="#detalle-publicidad">
+Explorar servicios ↗
+</a>
+</article>
 
-      <article class="service-card reveal">
-        <span class="service-number">
-          02 / DECORACIÓN
-        </span>
+<article class="service-card reveal">
+<span class="service-number">
+02 / DECORACIÓN
+</span>
 
-        <h3>Diseño Interior</h3>
+<h3>Diseño Interior</h3>
 
-        <p>
-          Transformamos espacios mediante
-          soluciones creativas que combinan
-          funcionalidad, estilo y personalidad.
-        </p>
+<p>
+Transformamos espacios mediante
+soluciones creativas que combinan
+funcionalidad, estilo y personalidad.
+</p>
 
-        <a href="#detalle-interior">
-          Explorar servicios ↗
-        </a>
-      </article>
+<a href="#detalle-interior">
+Explorar servicios ↗
+</a>
+</article>
 
-      <article class="service-card reveal">
-        <span class="service-number">
-          03 / EXPANDE TU NEGOCIO
-        </span>
+<article class="service-card reveal">
+<span class="service-number">
+03 / EXPANDE TU NEGOCIO
+</span>
 
-        <h3>Franquicias</h3>
+<h3>Franquicias</h3>
 
-        <p>
-          Diseñamos conceptos visuales
-          y espacios que fortalecen la identidad
-          de tu negocio y acompañan su crecimiento.
-        </p>
+<p>
+Diseñamos conceptos visuales
+y espacios que fortalecen la identidad
+de tu negocio y acompañan su crecimiento.
+</p>
 
-        <a href="#detalle-franquicias">
-          Explorar servicios ↗
-        </a>
-      </article>
+<a href="#detalle-franquicias">
+Explorar servicios ↗
+</a>
+</article>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
 <!-- ==========================================
-     WHY US
-     ========================================== -->
+WHY US
+========================================== -->
 
 <section class="section" id="porque">
-  <div class="container why-grid">
+<div class="container why-grid">
 
-    <div class="section-heading reveal">
-      <span class="eyebrow">
-        02 / Por qué nosotros
-      </span>
+<div class="section-heading reveal">
+<span class="eyebrow">
+02 / Por qué nosotros
+</span>
 
-      <h2>
-        Cada detalle
-        importa.
-      </h2>
+<h2>
+Cada detalle
+importa.
+</h2>
 
-      <p>
-        Transformamos ideas en soluciones
-        que combinan estrategia, creatividad
-        y ejecución profesional.
-      </p>
-    </div>
+<p>
+Transformamos ideas en soluciones
+que combinan estrategia, creatividad
+y ejecución profesional.
+</p>
+</div>
 
-    <div>
+<div>
 
-      <div class="why-item reveal">
-        <span class="why-number">01</span>
-        <div>
-          <h3>Estrategias innovadoras</h3>
-          <p>
-            Desarrollamos soluciones creativas
-            para conectar tu marca con su público
-            de manera memorable.
-          </p>
-        </div>
-      </div>
+<div class="why-item reveal">
+<span class="why-number">01</span>
+<div>
+<h3>Estrategias innovadoras</h3>
+<p>
+Desarrollamos soluciones creativas
+para conectar tu marca con su público
+de manera memorable.
+</p>
+</div>
+</div>
 
-      <div class="why-item reveal">
-        <span class="why-number">02</span>
-        <div>
-          <h3>Perspectivas estratégicas</h3>
-          <p>
-            Analizamos las necesidades de cada
-            proyecto para proponer soluciones
-            funcionales y visualmente impactantes.
-          </p>
-        </div>
-      </div>
+<div class="why-item reveal">
+<span class="why-number">02</span>
+<div>
+<h3>Perspectivas estratégicas</h3>
+<p>
+Analizamos las necesidades de cada
+proyecto para proponer soluciones
+funcionales y visualmente impactantes.
+</p>
+</div>
+</div>
 
-      <div class="why-item reveal">
-        <span class="why-number">03</span>
-        <div>
-          <h3>Personalización</h3>
-          <p>
-            Cada marca es diferente.
-            Diseñamos experiencias alineadas
-            con su identidad y objetivos.
-          </p>
-        </div>
-      </div>
+<div class="why-item reveal">
+<span class="why-number">03</span>
+<div>
+<h3>Personalización</h3>
+<p>
+Cada marca es diferente.
+Diseñamos experiencias alineadas
+con su identidad y objetivos.
+</p>
+</div>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
 <!-- ==========================================
-     DETAILED SERVICES
-     ========================================== -->
+DETAILED SERVICES
+========================================== -->
 
 <section class="section" id="servicios-detalle">
-  <div class="container">
+<div class="container">
 
-    <div class="section-heading reveal">
-      <span class="eyebrow">
-        Nuestras especialidades
-      </span>
+<div class="section-heading reveal">
+<span class="eyebrow">
+Nuestras especialidades
+</span>
 
-      <h2>
-        Soluciones para cada idea.
-      </h2>
-    </div>
+<h2>
+Soluciones para cada idea.
+</h2>
+</div>
 
-    <div class="details-grid">
+<div class="details-grid">
 
-      <!-- PUBLICIDAD -->
+<!-- PUBLICIDAD -->
 
-      <article class="detail-panel reveal" id="detalle-publicidad">
+<article class="detail-panel reveal" id="detalle-publicidad">
 
-        <span class="eyebrow">
-          Brand Marketing
-        </span>
+<span class="eyebrow">
+Brand Marketing
+</span>
 
-        <h3>Diseño & Publicidad</h3>
+<h3>Diseño & Publicidad</h3>
 
-        <div class="detail-columns">
+<div class="detail-columns">
 
-          <div class="detail-item">
-            <h4>Diseño de marca</h4>
+<div class="detail-item">
+<h4>Diseño de marca</h4>
 
-            <p>
-              Creamos marcas sólidas que transmiten
-              confianza y conectan con su público.
-            </p>
+<p>
+Creamos marcas sólidas que transmiten
+confianza y conectan con su público.
+</p>
 
-            <div class="tags">
-              <span>Manual de marca</span>
-              <span>Papelería corporativa</span>
-              <span>Identidad visual</span>
-            </div>
-          </div>
+<div class="tags">
+<span>Manual de marca</span>
+<span>Papelería corporativa</span>
+<span>Identidad visual</span>
+</div>
+</div>
 
-          <div class="detail-item">
-            <h4>Material publicitario</h4>
+<div class="detail-item">
+<h4>Material publicitario</h4>
 
-            <p>
-              Desarrollamos comunicación visual
-              atractiva para posicionar productos
-              y servicios.
-            </p>
+<p>
+Desarrollamos comunicación visual
+atractiva para posicionar productos
+y servicios.
+</p>
 
-            <div class="tags">
-              <span>Flyers</span>
-              <span>Folletos</span>
-              <span>Brochures</span>
-              <span>Roll-Ups</span>
-              <span>Backings</span>
-            </div>
-          </div>
+<div class="tags">
+<span>Flyers</span>
+<span>Folletos</span>
+<span>Brochures</span>
+<span>Roll-Ups</span>
+<span>Backings</span>
+</div>
+</div>
 
-          <div class="detail-item">
-            <h4>Rotulación</h4>
+<div class="detail-item">
+<h4>Rotulación</h4>
 
-            <p>
-              Realzamos la presencia de tu marca
-              en espacios públicos y comerciales.
-            </p>
+<p>
+Realzamos la presencia de tu marca
+en espacios públicos y comerciales.
+</p>
 
-            <div class="tags">
-              <span>Letras 3D</span>
-              <span>Rótulos luminosos</span>
-              <span>Branding vehicular</span>
-              <span>Publicidad exterior</span>
-            </div>
-          </div>
+<div class="tags">
+<span>Letras 3D</span>
+<span>Rótulos luminosos</span>
+<span>Branding vehicular</span>
+<span>Publicidad exterior</span>
+</div>
+</div>
 
-        </div>
-      </article>
+</div>
+</article>
 
-      <!-- DISEÑO INTERIOR -->
+<!-- DISEÑO INTERIOR -->
 
-      <article class="detail-panel reveal" id="detalle-interior">
+<article class="detail-panel reveal" id="detalle-interior">
 
-        <span class="eyebrow">
-          Decoración
-        </span>
+<span class="eyebrow">
+Decoración
+</span>
 
-        <h3>Diseño Interior</h3>
+<h3>Diseño Interior</h3>
 
-        <div class="detail-columns">
+<div class="detail-columns">
 
-          <div class="detail-item">
-            <h4>Planificación de espacios</h4>
+<div class="detail-item">
+<h4>Planificación de espacios</h4>
 
-            <p>
-              Optimizamos funcionalidad y estética
-              para crear ambientes personalizados.
-            </p>
+<p>
+Optimizamos funcionalidad y estética
+para crear ambientes personalizados.
+</p>
 
-            <div class="tags">
-              <span>Diseño conceptual</span>
-              <span>Distribución espacial</span>
-              <span>Mobiliario</span>
-            </div>
-          </div>
+<div class="tags">
+<span>Diseño conceptual</span>
+<span>Distribución espacial</span>
+<span>Mobiliario</span>
+</div>
+</div>
 
-          <div class="detail-item">
-            <h4>Diseño de iluminación</h4>
+<div class="detail-item">
+<h4>Diseño de iluminación</h4>
 
-            <p>
-              Creamos ambientes donde la luz
-              complementa la identidad y experiencia
-              de tu marca.
-            </p>
+<p>
+Creamos ambientes donde la luz
+complementa la identidad y experiencia
+de tu marca.
+</p>
 
-            <div class="tags">
-              <span>Planificación</span>
-              <span>Luminarias</span>
-              <span>Distribución de iluminación</span>
-            </div>
-          </div>
+<div class="tags">
+<span>Planificación</span>
+<span>Luminarias</span>
+<span>Distribución de iluminación</span>
+</div>
+</div>
 
-          <div class="detail-item">
-            <h4>Decoración personalizada</h4>
+<div class="detail-item">
+<h4>Decoración personalizada</h4>
 
-            <p>
-              Diseñamos espacios acogedores que
-              reflejan el carácter de cada negocio.
-            </p>
+<p>
+Diseñamos espacios acogedores que
+reflejan el carácter de cada negocio.
+</p>
 
-            <div class="tags">
-              <span>Conceptualización</span>
-              <span>Temática y estilo</span>
-              <span>Elementos decorativos</span>
-            </div>
-          </div>
+<div class="tags">
+<span>Conceptualización</span>
+<span>Temática y estilo</span>
+<span>Elementos decorativos</span>
+</div>
+</div>
 
-        </div>
-      </article>
+</div>
+</article>
 
-      <!-- FRANQUICIAS -->
+<!-- FRANQUICIAS -->
 
-      <article class="detail-panel reveal" id="detalle-franquicias">
+<article class="detail-panel reveal" id="detalle-franquicias">
 
-        <span class="eyebrow">
-          Expande tu negocio
-        </span>
+<span class="eyebrow">
+Expande tu negocio
+</span>
 
-        <h3>Franquicias</h3>
+<h3>Franquicias</h3>
 
-        <div class="detail-columns">
+<div class="detail-columns">
 
-          <div class="detail-item">
-            <h4>Asesoramiento</h4>
+<div class="detail-item">
+<h4>Asesoramiento</h4>
 
-            <p>
-              Analizamos necesidades comerciales
-              y espaciales para definir soluciones
-              funcionales.
-            </p>
+<p>
+Analizamos necesidades comerciales
+y espaciales para definir soluciones
+funcionales.
+</p>
 
-            <div class="tags">
-              <span>Evaluación</span>
-              <span>Planificación</span>
-              <span>Orientación de diseño</span>
-            </div>
-          </div>
+<div class="tags">
+<span>Evaluación</span>
+<span>Planificación</span>
+<span>Orientación de diseño</span>
+</div>
+</div>
 
-          <div class="detail-item">
-            <h4>Desarrollo de concepto</h4>
+<div class="detail-item">
+<h4>Desarrollo de concepto</h4>
 
-            <p>
-              Creamos propuestas visuales que
-              mantienen una identidad coherente
-              en cada sede.
-            </p>
+<p>
+Creamos propuestas visuales que
+mantienen una identidad coherente
+en cada sede.
+</p>
 
-            <div class="tags">
-              <span>Concepto de marca</span>
-              <span>Propuesta visual</span>
-              <span>Experiencia espacial</span>
-            </div>
-          </div>
+<div class="tags">
+<span>Concepto de marca</span>
+<span>Propuesta visual</span>
+<span>Experiencia espacial</span>
+</div>
+</div>
 
-          <div class="detail-item">
-            <h4>Decoración personalizada</h4>
+<div class="detail-item">
+<h4>Decoración personalizada</h4>
 
-            <p>
-              Adaptamos la temática y los elementos
-              visuales a la propuesta comercial
-              del negocio.
-            </p>
+<p>
+Adaptamos la temática y los elementos
+visuales a la propuesta comercial
+del negocio.
+</p>
 
-            <div class="tags">
-              <span>Ambientación</span>
-              <span>Estilo</span>
-              <span>Elementos de marca</span>
-            </div>
-          </div>
+<div class="tags">
+<span>Ambientación</span>
+<span>Estilo</span>
+<span>Elementos de marca</span>
+</div>
+</div>
 
-        </div>
-      </article>
+</div>
+</article>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
 <!-- ==========================================
-     PORTFOLIO
-     ========================================== -->
+PORTFOLIO
+========================================== -->
 
 <section class="section" id="portafolio">
-  <div class="container">
+<div class="container">
 
-    <div class="section-heading reveal">
-      <span class="eyebrow">
-        03 / Portafolio
-      </span>
+<div class="section-heading reveal">
+<span class="eyebrow">
+03 / Portafolio
+</span>
 
-      <h2>
-        Nuestro trabajo
-        habla por nosotros.
-      </h2>
+<h2>
+Nuestro trabajo
+habla por nosotros.
+</h2>
 
-      <p>
-        Explora nuestro catálogo de proyectos
-        de diseño, publicidad y soluciones
-        creativas. Las fotografías mantienen
-        sus colores originales.
-      </p>
-    </div>
+<p>
+Explora nuestro catálogo de proyectos
+de diseño, publicidad y soluciones
+creativas. Las fotografías mantienen
+sus colores originales.
+</p>
+</div>
 
-    <div class="gallery-controls">
+<div class="gallery-controls">
 
-      <div class="gallery-tabs">
+<div class="gallery-tabs">
 
-        <button
-          class="gallery-tab active"
-          data-view="all"
-          type="button"
-          aria-pressed="true">
-          Todo el catálogo
-        </button>
+<button
+class="gallery-tab active"
+data-view="all"
+type="button"
+aria-pressed="true">
+Todo el catálogo
+</button>
 
-        <button
-          class="gallery-tab"
-          data-view="featured"
-          type="button"
-          aria-pressed="false">
-          Destacados
-        </button>
+<button
+class="gallery-tab"
+data-view="featured"
+type="button"
+aria-pressed="false">
+Destacados
+</button>
 
-      </div>
+</div>
 
-      <span
-        class="gallery-count"
-        id="galleryCount">
-        Preparando catálogo...
-      </span>
+<span
+class="gallery-count"
+id="galleryCount">
+Preparando catálogo...
+</span>
 
-    </div>
+</div>
 
-    <div
-      class="gallery-grid"
-      id="galleryGrid">
-    </div>
+<div
+class="gallery-grid"
+id="galleryGrid">
+</div>
 
-    <p class="gallery-note">
-      Haz clic en cada fotografía para ampliarla.
-      El catálogo conserva la numeración original
-      de Media Machine.
-    </p>
+<p class="gallery-note">
+Haz clic en cada fotografía para ampliarla.
+El catálogo conserva la numeración original
+de Media Machine.
+</p>
 
-  </div>
+</div>
 </section>
 
 <!-- ==========================================
-     ABOUT
-     ========================================== -->
+ABOUT
+========================================== -->
 
 <section class="section" id="nosotros">
-  <div class="container about-grid">
+<div class="container about-grid">
 
-    <div class="about-feature reveal">
+<div class="about-feature reveal">
 
-      <span>04 / SOBRE NOSOTROS</span>
+<span>04 / SOBRE NOSOTROS</span>
 
-      <strong>
-        Somos el factor
-        decisivo de tu éxito.
-      </strong>
+<strong>
+Somos el factor
+decisivo de tu éxito.
+</strong>
 
-      <span>MEDIA MACHINE · QUITO</span>
+<span>MEDIA MACHINE · QUITO</span>
 
-    </div>
+</div>
 
-    <div class="about-copy reveal">
+<div class="about-copy reveal">
 
-      <span class="eyebrow">
-        Quiénes somos
-      </span>
+<span class="eyebrow">
+Quiénes somos
+</span>
 
-      <h2>
-        Más que diseño.
-        Una visión compartida.
-      </h2>
+<h2>
+Más que diseño.
+Una visión compartida.
+</h2>
 
-      <p>
-        Con más de dos décadas de experiencia,
-        en Media Machine nos dedicamos a crear
-        soluciones creativas y efectivas
-        en diseño, publicidad y construcción.
-      </p>
+<p>
+Con más de dos décadas de experiencia,
+en Media Machine nos dedicamos a crear
+soluciones creativas y efectivas
+en diseño, publicidad y construcción.
+</p>
 
-      <p>
-        Hemos colaborado con una amplia gama
-        de clientes, ayudándoles a alcanzar
-        sus objetivos comerciales mediante
-        estrategias innovadoras y una ejecución cuidada.
-      </p>
+<p>
+Hemos colaborado con una amplia gama
+de clientes, ayudándoles a alcanzar
+sus objetivos comerciales mediante
+estrategias innovadoras y una ejecución cuidada.
+</p>
 
-      <p>
-        Nuestro compromiso con la excelencia
-        y la satisfacción del cliente impulsa
-        cada proyecto que emprendemos.
-      </p>
+<p>
+Nuestro compromiso con la excelencia
+y la satisfacción del cliente impulsa
+cada proyecto que emprendemos.
+</p>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
 <!-- ==========================================
-     CLIENTS
-     ========================================== -->
+CLIENTS
+========================================== -->
 
 <section class="section" id="clientes">
-  <div class="container">
+<div class="container">
 
-    <div class="section-heading reveal">
+<div class="section-heading reveal">
 
-      <span class="eyebrow">
-        05 / Nuestros clientes
-      </span>
+<span class="eyebrow">
+05 / Nuestros clientes
+</span>
 
-      <h2>
-        Relaciones que
-        dejan huella.
-      </h2>
+<h2>
+Relaciones que
+dejan huella.
+</h2>
 
-      <p>
-        Construimos relaciones de confianza
-        y proyectos que generan resultados duraderos.
-      </p>
+<p>
+Construimos relaciones de confianza
+y proyectos que generan resultados duraderos.
+</p>
 
-    </div>
+</div>
 
-    <div class="clients-panel reveal">
+<div class="clients-panel reveal">
 
-      <h3>CLIENTES MEDIA MACHINE</h3>
+<h3>CLIENTES MEDIA MACHINE</h3>
 
-      <p>
-        Espacio preparado para incorporar los logotipos
-        de nuestros clientes y aliados.
-      </p>
+<p>
+Espacio preparado para incorporar los logotipos
+de nuestros clientes y aliados.
+</p>
 
-    </div>
+</div>
 
-  </div>
+</div>
 </section>
 
 <!-- ==========================================
-     CONTACT
-     ========================================== -->
+CONTACT
+========================================== -->
 
 <section class="contact-section" id="contacto">
-  <div class="container">
+<div class="container">
 
-    <div class="contact-panel reveal">
+<div class="contact-panel reveal">
 
-      <div>
-        <span class="eyebrow">
-          Hablemos de tu proyecto
-        </span>
+<div>
+<span class="eyebrow">
+Hablemos de tu proyecto
+</span>
 
-        <h2>
-          ¿Tienes una idea?
-          Hagámosla realidad.
-        </h2>
+<h2>
+¿Tienes una idea?
+Hagámosla realidad.
+</h2>
 
-        <p>
-          Branding, publicidad, diseño interior
-          o franquicias. Conversemos sobre
-          lo que quieres construir.
-        </p>
-      </div>
+<p>
+Branding, publicidad, diseño interior
+o franquicias. Conversemos sobre
+lo que quieres construir.
+</p>
+</div>
 
-      <a
-        class="btn btn-primary"
-        href="https://api.whatsapp.com/send?phone=593999250437"
-        target="_blank"
-        rel="noopener noreferrer">
-        Cotizar por WhatsApp ↗
-      </a>
+<a
+class="btn btn-primary"
+href="https://api.whatsapp.com/send?phone=593999250437"
+target="_blank"
+rel="noopener noreferrer">
+Cotizar por WhatsApp ↗
+</a>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
 </main>
 
 <!-- ==========================================
-     FOOTER
-     ========================================== -->
+FOOTER
+========================================== -->
 
 <footer class="footer">
-  <div class="container">
+<div class="container">
 
-    <div class="footer-grid">
+<div class="footer-grid">
 
-      <div>
-        <div class="logo">
-          MEDIA<span>MACHINE.</span>
-        </div>
+<div>
+<div class="logo">
+MEDIA<span>MACHINE.</span>
+</div>
 
-        <p>
-          Construimos tus ideas.<br>
-          Diseño, publicidad y experiencias
-          visuales en Quito, Ecuador.
-        </p>
-      </div>
+<p>
+Construimos tus ideas.<br>
+Diseño, publicidad y experiencias
+visuales en Quito, Ecuador.
+</p>
+</div>
 
-      <div>
-        <h4>Redes sociales</h4>
+<div>
+<h4>Redes sociales</h4>
 
-        <a
-          href="https://www.instagram.com/mediamachineuio/"
-          target="_blank"
-          rel="noopener noreferrer">
-          Instagram ↗
-        </a>
+<a
+href="https://www.instagram.com/mediamachineuio/"
+target="_blank"
+rel="noopener noreferrer">
+Instagram ↗
+</a>
 
-        <a
-          href="https://www.facebook.com/share/18qtZdFPBv/?mibextid=wwXIfr"
-          target="_blank"
-          rel="noopener noreferrer">
-          Facebook ↗
-        </a>
+<a
+href="https://www.facebook.com/share/18qtZdFPBv/?mibextid=wwXIfr"
+target="_blank"
+rel="noopener noreferrer">
+Facebook ↗
+</a>
 
-        <a
-          href="https://www.tiktok.com/@mediamachineuio"
-          target="_blank"
-          rel="noopener noreferrer">
-          TikTok ↗
-        </a>
-      </div>
+<a
+href="https://www.tiktok.com/@mediamachineuio"
+target="_blank"
+rel="noopener noreferrer">
+TikTok ↗
+</a>
+</div>
 
-      <div>
-        <h4>Ubicación y contacto</h4>
+<div>
+<h4>Ubicación y contacto</h4>
 
-        <p>
-          Av. Colón y Reina Victoria E6-49<br>
-          Quito, Ecuador.
-        </p>
+<p>
+Av. Colón y Reina Victoria E6-49<br>
+Quito, Ecuador.
+</p>
 
-        <a
-          href="https://www.google.com/maps?q=-0.2008223,-78.4889885&z=17"
-          target="_blank"
-          rel="noopener noreferrer">
-          Google Maps ↗
-        </a>
+<a
+href="https://www.google.com/maps?q=-0.2008223,-78.4889885&z=17"
+target="_blank"
+rel="noopener noreferrer">
+Google Maps ↗
+</a>
 
-        <a
-          href="https://api.whatsapp.com/send?phone=593999250437"
-          target="_blank"
-          rel="noopener noreferrer">
-          WhatsApp ↗
-        </a>
+<a
+href="https://api.whatsapp.com/send?phone=593999250437"
+target="_blank"
+rel="noopener noreferrer">
+WhatsApp ↗
+</a>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-    <div class="footer-bottom">
-      © 2026 Media Machine.
-      Todos los derechos reservados.
-    </div>
+<div class="footer-bottom">
+© 2026 Media Machine.
+Todos los derechos reservados.
+</div>
 
-  </div>
+</div>
 </footer>
 
 <!-- ==========================================
-     FLOATING WHATSAPP
-     ========================================== -->
+FLOATING WHATSAPP
+========================================== -->
 
 <a
-  class="floating-whatsapp"
-  href="https://api.whatsapp.com/send?phone=593999250437"
-  target="_blank"
-  rel="noopener noreferrer">
-  WhatsApp ↗
+class="floating-whatsapp"
+href="https://api.whatsapp.com/send?phone=593999250437"
+target="_blank"
+rel="noopener noreferrer">
+WhatsApp ↗
 </a>
 
 <!-- ==========================================
-     LIGHTBOX
-     ========================================== -->
+LIGHTBOX
+========================================== -->
 
 <div
-  class="lightbox"
-  id="lightbox"
-  role="dialog"
-  aria-modal="true"
-  aria-hidden="true"
-  aria-label="Fotografía ampliada">
+class="lightbox"
+id="lightbox"
+role="dialog"
+aria-modal="true"
+aria-hidden="true"
+aria-label="Fotografía ampliada">
 
-  <button
-    class="lightbox-close"
-    id="lightboxClose"
-    type="button"
-    aria-label="Cerrar fotografía">
-    &times;
-  </button>
+<button
+class="lightbox-close"
+id="lightboxClose"
+type="button"
+aria-label="Cerrar fotografía">
+&times;
+</button>
 
-  <img
-    id="lightboxImage"
-    alt="Proyecto Media Machine ampliado">
+<img
+id="lightboxImage"
+alt="Proyecto Media Machine ampliado">
 
-  <div
-    id="lightboxCaption"
-    class="lightbox-caption">
-  </div>
+<div
+id="lightboxCaption"
+class="lightbox-caption">
+</div>
 
 </div>
 
 <!-- ==========================================
-     JAVASCRIPT — CORRECTED
-     ========================================== -->
+JAVASCRIPT — CORRECTED
+========================================== -->
 
 <script>
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* ========================================
-     1. CATALOG CONFIGURATION
-     ======================================== */
+/* ========================================
+1. CATALOG CONFIGURATION
+======================================== */
 
-  const IMAGE_PREFIX =
-    "Catalogo MM y IF abril 2026_-";
+const IMAGE_PREFIX =
+"Catalogo MM y IF abril 2026_page-";
 
-  const s = Array.from(
-    { length: 53 },
-    (_, i) => i + 2
-  ).filter(n => n !== 13 && n !== 15);
+const pages = Array.from(
+{ length: 53 },
+(_, i) => i + 2
+).filter(n => n !== 13 && n !== 15);
 
-  /* ========================================
-     2. ELEMENT REFERENCES
-     ======================================== */
+/* ========================================
+2. ELEMENT REFERENCES
+======================================== */
 
-  const gallery =
-    document.getElementById("galleryGrid");
+const gallery =
+document.getElementById("galleryGrid");
 
-  const counter =
-    document.getElementById("galleryCount");
+const counter =
+document.getElementById("galleryCount");
 
-  const lightbox =
-    document.getElementById("lightbox");
+const lightbox =
+document.getElementById("lightbox");
 
-  const lightboxImage =
-    document.getElementById("lightboxImage");
+const lightboxImage =
+document.getElementById("lightboxImage");
 
-  const lightboxCaption =
-    document.getElementById("lightboxCaption");
+const lightboxCaption =
+document.getElementById("lightboxCaption");
 
-  const lightboxClose =
-    document.getElementById("lightboxClose");
+const lightboxClose =
+document.getElementById("lightboxClose");
 
-  const menuToggle =
-    document.getElementById("menuToggle");
+const menuToggle =
+document.getElementById("menuToggle");
 
-  const navigation =
-    document.getElementById("navigation");
+const navigation =
+document.getElementById("navigation");
 
-  /* ========================================
-     3. ORIGINAL IMAGE NAMES
-     ======================================== */
+/* ========================================
+3. ORIGINAL IMAGE NAMES
+======================================== */
 
-  function imageName() {
+function imageName(page) {
 
-    const number =
-      String(page).padStart(4, "0");
+const number =
+String(page).padStart(4, "0");
 
-    return IMAGE_PREFIX + number + ".jpg";
-  }
+return IMAGE_PREFIX + number + ".jpg";
+}
 
-  /* ========================================
-     4. GITHUB PAGES IMAGE PATHS
-     ======================================== */
+/* ========================================
+4. GITHUB PAGES IMAGE PATHS
+======================================== */
 
-  function imagePaths(page) {
+function imagePaths(page) {
 
-    const filename = imageName(page);
+const filename = imageName(page);
 
-    const root = new URL(
-      "./",
-      document.baseURI
-    );
+const root = new URL(
+"./",
+document.baseURI
+);
 
-    return [
-      new URL(filename, root).href,
-      new URL("assets/catalog/" + filename, root).href
-    ];
-  }
+return [
+new URL(filename, root).href,
+new URL("assets/catalog/" + filename, root).href
+];
+}
 
-  /* ========================================
-     5. IMAGE LOADER
-     ======================================== */
+/* ========================================
+5. IMAGE LOADER
+======================================== */
 
-  function assignImage(img, page, onSuccess, onFailure) {
+function assignImage(img, page, onSuccess, onFailure) {
 
-    const paths = imagePaths(page);
+const paths = imagePaths(page);
 
-    let index = 0;
-    let finished = false;
+let index = 0;
+let finished = false;
 
-    img.onload = function () {
+img.onload = function () {
 
-      if (finished) return;
+if (finished) return;
 
-      finished = true;
+finished = true;
 
-      if (typeof onSuccess === "function") {
-        onSuccess(img.currentSrc || img.src);
-      }
-    };
+if (typeof onSuccess === "function") {
+onSuccess(img.currentSrc || img.src);
+}
+};
 
-    img.onerror = function () {
+img.onerror = function () {
 
-      if (finished) return;
+if (finished) return;
 
-      index++;
+index++;
 
-      if (index < paths.length) {
+if (index < paths.length) {
 
-        console.warn(
-          "Probando otra ruta:",
-          paths[index]
-        );
+console.warn(
+"Probando otra ruta:",
+paths[index]
+);
 
-        img.src = paths[index];
+img.src = paths[index];
 
-      } else {
+} else {
 
-        finished = true;
+finished = true;
 
-        console.error(
-          "Imagen no encontrada:",
-          imageName(page),
-          paths
-        );
+console.error(
+"Imagen no encontrada:",
+imageName(page),
+paths
+);
 
-        if (typeof onFailure === "function") {
-          onFailure();
-        }
-      }
-    };
+if (typeof onFailure === "function") {
+onFailure();
+}
+}
+};
 
-    img.src = paths[0];
-  }
+img.src = paths[0];
+}
 
-  /* ========================================
-     6. LIGHTBOX
-     ======================================== */
+/* ========================================
+6. LIGHTBOX
+======================================== */
 
-  let previousFocus = null;
+let previousFocus = null;
 
-  function openLightbox(src, page) {
+function openLightbox(src, page) {
 
-    previousFocus = document.activeElement;
+previousFocus = document.activeElement;
 
-    lightboxImage.src = src;
+lightboxImage.src = src;
 
-    lightboxCaption.textContent =
-      "MEDIA MACHINE / PROYECTO " +
-      String(page).padStart(4, "0");
+lightboxCaption.textContent =
+"MEDIA MACHINE / PROYECTO " +
+String(page).padStart(4, "0");
 
-    lightbox.classList.add("open");
+lightbox.classList.add("open");
 
-    lightbox.setAttribute(
-      "aria-hidden",
-      "false"
-    );
+lightbox.setAttribute(
+"aria-hidden",
+"false"
+);
 
-    document.body.classList.add("no-scroll");
+document.body.classList.add("no-scroll");
 
-    lightboxClose.focus();
-  }
+lightboxClose.focus();
+}
 
-  function closeLightbox() {
+function closeLightbox() {
 
-    lightbox.classList.remove("open");
+lightbox.classList.remove("open");
 
-    lightbox.setAttribute(
-      "aria-hidden",
-      "true"
-    );
+lightbox.setAttribute(
+"aria-hidden",
+"true"
+);
 
-    document.body.classList.remove("no-scroll");
+document.body.classList.remove("no-scroll");
 
-    lightboxImage.removeAttribute("src");
+lightboxImage.removeAttribute("src");
 
-    if (
-      previousFocus &&
-      typeof previousFocus.focus === "function"
-    ) {
-      previousFocus.focus();
-    }
-  }
+if (
+previousFocus &&
+typeof previousFocus.focus === "function"
+) {
+previousFocus.focus();
+}
+}
 
-  lightboxClose.addEventListener(
-    "click",
-    closeLightbox
-  );
+lightboxClose.addEventListener(
+"click",
+closeLightbox
+);
 
-  lightbox.addEventListener("click", function (event) {
+lightbox.addEventListener("click", function (event) {
 
-    if (event.target === lightbox) {
-      closeLightbox();
-    }
-  });
+if (event.target === lightbox) {
+closeLightbox();
+}
+});
 
-  document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", function (event) {
 
-    if (
-      event.key === "Escape" &&
-      lightbox.classList.contains("open")
-    ) {
-      closeLightbox();
-    }
-  });
+if (
+event.key === "Escape" &&
+lightbox.classList.contains("open")
+) {
+closeLightbox();
+}
+});
 
-  /* ========================================
-     7. CREATE GALLERY CARD
-     ======================================== */
+/* ========================================
+7. CREATE GALLERY CARD
+======================================== */
 
-  function createCard(page) {
+function createCard(page) {
 
-    const card =
-      document.createElement("article");
+const card =
+document.createElement("article");
 
-    card.className = "gallery-card";
+card.className = "gallery-card";
 
-    const button =
-      document.createElement("button");
+const button =
+document.createElement("button");
 
-    button.className = "gallery-button";
-    button.type = "button";
+button.className = "gallery-button";
+button.type = "button";
 
-    button.setAttribute(
-      "aria-label",
-      "Ampliar proyecto " + page
-    );
+button.setAttribute(
+"aria-label",
+"Ampliar proyecto " + page
+);
 
-    const image =
-      document.createElement("img");
+const image =
+document.createElement("img");
 
-    image.alt =
-      "Media Machine - Proyecto " + page;
+image.alt =
+"Media Machine - Proyecto " + page;
 
-    image.decoding = "async";
-    image.loading = page <= 8 ? "eager" : "lazy";
+image.decoding = "async";
+image.loading = page <= 8 ? "eager" : "lazy";
 
-    const info =
-      document.createElement("div");
+const info =
+document.createElement("div");
 
-    info.className = "gallery-info";
+info.className = "gallery-info";
 
-    const title =
-      document.createElement("span");
+const title =
+document.createElement("span");
 
-    title.textContent =
-      "MEDIA MACHINE / " +
-      String(page).padStart(4, "0");
+title.textContent =
+"MEDIA MACHINE / " +
+String(page).padStart(4, "0");
 
-    const subtitle =
-      document.createElement("small");
+const subtitle =
+document.createElement("small");
 
-    subtitle.textContent = "Ampliar ↗";
+subtitle.textContent = "Ampliar ↗";
 
-    info.append(title, subtitle);
-    button.append(image, info);
-    card.appendChild(button);
+info.append(title, subtitle);
+button.append(image, info);
+card.appendChild(button);
 
-    return {
-      card,
-      button,
-      image,
-      subtitle
-    };
-  }
+return {
+card,
+button,
+image,
+subtitle
+};
+}
 
-  /* ========================================
-     8. GALLERY RENDER
-     ======================================== */
+/* ========================================
+8. GALLERY RENDER
+======================================== */
 
-  let renderVersion = 0;
+let renderVersion = 0;
 
-  function renderGallery(mode = "all") {
+function renderGallery(mode = "all") {
 
-    renderVersion++;
+renderVersion++;
 
-    const currentVersion = renderVersion;
+const currentVersion = renderVersion;
 
-    const selectedPages =
-      mode === "featured"
-        ? pages.slice(0, 9)
-        : pages;
+const selectedPages =
+mode === "featured"
+? pages.slice(0, 9)
+: pages;
 
-    gallery.replaceChildren();
+gallery.replaceChildren();
 
-    const cards = selectedPages.map(page => ({
-      page,
-      ...createCard(page)
-    }));
+const cards = selectedPages.map(page => ({
+page,
+...createCard(page)
+}));
 
-    const fragment =
-      document.createDocumentFragment();
+const fragment =
+document.createDocumentFragment();
 
-    cards.forEach(item => {
-      fragment.appendChild(item.card);
-    });
+cards.forEach(item => {
+fragment.appendChild(item.card);
+});
 
-    gallery.appendChild(fragment);
+gallery.appendChild(fragment);
 
-    let loaded = 0;
-    let failed = 0;
+let loaded = 0;
+let failed = 0;
 
-    function updateCounter() {
+function updateCounter() {
 
-      if (currentVersion !== renderVersion) return;
+if (currentVersion !== renderVersion) return;
 
-      counter.textContent =
-        loaded + " de " +
-        selectedPages.length +
-        " fotografías cargadas" +
-        (failed
-          ? " · " + failed + " no disponibles"
-          : "");
-    }
+counter.textContent =
+loaded + " de " +
+selectedPages.length +
+" fotografías cargadas" +
+(failed
+? " · " + failed + " no disponibles"
+: "");
+}
 
-    updateCounter();
+updateCounter();
 
-    cards.forEach(item => {
+cards.forEach(item => {
 
-      assignImage(
+assignImage(
 
-        item.image,
-        item.page,
+item.image,
+item.page,
 
-        function (src) {
+function (src) {
 
-          if (currentVersion !== renderVersion) return;
+if (currentVersion !== renderVersion) return;
 
-          loaded++;
-          updateCounter();
+loaded++;
+updateCounter();
 
-          item.button.addEventListener(
-            "click",
-            function () {
-              openLightbox(src, item.page);
-            }
-          );
-        },
+item.button.addEventListener(
+"click",
+function () {
+openLightbox(src, item.page);
+}
+);
+},
 
-        function () {
+function () {
 
-          if (currentVersion !== renderVersion) return;
+if (currentVersion !== renderVersion) return;
 
-          failed++;
-          updateCounter();
+failed++;
+updateCounter();
 
-          item.image.remove();
+item.image.remove();
 
-          const placeholder =
-            document.createElement("div");
+const placeholder =
+document.createElement("div");
 
-          placeholder.className = "image-error";
+placeholder.className = "image-error";
 
-          const message =
-            document.createElement("strong");
+const message =
+document.createElement("strong");
 
-          message.textContent =
-            "Imagen " + item.page +
-            " no disponible";
+message.textContent =
+"Imagen " + item.page +
+" no disponible";
 
-          const filename =
-            document.createElement("small");
+const filename =
+document.createElement("small");
 
-          filename.textContent =
-            imageName(item.page);
+filename.textContent =
+imageName(item.page);
 
-          placeholder.append(message, filename);
+placeholder.append(message, filename);
 
-          item.button.prepend(placeholder);
+item.button.prepend(placeholder);
 
-          item.button.disabled = true;
+item.button.disabled = true;
 
-          item.subtitle.textContent =
-            "Verificar archivo";
-        }
+item.subtitle.textContent =
+"Verificar archivo";
+}
 
-      );
+);
 
-    });
-  }
+});
+}
 
-  /* ========================================
-     9. GALLERY FILTERS
-     ======================================== */
+/* ========================================
+9. GALLERY FILTERS
+======================================== */
 
-  document.querySelectorAll(".gallery-tab")
-    .forEach(tab => {
+document.querySelectorAll(".gallery-tab")
+.forEach(tab => {
 
-      tab.addEventListener("click", function () {
+tab.addEventListener("click", function () {
 
-        document.querySelectorAll(".gallery-tab")
-          .forEach(other => {
+document.querySelectorAll(".gallery-tab")
+.forEach(other => {
 
-            const active = other === tab;
+const active = other === tab;
 
-            other.classList.toggle("active", active);
+other.classList.toggle("active", active);
 
-            other.setAttribute(
-              "aria-pressed",
-              String(active)
-            );
-          });
+other.setAttribute(
+"aria-pressed",
+String(active)
+);
+});
 
-        renderGallery(tab.dataset.view || "all");
-      });
-    });
+renderGallery(tab.dataset.view || "all");
+});
+});
 
-  /* ========================================
-     10. MOBILE MENU
-     ======================================== */
+/* ========================================
+10. MOBILE MENU
+======================================== */
 
-  if (menuToggle && navigation) {
+if (menuToggle && navigation) {
 
-    menuToggle.addEventListener("click", function () {
+menuToggle.addEventListener("click", function () {
 
-      const isOpen =
-        navigation.classList.toggle("open");
+const isOpen =
+navigation.classList.toggle("open");
 
-      menuToggle.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-      );
-    });
+menuToggle.setAttribute(
+"aria-expanded",
+String(isOpen)
+);
+});
 
-    navigation.querySelectorAll("a")
-      .forEach(link => {
+navigation.querySelectorAll("a")
+.forEach(link => {
 
-        link.addEventListener("click", function () {
+link.addEventListener("click", function () {
 
-          navigation.classList.remove("open");
+navigation.classList.remove("open");
 
-          menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-        });
-      });
-  }
+menuToggle.setAttribute(
+"aria-expanded",
+"false"
+);
+});
+});
+}
 
-  /* ========================================
-     11. SAFE SCROLL ANIMATIONS
-     ======================================== */
+/* ========================================
+11. SAFE SCROLL ANIMATIONS
+======================================== */
 
-  const revealItems =
-    document.querySelectorAll(".reveal");
+const revealItems =
+document.querySelectorAll(".reveal");
 
-  if (
-    "IntersectionObserver" in window &&
-    !window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches
-  ) {
+if (
+"IntersectionObserver" in window &&
+!window.matchMedia(
+"(prefers-reduced-motion: reduce)"
+).matches
+) {
 
-    // Make all elements visible first.
-    // Animation initialization cannot hide
-    // sections if another script fails.
+// Make all elements visible first.
+// Animation initialization cannot hide
+// sections if another script fails.
 
-    revealItems.forEach(item => {
-      item.classList.add("visible");
-    });
+revealItems.forEach(item => {
+item.classList.add("visible");
+});
 
-    // The website remains fully visible.
-    // Hover and lighting effects still work.
+// The website remains fully visible.
+// Hover and lighting effects still work.
 
-  } else {
+} else {
 
-    revealItems.forEach(item => {
-      item.classList.add("visible");
-    });
-  }
+revealItems.forEach(item => {
+item.classList.add("visible");
+});
+}
 
-  /* ========================================
-     12. INITIALIZE
-     ======================================== */
+/* ========================================
+12. INITIALIZE
+======================================== */
 
-  renderGallery("all");
+renderGallery("all");
 
-  console.log(
-    "MEDIA MACHINE BLACK & WHITE LUXURY PRO"
-  );
+console.log(
+"MEDIA MACHINE BLACK & WHITE LUXURY PRO"
+);
 
 });
 </script>
