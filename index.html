@@ -12,26 +12,33 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-  .hero-visual.hero-logo {
-  width: 1300px !important;
-  height: 700px !important;
-  max-width: 100%;      /* evita desbordes en pantallas pequeñas */
-  max-height: 100vh;    /* limita altura máxima a vista */
+ .hero-visual.hero-logo {
+  width: 600px;          /* ancho moderado */
+  height: 600px;         /* altura moderada */
   border-radius: 26px;
   overflow: hidden;
-  box-shadow: 0 0 60px rgba(255,255,255,0.2);
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #030505;
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow:
+    0 0 25px rgba(255,255,255,.1),
+    0 0 85px rgba(255,255,255,.05),
+    0 35px 80px rgba(0,0,0,.65);
 }
+
 .hero-visual.hero-logo video.hero-brand-image {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* que el video quepa entero sin recorte */
   border-radius: 26px;
   display: block;
+  padding: 0;            /* elimina padding si hubiera */
+  filter: drop-shadow(0 0 14px rgba(255,255,255,.1));
 }
+
 
 
   
