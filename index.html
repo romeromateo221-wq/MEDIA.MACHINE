@@ -40,9 +40,9 @@ html, body {
 }
 
 .hero-visual.hero-logo {
-  width: 90%;                /* ocupa 90% del contenedor padre */
-  max-width: 100px;          /* máximo 600px en pantallas grandes */
-  aspect-ratio: 1 / 1;       /* mantiene proporción cuadrada */
+  width: 90%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;   /* fuerza aspecto cuadrado */
   border-radius: 26px;
   overflow: hidden;
   margin: auto;
@@ -50,28 +50,27 @@ html, body {
   justify-content: center;
   align-items: center;
   background: #030505;
-  border: 1px solid rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,.22);
   box-shadow:
     0 0 25px rgba(255,255,255,.1),
     0 0 85px rgba(255,255,255,.05),
     0 35px 80px rgba(0,0,0,.65);
 }
-
 .hero-visual.hero-logo video.hero-brand-image {
-  padding: 0 !important;     /* elimina padding */
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;    /* cubre todo el contenedor */
   border-radius: 26px;
   display: block;
+  padding: 0;
   filter: drop-shadow(0 0 14px rgba(255,255,255,.1));
 }
-
+/* Responsive para móviles */
 @media (max-width: 650px) {
   .hero-visual.hero-logo {
-    max-width: 90vw;     /* más ancho relativo en pantallas pequeñas */
-    margin: 20px auto;   /* margen superior/inferior */
-    height: auto;
+    max-width: 90vw;
+    aspect-ratio: 1 / 1;
+    margin: 20px auto;
   }
 }
 
